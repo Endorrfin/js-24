@@ -1,0 +1,14 @@
+{
+  "name": "calc.js",
+  "version": "1.0.0",
+  "description": "Simple calc using Node.js",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha"
+  },
+  "author": "KvN",
+  "license": "ISC",
+  "devDependencies": {
+    "mocha": "^10.2.0"
+  }
+}

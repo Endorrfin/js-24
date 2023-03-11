@@ -1,0 +1,2 @@
+1. Unit Testing in JavaScript with Mocha - https://www.taniarascia.com/unit-testing-in-javascript/
+2. Introducing Test Driven Development in JavaScript - https://tproger.ru/translations/unit-testing-in-javascript/

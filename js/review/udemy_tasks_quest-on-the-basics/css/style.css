@@ -1,0 +1,155 @@
+
+/*  >>>>>>>>>>>>>>>>>>>>> FONTS  <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+@import url("https://fonts.googleapis.com/css?family=Lobster+Two:700,700i|Space+Mono");
+@import url("https://fonts.googleapis.com/css?family=Lobster&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Great+Vibes&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Exo+2:400,700&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+/*  >>>>>>>>>>>>>>>>>>>>> GLOBAL STYLE  <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.container {
+  width: 100%;
+}
+
+section {
+  margin-bottom: 5px;
+  padding-bottom: 5px;
+  border-bottom: 0.7px dashed #900000;
+}
+
+.title-h1 {
+  font-family: "Lobster Two", cursive;
+  font-style: italic;
+  margin: 40px 40px 0;
+  color: #fff;
+  font-size: 50px;
+  text-align: center;
+  text-shadow: 0 1px 0 #900000, 0 2px 0 #c7c5c5, 0 3px 0 #bbbaba,
+    0 4px 0 #b7b6b6, 0 5px 0 #a9a6a6, 0 6px 1px #29325233,
+    0 0 5px rgba(41, 50, 82, 0.1), 0 1px 3px rgba(41, 50, 82, 0.1),
+    0 3px 5px hsla(227, 33%, 24%, 0.1), 0 5px 10px rgba(41, 50, 82, 0.2),
+    0 10px 10px rgba(41, 50, 82, 0.3), 0 20px 20px rgba(41, 50, 82, 0.1);
+}
+
+.title-h2 {
+  font-family: "Lobster Two", cursive;
+  margin: 20px 20px;
+  color: rgb(255, 255, 255);
+  font-size: 35px;
+  text-align: center;
+  text-shadow: 0 1px 0 #900000, 0 2px 0 #900000, 0 3px 0 #bbbaba,
+    0 4px 0 #b7b6b6, 0 5px 0 #a9a6a6, 0 6px 1px rgba(0, 0, 0, 0.2),
+    0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1),
+    0 3px 5px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.title-h3 {
+  font-family: "Montserrat", sans-serif;
+  /* font-family: 'Exo 2', sans-serif; */
+  /* font-family: 'Apple Chancery'; */
+  margin: 10px 10px;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-style: italic;
+  text-align: center;
+  text-shadow: 0 1px 0 #900000, 0 2px 0 #900000, 0 3px 0 #900000,
+    0 4px 0 #b7b6b6, 0 5px 0 #a9a6a6, 0 6px 1px rgba(0, 0, 0, 0.2),
+    0 0 5px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.1),
+    0 3px 5px rgba(0, 0, 0, 0.1), 0 5px 10px rgba(0, 0, 0, 0.2),
+    0 10px 10px rgba(0, 0, 0, 0.3), 0 20px 20px rgba(0, 0, 0, 0.1);
+}
+
+.section-header {
+  position: relative;
+  text-align: center;
+  margin-bottom: 3.5rem;
+}
+.section-header h4 {
+  position: relative;
+  display: inline-block;
+  background: #fff;
+  margin-bottom: 0;
+  padding: 0.5rem 1rem;
+  border-bottom: 0.125rem solid #900000;
+  font-size: 1.25rem;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #900000;
+}
+.section-header h4::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.25rem;
+  transform: translateX(-1.25rem);
+  border-top: 1.25rem solid #900000;
+  border-left: 1.25rem solid transparent;
+  border-right: 1.25rem solid transparent;
+}
+.section-header h4::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -1.125rem;
+  transform: translateX(-1.25rem);
+  border-top: 1.25rem solid #fff;
+  border-left: 1.25rem solid transparent;
+  border-right: 1.25rem solid transparent;
+}
+
+
+
+
+
+
+/*  >>>>>>>>>>>>>>>>>>>>> CURRENT STYLE  <<<<<<<<<<<<<<<<<<<<<<<<<<< */
+
+.btn-style {
+  text-decoration: none;
+  outline: none;
+  display: inline-block;
+  width: 140px;
+  height: 45px;
+  line-height: 45px;
+  border-radius: 45px;
+  margin: 10px 20px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 11px;
+  text-transform: uppercase;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 400;
+  color: #524f4e;
+  background: white;
+  /* box-shadow: 0 8px 15px rgba(0,0,0,.1); */
+  box-shadow: 0 0 10px #d8d8d8;
+  transition: .3s;
+}
+
+.btn-style:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px #2ee59d66;
+  color: #ffffff;
+  transform: translateY(-7px);
+}
+
+.input-style {
+  font-family: 'Montserrat', sans-serif;
+  padding: 10px;
+  font-size: 11px;
+  border: 1px solid rgba(80, 80, 80, 0.3);
+  border-radius: 4px;
+  background: rgba(255, 255, 255, .5);
+  color: rgba(36, 35, 35, 0.4);
+  width: 220px;
+  /* height: 23px; */
+  line-height: 23px;
+  background: white;
+  box-shadow: 0 0 10px #d8d8d8;
+  transition: .3s;
+  letter-spacing: 2px;
+ }
+

@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Unit 00</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1 class="title-h1">[_JS_] Technical interview</h1>
+        <h1 class="title-h2">Author: Алексей Тарасов (Учебный центр "Специалист")</h2>
+            <h1 class="title-h2">Source: https://www.udemy.com/javascript-i/</h2>
+                <h2 class="title-h3">Subject: "JavaScript задачи. Квест по основам"!</h2>
+                <p><b>Description:</b> В мае 2017 года на своих курсах я провёл первый квест. Он содержал около десяти
+                    задач и имел жёсткие правила прохождения. Например, на каждое задание выделялось фиксированное
+                    время, а при любой серьёзной ошибке участник покидал квест. Эксперимент показал, что слушателям
+                    понравился такой формат (особенно финалистам!), но поддерживать его в ручном режиме стало сложно.
+                    Текущий микрокурс представляет собой новый квест, в который вошли как лучшие задачи первых квестов
+                    по JavaScript, так новые задачи. Теперь каждый после первого знакомства с JavaScript может закрепить
+                    изученный материал и получить дополнительный опыт, решая задачи по основам JavaScript.</h4>
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 01 - function palmTree(n) </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Реализуйте функцию palmTree(n), которая будет принимать целое положительное n и возвращать
+                            строку, состоящую из символов “p”. Например, вызов palmTree(3) приведет к тому, что функция
+                            вернет “ppp”. Примечание: при нечисловом аргументе функция должна вернуть false, а при
+                            вызове без аргумента - один символ “p”.*/
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 02 - function autoReplace(needles,change,haystack) </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Реализуйте функцию autoReplace(needles,change,haystack), которая будет принимать целое
+                            массив строк, которые нужно поменять на строку change внутри строки haystack. Например,
+                            вызов функции
+
+                            autoReplace([‘салат’, ‘помидоры’], ‘еда’, ‘свежие помидоры пошли в салат’) должна вернуть строку “свежие еда пошли в еда”.
+                            <br>
+                            Примечание: если хотите, тут можно использовать регулярные выражения, но это не обязательное
+                            требование, при этом регистр не должен учитываться. При отсутствии параметров должен
+                            вернуться false.
+                            <br>
+                            Данная задача, может пригодиться в тех случаях, когда есть массив стоп слов, и нужно
+                            очистить один, или несколько наборов текста, так, чтобы эти слова не попадались. Например,
+                            зарисовать их звездочками, или какими-то шаблонами, включающими гиперссылку.
+                        </p>
+
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 03 - function autoTags(str, tags, url)</h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Создайте функцию autoTags(str, tags, url), которая принимает входную строку str, массив слов для замены на теги и базовый URL (по умолчанию должен иметь значение “https://mysite.local/tag/”), которые нужно сделать тегами в строке str. Напримерб вызов функции.
+
+                            autoTags(‘интересно изучать js’, [‘html, ‘js])
+                            должна вернуть строку должен вернуть строку ‘интересно изучать <a href=“https://mysite.local/tag/js”>@js</a>’.
+                            
+                            Примечание: если вы увидите как замыкание может упростить работу над задачей, испльзуйте его.
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 04 - function (genitive = (n, word)) </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            const autoTags = getAutoTags();
+                            console.log( autoTags(‘интересно изучать js’, [‘html’,’js’]) );
+                            
+                            Реализуйте функцию genitive(n, word). Функция принимает положительное целое число и объект word с вариантами записи слов для разных чисел. Объект word имеет свойства singular many1 many2, например {singular: ‘товар’, many1: ‘товара’, many2: ‘товаров’.
+                            Например, при вызове
+                            
+                            genitive(5, {singular: ‘курс’б many1: ‘курса’, many2: ‘курсов’})
+                            функция должна вернуть строку ‘5 курсов’
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 05 - object classNames </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Создайте объекта classNames co свойством cname и методами 
+                            add( String [,String]) Добавляет к cname классы
+                            remove( String [,String]) Удаляет из cname классы
+                            toggle ( String [, Boolean]) Если класс у элемента отсутствует - добавляет, иначе - убирает. Когда вторым параметром передано false - удаляет указанный классб а если true - добавляет.
+                            
+                            Например, значение classNames.cname = ‘btn’. После вызова classNames.toggle(‘btn-primary’) значение classNames.cname должно стать ‘btn btn-primary’. При повторном вызове classNames.toggle(‘btn-primary’), значение длолжно вернуться в ‘btn’
+                            ПримечаниеЖ это пригодится в дальнейшем при работе с DOM на HTML-странице. Познакомьтесь с интерфейсом https://developer.mozilla.org/ru/docs/Web/API/Element/classList
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 06 - function lorem </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Напишите функцию lorem(n), которая принимает положительное целое n (от 1 до 445) и при вызове возвращает строку длинной n символов из строки.
+
+                            “Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi eveniet neque quasi placeat aliquam, hic voluptas magnam. Similique recusandae libero reprehenderit deleniti voluptas blanditiis, ipsa eaque ratione repellendus deserunt placeat, illum perspiciatis nulla? Molestiae eum similique molestias nam ut officiis provident beatae cumque. Ad, laboriosam iste. Dicta odio consectetur vitae autem voluptatibus architecto, repellendus reiciendis accusamus sit iusto excepturi dolore quaerat aliquam debitis molestiae modi a voluptate officia delectus ex, numquam neque laborum? Perspiciatis repellat sequi eligendi fugiat velit illo minus voluptates excepturi, praesentium libero aut corrupti odio aliquam dolorum in nulla eveniet odit est esse? Vero minus explicabo labore.”
+                            
+                            Например, при вызове lorem(100) функция должна вернуть строку
+                            “Lorem ipsum dolor, sit amet consectetur adipisicing elit. Animi eveniet neque quasi placeat aliquam, hic”
+                        </p>
+
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 07 - function myReplace </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+                            Напишите функцию myReplace(s1, s2, s3), которая будет принимать три строковых аргумента s1 , s2, s3 и заменять в первом аргументе s1 все слова, совпадающие со вторым аргументом s2, на третий аргумент s3. Функция должна возвращать измененную строку. Например, вызов 
+                            myReplace(“Ехал Грека, через реку”, “р”, “л”)
+                            
+                            должен вернуть строку “Ехал Глека, челез леку”
+                            
+                            Примечание: эта задача является частным случаем одной из предыдущих задач. Она более простая, позволяет отдохнуть и приступить к следующим задачам. Внимание, функция должна учитывать регистр слов.
+                            
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 08 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 09 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 10 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 11 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 12 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 13 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 14 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 15 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 16 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 17 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 18 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 19 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+
+                    <section>
+                        <div class="section-header">
+                            <h4 class="section-title">Task 20 - </h4>
+                        </div>
+                        <p class="description"><b><u>Условие задачи:</u></b>
+
+                        </p>
+
+                    </section>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

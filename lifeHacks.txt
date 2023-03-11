@@ -1,0 +1,26 @@
+
+👀 references
+
+// 'use strict';
+
+// COMMENTS
+// Important information is highlighted
+// ! Deprecated method, do not use
+// ? Should this method be exposed in the public API?
+// TODO: refactor this method so that it conforms to the API
+// @param myParam The parameter for this method
+
+
+// ============ NAME ============
+// bradtraversy / vanillawebprojects (20+ Web Projects With Vanilla JavaScript) - https://github.com/bradtraversy/vanillawebprojects
+
+// ============ NAME ============
+// ------- Example I -------
+
+
+// ============ BINARY SEARCH ============
+// ------------ Solution 1.1 - using cycle ------------
+
+
+
+

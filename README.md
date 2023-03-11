@@ -1,1 +1,8 @@
 # js-24
+
+JAVASCRIPT
+1. 
+
+
+TYPESCRIPT
+1. 
