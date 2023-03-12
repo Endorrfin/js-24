@@ -42,3 +42,6 @@ SETTINGS tsconfig.json
 
 // ------- UNION -------
 
+
+👀 references
+1. Utility Types в TypeScript с нуля. Все Утилиты на Практике - https://www.youtube.com/watch?v=cQr90ZFWA4g
