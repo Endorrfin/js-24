@@ -15,9 +15,9 @@ function sum1(a, b, c, d) {
   return a + b + c + d;
 }
 
-console.log(sum1(3, 4));
-console.log(sum1(3, 4, 5));
-console.log(sum1(3, 4, 5, 6));
+// console.log(sum1(3, 4));
+// console.log(sum1(3, 4, 5));
+// console.log(sum1(3, 4, 5, 6));
 
 
 // -------------- Solution 1.2 --------------

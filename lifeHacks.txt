@@ -22,5 +22,20 @@
 // ------------ Solution 1.1 - using cycle ------------
 
 
+JAVASCRIPT
+1. js | algorithms & data structures
+2. js | design-patterns
+3. js | topics - array_methods
+4. js | testing
+4. js | refactoring code
+
+
+TYPESCRIPT
+1. ts | unit-01-basicTypes
+2. ts | unit-02-advancedTypes
+3. ts | unit-03-classes
+4. ts | unit-04-advanced | utilityTypes
+
+
 
 
