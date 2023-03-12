@@ -18,57 +18,58 @@
 * Предоставляется инструмент доступа к объектам без возможности как-то повлиять на эти объекты.
 * * */
 
-// -------------- Example 1.1 block I --------------
-class IteratorSimple {
-    constructor(el) {
-        this.index = 0;
-        this.elements = el;
-    }
-
-    next() {
-        return this.elements[this.index++];
-    }
-
-    hasNext() {
-        return this.index < this.elements.length;
-    }
-};
-
-// -------------- Example 1.1 block II --------------
-const collection = new IteratorSimple(['Audi', 'BMW', 'Tesla', 'Mercedes']);
-
-while (collection.hasNext()) {
-    // console.log(collection.next());
-};
-
-
-// -------------- Example 2.1 block I --------------
-class IteratorComplex {
-    constructor(el) {
-        this.index = 0;
-        this.keys = Object.keys(el);
-        this.elements = el;
-    }
-
-    next() {
-        return this.elements[this.keys[this.index++]];
-    }
-
-    hasNext() {
-        return this.index < this.keys.length;
-    }
-};
-
-
-// -------------- Example 2.1 block II --------------
-const autos = {
-    audi: {model: 'Audi', color: 'black', price: '20000'},
-    bmw: {model: 'BMW', color: 'white', price: '30000'},
-    tesla: {model: 'Tesla', color: 'gray', price: '40000'},
-};
-
-const collectionComplex = new IteratorComplex(autos);
-
-while (collectionComplex.hasNext()) {
-    // console.log(collectionComplex.next());
-};
+// // -------------- Example 1.1 block I --------------
+// class IteratorSimple {
+//     constructor(el) {
+//         this.index = 0;
+//         this.elements = el;
+//     }
+//
+//     next() {
+//         return this.elements[this.index++];
+//     }
+//
+//     hasNext() {
+//         return this.index < this.elements.length;
+//     }
+// };
+//
+// // -------------- Example 1.1 block II --------------
+// const collection = new IteratorSimple(['Audi', 'BMW', 'Tesla', 'Mercedes']);
+//
+// while (collection.hasNext()) {
+//     console.log(collection.next());
+// };
+//
+//
+// // -------------- Example 2.1 block I --------------
+// class IteratorComplex {
+//     constructor(el) {
+//         this.index = 0;
+//         this.keys = Object.keys(el);
+//         this.elements = el;
+//     }
+//
+//     next() {
+//         return this.elements[this.keys[this.index++]];
+//     }
+//
+//     hasNext() {
+//         return this.index < this.keys.length;
+//     }
+// };
+//
+//
+// // -------------- Example 2.1 block II --------------
+// const autos = {
+//     audi: {model: 'Audi', color: 'yellow', price: '20000'},
+//     bmw: {model: 'BMW', color: 'black', price: '30000'},
+//     tesla: {model: 'Tesla', color: 'red', price: '40000'},
+//     mercedes: {model: 'Mercedes', color: 'white', price: '50000'},
+// };
+//
+// const collectionComplex = new IteratorComplex(autos);
+//
+// while (collectionComplex.hasNext()) {
+//     console.log(collectionComplex.next());
+// };
