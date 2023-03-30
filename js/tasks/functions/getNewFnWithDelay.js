@@ -9,7 +9,7 @@ function someFn () {
   console.log(arguments);
 }
 
-someFn('arg1', 2, []);
+// someFn('arg1', 2, []);
 
 
 
@@ -25,7 +25,7 @@ Function.prototype.delay = function(delay) {
 
 const someFnDelay = someFn.delay(2000);
 
-someFnDelay(1, 2, 3, 4, 5, 6, 7);
+// someFnDelay(1, 2, 3, 4, 5, 6, 7);
 
 
 // ------- Solution 1.2 -------
@@ -40,4 +40,4 @@ Function.prototype.delay = function(delay) {
 
 const someFnDelayArrow = someFn.delay(5000);
 
-someFnDelayArrow('arg2', 1, 2, 3, 4, 5, []);
+// someFnDelayArrow('arg2', 1, 2, 3, 4, 5, []);
