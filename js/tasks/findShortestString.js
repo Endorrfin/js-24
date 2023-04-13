@@ -2,6 +2,7 @@
 Написать функцию, которая параметром принимает строку, а на выходе дает самое короткое слово содержащееся в строке.
 */
 
+// ------- SOLUTION 1.1 -------
 // !Base
 function findShort(string) {
     var wordsArray = string.split(' ');
@@ -14,6 +15,7 @@ function findShort(string) {
 // console.log(findShort('Do you want to send information and documents about your company'));
 
 
+// ------- SOLUTION 1.2 -------
 // !Advanced
 function findShortAdvanced(string) {
     return string
@@ -26,6 +28,7 @@ function findShortAdvanced(string) {
 // console.log(findShortAdvanced('You can also send an application to connect your Project site below'));
 
 
+// ------- SOLUTION 1.3 -------
 // !ES6 - самое длинное слово в строке
 const findShortEs6 = string =>
     string
@@ -35,25 +38,8 @@ const findShortEs6 = string =>
 // console.log(findShortEs6('You can also send a document to connect your Project site below longestWordInLine'));
 
 
-
-
-// arr1 = [1, 2, 3, 4, 5, 6]
-// let result = [];
-// let z = 7
-// for (let i = 0; i < arr1.length; i++) {
-//     if (z === i[0] + i) {
-
-//     } else if (z = i[1] + i) {
-
-//     }
-
-// }
-
-// return z ===
-
-
-
-function findShortLength(string) {
+// ------- SOLUTION 1.4 -------
+function findShortestLength(string) {
     return string
         .split(' ')
         .sort(function (a, b) {
@@ -62,3 +48,14 @@ function findShortLength(string) {
 }
 
 // console.log(findShortAdvanced('You can also send an application to connect your Project site below'));
+
+
+// ------- SOLUTION 1.5 -------
+function findLongestWordLength(str) {
+    const arrOfWords = str.split(' ');
+    const arrOfLengths = arrOfWords.map(item => item.length);
+
+    return Math.max(...arrOfLengths);
+}
+
+// console.log(findLongestWordLength('You can also send an application to connect your Project site below'));

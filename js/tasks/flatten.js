@@ -7,6 +7,8 @@
  * Output**: Array
  * */
 
+// ------- Solution 1.2 -------
+
 function flatten(array) {
   const res = [];
   for (let i = 0; i < array.length; i++) {
@@ -24,3 +26,25 @@ function flatten(array) {
 
 // console.log(flatten([[1], [[2, 3]], [[[4]]]]));
 // console.log(flatten([[1], [[2]], [[[3]]], [[[[4]]]], [[[[[5]]]]], [[[[[[6, 7, 8, 9]]]]]], 0]));
+
+
+
+// ------- Solution 2.1 -------
+function flattenAgain(...stack) {
+  const result = [];
+  while(stack.length) {
+    const element = stack.shift();
+    if (Array.isArray(element)) {
+      stack.unshift(...element)
+      continue;
+    }
+
+    result.push(element)
+  }
+
+  return result
+}
+
+// console.log(flattenAgain(1, [2, [[3]]], 4, 5, [6, [7]]));
+// console.log(flattenAgain('a', ['b', 2], 3, null, [[4], ['c']]));
+

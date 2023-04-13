@@ -38,18 +38,15 @@ const binaryTree = {
 };
 
 
-
-const binaryTreeTwo = {
-};
+const binaryTreeTwo = {};
 
 
-// ------- Solution 1.1 -------
+// ------- SOLUTION 1.1 -------
 function sumTree(tree) {
   let sum = tree.value ? tree.value : 0;
   if(tree.left) {
     sum += sumTree(tree.left)
-  }
-  ;
+  };
   if(tree.right) {
     sum += sumTree(tree.right)
   }
