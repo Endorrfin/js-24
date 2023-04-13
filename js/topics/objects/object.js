@@ -9,7 +9,18 @@
  */
 
 const months = {
-  January: 31, February: 28, March: 31, April: 30, May: 31, June: 30, July: 31, August: 31, September: 30, October: 31, November: 30, December: 31,
+  January: 31,
+  February: 28,
+  March: 31,
+  April: 30,
+  May: 31,
+  June: 30,
+  July: 31,
+  August: 31,
+  September: 30,
+  October: 31,
+  November: 30,
+  December: 31,
 };
 
 const monthsBySeason = {
@@ -233,7 +244,7 @@ const complexObjectCopy2 = structuredClone(complexObject);
 // console.log('complexObjectCopy2 using structuredClone', complexObjectCopy2); // amassing done deep clone
 
 
-// -------------- Case 1.3 - method limitations --------------
+// -------------- Case 1.4 - method limitations --------------
 class Developer {
   constructor(name, birthDate, title, skills = []) {
     this.name = name;
@@ -274,6 +285,80 @@ john.addSkill('TypeScript');
 // console.log(johnCopyUsingStructuredClone.addSkill); // undefined
 // console.log(johnCopyUsingStructuredClone.firstName); // undefined
 // console.log(johnCopyUsingStructuredClone instanceof Developer); // false
+
+
+
+
+// -------------- Case 2.1 - attribute of properties, get/set --------------
+
+const acc = {
+  id: 777,
+  name: 'Taras',
+  passHash: 's8kfjiWerlk34Dfoiwer',
+  role: 'user',
+};
+
+Object.defineProperty(acc, 'passHash', {
+  enumerable: false,
+  configurable: false,
+  writable: true,
+})
+
+Object.defineProperty(acc, 'role', {
+  enumerable: true,
+  configurable: false,
+  writable: false,
+})
+
+Object.defineProperty(acc, 'id', {
+  configurable: false,
+})
+
+Object.defineProperty(acc, 'country', {
+  value: 'Ukraine',
+  enumerable: true,
+})
+
+
+
+
+// acc.role = 'admin';
+// delete acc.name;
+for (let p in acc) {
+  // console.log(acc[p]);
+}
+
+
+
+// -------------- Case 2.2 - get/set --------------
+
+const employee = {
+  id: 888,
+  name: 'Bogdan',
+  surname: 'Ross',
+  passHash: 's8kfjiWerlk34Dfoiwer',
+  role: 'internship',
+};
+
+
+Object.defineProperty( employee, 'fullName', {
+  get: function() {
+    return (this.name + ' ' + this.surname);
+  },
+
+  set: function(str) {
+    const a = str.split();
+    this.name = a[0];
+    this.surname = a[1];
+  },
+
+});
+
+employee.fullName = 'Piter Pen';
+console.log(employee.fullName);
+
+
+
 
 
 
