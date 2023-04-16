@@ -310,7 +310,7 @@ The sort method changes the original array.
 
 // const array = [1, 4, 5, 8, 5, 1, 2, 7, 5, 2, 11];
 // let count = 0;
-// function linearSearch(array, item) {
+// function linear(array, item) {
 //     for(let i = 0; i < array.length; i++) {
 //         count += 1;
 //         if (array[i] === item) {
@@ -320,7 +320,7 @@ The sort method changes the original array.
 //     return null;
 // }
 //
-// console.log(linearSearch(array, 11));
+// console.log(linear(array, 11));
 // console.log('count', count);
 
 
