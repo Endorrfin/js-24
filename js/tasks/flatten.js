@@ -30,7 +30,7 @@ function flatten(array) {
 
 
 // ------- Solution 2.1 -------
-function flattenAgain(...stack) {
+function flattenUseStack(...stack) {
   const result = [];
   while(stack.length) {
     const element = stack.shift();
@@ -45,6 +45,6 @@ function flattenAgain(...stack) {
   return result
 }
 
-// console.log(flattenAgain(1, [2, [[3]]], 4, 5, [6, [7]]));
-// console.log(flattenAgain('a', ['b', 2], 3, null, [[4], ['c']]));
+// console.log(flattenUseStack(1, [2, [[3]]], 4, 5, [6, [7]]));
+// console.log(flattenUseStack('a', ['b', 2], 3, null, [[4], ['c']]));
 

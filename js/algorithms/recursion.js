@@ -30,3 +30,41 @@ const fibonacci = (n) => {
 
 // console.log(fibonacci(8));
 // console.log(fibonacci(10));
+
+
+
+// ------------ Solution 1.3 - FlattenSimple ------------
+function flattenSimple(...data) {
+  return data.reduce((acc, item) => (
+    Array.isArray(item) ? acc.concat(flattenSimple(...item)) : acc.concat(item)
+  ), []);
+}
+
+// console.log(flattenSimple('flattenSimple', [[1], [[2]], [[[3]]], [[[[4]]]], [[[[[5]]]]], [[[[[[6, 7, 8, 9]]]]]], 0]));
+// console.log(flattenSimple('flattenSimple', ['a', ['b', 2], 3, null, [[4], ['c']]]));
+
+// ------------ Solution 1.3 - FlattenHard ------------
+function flattenHard(...data) {
+  const result = [];
+  for (let i = 0; i < data.length; i++) {
+    const currentElement = data[i];
+    if (Array.isArray(currentElement)) {
+      result.push(...flattenHard(...currentElement));
+    } else {
+      result.push(currentElement);
+    }
+  }
+
+  return result;
+}
+
+// console.log(flattenHard('flattenHard', [[1], [[2]], [[[3]]], [[[[4]]]], [[[[[5]]]]], [[[[[[6, 7, 8, 9]]]]]], 0]));
+// console.log(flattenHard('flattenHard', ['a', ['b', 2], 3, null, [[4], ['c']]]));
+
+
+
+
+
+
+
+

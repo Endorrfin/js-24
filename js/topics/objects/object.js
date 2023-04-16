@@ -355,7 +355,7 @@ Object.defineProperty( employee, 'fullName', {
 });
 
 employee.fullName = 'Piter Pen';
-console.log(employee.fullName);
+// console.log(employee.fullName);
 
 
 

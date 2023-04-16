@@ -252,64 +252,55 @@ const swedishCar = {
 
 
 
+/*
+* #1
+* Создать объект с розничной ценой и количеством продуктов.
+* Этот объект должен содержать метод для получения общей стоимости всех товаров (цена * количество продуктов)
+*
+*
+* #2
+* Создать объект из предыдущей задачи.
+* Создать второй объект, который описывает количество деталей и цену за одну деталь.
+* Для второго объекта нужно узнать общую стоимость всех деталей, но нельзя создавать новые функции и методы.
+* Для этого “позаимствуйте” метод из предыдущего объекта.
+*
+* */
 
-
-/**
-|--------------------------------------------------
-  === <<<---  TASK - THIS --->>>  ===
-#1
-Создать объект с розничной ценой и количеством продуктов.
-Этот объект должен содержать метод для получения общей стоимости всех товаров (цена * количество продуктов)
-
-#2
-Создать объект из предыдущей задачи.
-Создать второй объект, который описывает количество деталей и цену за одну деталь.
-Для второго объекта нужно узнать общую стоимость всех деталей, но нельзя создавать новые функции и методы.
-Для этого “позаимствуйте” метод из предыдущего объекта.
-
-|--------------------------------------------------
-*/
-
-// // #1
-// let product1 = {
-//   price: 40,
-//   counts: 20,
-//   getTotalPrice() {
-//     return this.price * this.counts;
-//   },
-// };
+let product1 = {
+  price: 40,
+  counts: 20,
+  getTotalPrice() {
+    return this.price * this.counts;
+  },
+};
 
 // console.log(product1.getTotalPrice()); // 800
 
 
-// // #2
-// let product2 = {
-//   price: 100,
-//   counts: 12,
-// };
+let product2 = {
+  price: 100,
+  counts: 12,
+};
 
 // const totalPriceProduct2 = product1.getTotalPrice.call(product2);
 // console.log(totalPriceProduct2); // 1200
-
 // console.log(product1.getTotalPrice.apply(product2));
 
 
-/**
-|--------------------------------------------------
-  === <<<---  TASK  --->>>  ===
-Даны объект и функция:
-let sizes = {width: 5, height: 10},
-getSquare = function () {return this.width * this.height};
-Не изменяя функцию или объект, получить результат функции
-getSquare для объекта sizes
 
-|--------------------------------------------------
-*/
+/*
+* Даны объект и функция:
+* let sizes = {width: 5, height: 10},
+* getSquare = function () {return this.width * this.height};
+* Не изменяя функцию или объект, получить результат функции
+* getSquare для объекта sizes
+*
+* */
 
-// let sizes = {
-//   width: 5,
-//   height: 10
-// },
+let sizes = {
+  width: 5,
+  height: 10
+}
 
 // getSquare = function () {
 //   return this.width * this.height
@@ -320,8 +311,8 @@ getSquare для объекта sizes
 
 
 /**
-|--------------------------------------------------
-  === <<<---  TASK this.bind --->>>  ===
+ *
+ TASK this.bind
 let element = {
     height: 25,
     getHeight: function () {return this.height;}
@@ -332,17 +323,17 @@ getElementHeight(); // undefined
 
 Измените функцию getElementHeight таким образом, чтобы можно
 было вызвать getElementHeight() и получить 25.
-|--------------------------------------------------
+
 */
 
-// let element = {
-//   height: 25,
-//   getHeight: function () {
-//     return this.height;
-//   }
-// };
+let element = {
+  height: 25,
+  getHeight: function () {
+    return this.height;
+  }
+};
 
-// let getElementHeight = element.getHeight.bind(element);
+let getElementHeight = element.getHeight.bind(element);
 // console.log(getElementHeight()); // 25
 
 
@@ -352,6 +343,7 @@ getElementHeight(); // undefined
     * то this которая находиться внутри ключевого слова function
     * будет ссылаться именно на контекст этой функции
     * */
+
 const Muhtar = {
     name: 'Keks',
     friends: ['Shakik', 'Barsik', 'Sirko', 'Bim'],
@@ -447,18 +439,18 @@ const myObject2 = {
  */
 
 // -------------- Example 1.1 --------------
-const product1 = {
+const product3 = {
   label: 'Adidas',
   showLabel () {
-    console.log(product1.label);
+    console.log(product3.label);
   },
 };
 
-// product1.showLabel();
+// product3.showLabel();
 
 
 // -------------- Example 1.2 --------------
-const product2 = {
+const product4 = {
   label: 'Adidas',
   showLabel () {
     console.log(this); // {label: "Adidas", showLabel: ƒ}
@@ -466,7 +458,7 @@ const product2 = {
   },
 };
 
-// product2.showLabel();
+// product4.showLabel();
 
 
 
@@ -568,6 +560,149 @@ function Maccoffee() {
 const coffee7 = new Maccoffee()
 // console.log(coffee7); // {}
 // console.log(coffee7.strong); // undefined
+
+
+
+// -------------- Case 4.1 - this | шаблон виклику метода --------------
+// В даному випадку this - посилання на поточний обʼєкт
+
+const employee = {
+  name: 'Olivia',
+  surname: 'Karl',
+  taxId: 3045672365,
+
+  method: function() {
+    // console.log(this.taxId);
+  }
+};
+
+employee.method();
+
+
+// -------------- Case 4.2 - this | шаблон виклику конструктора --------------
+// В даному випадку this - обʼєкт, що створюється через функцію конструктор
+
+function Currency (a) {
+  this.p = a;
+  // console.log(this.p);
+}
+
+new Currency('USD');
+new Currency('EUR');
+new Currency('UAH');
+
+
+
+// -------------- Case 4.3 - this | функція, яка не є методом і не є конструктором, this завжди вказує на window || undefined if use strict --------------
+// В даному випадку this - буде посилатись на глобальний обʼєкт window, оскільки виклик обʼєкта відбувається в контексті window
+
+function func () {
+  // console.log(this);
+}
+
+func();
+
+
+// -------
+function Cons() {
+  this.p = 444;
+  var self = this;
+  function pM() {
+    console.log(self.p);
+  }
+  this.method = function() {
+    pM();
+  };
+}
+// (new Cons()).method();
+
+
+// -------------- Case 4.4 - this | call & apply --------------
+// В даному випадку this - буде посилатись на глобальний обʼєкт window, оскільки виклик обʼєкта відбувається в контексті window
+
+
+const soccer = {
+  number: 11,
+  country: 'Brazil',
+  method: function() {
+    console.log(this.number);
+  }
+};
+
+const TRAP = {
+  number: 'This is port Panama',
+};
+
+// soccer.method(TRAP);
+// soccer.method.call(TRAP);
+
+
+
+const soccerWithParam = {
+  number: 11,
+  country: 'Brazil',
+  method: function(a, b) {
+    console.log(this.number, a, b);
+  }
+};
+
+const trapParam = {
+  number: 'This is port Panama',
+};
+
+// soccerWithParam.method.call(trapParam, 34, 56);
+// soccerWithParam.method.apply(trapParam, [34, 56]);
+
+
+// How it's use
+// Case I
+function funcArgNotWorking() {
+  var arg = agruments;
+  console.log(arg, arg instanceof Array);
+}
+
+// funcArgNotWorking(4, 5, 6, 7, 3, 100);
+
+
+function funcArgWorking() {
+  var arg = [].slice.call(arguments);
+  console.log(arg, arg instanceof Array);
+}
+
+// funcArgWorking(4, 5, 6, 7, 3, 100);
+
+
+// Case II
+function MoneyNotWorking() {
+  this.p = 'Знову властивість P';
+  function pM() {
+    console.log(this.p);
+  };
+  this.method = function() {
+    pM();
+  };
+}
+// (new MoneyNotWorking()).method();
+
+
+
+function MoneyWorking() {
+  this.p = 'Знову властивість P';
+  function pM() {
+    console.log(this.p);
+  };
+  this.method = function() {
+    pM.call(this);
+  };
+}
+// (new MoneyWorking()).method();
+
+
+
+
+
+
+
 
 
 
