@@ -139,6 +139,40 @@ const consoleOutput = () => {
 // console.log(consoleOutput());
 
 
+function createButton () {
+    const element = document.createElement('button');
+    element.id = 'btn';
+    element.className = 'button';
+    element.innerHTML = 'Click me',
+    element.style.height = '40px';
+    element.style.width = '90px';
+    element.style.backgroundColor = 'orange';
+    element.style.color = 'white';
+    element.style.position = 'absolute';
+    element.style.top = '300px';
+    element.style.left = '10px';
+    element.addEventListener('click', runClick);
+    document.body.appendChild(element);
+};
+
+// createButton();
+
+function runClick () {
+    console.log('A');
+
+    document.querySelector('button').addEventListener('click', (() => {
+        console.log('Button was clicked');
+    }));
+
+    console.log('B');
+}
+
+
+
+
+
+
+
 
 
 
