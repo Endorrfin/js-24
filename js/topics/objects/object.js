@@ -359,6 +359,104 @@ employee.fullName = 'Piter Pen';
 
 
 
+// -------------- Case 3.1 - property of fields --------------
+/*
+* enumerable - якщо true - то можна ітерувати, бачити перебираючи, або роздрукувати поля обʼєкта, false - ні
+* writable - якщо true - то можна змінювати поля обʼєкта, false - ні
+* configurable - якщо true - то можна видаляти поля обʼєкта, false - ні
+* */
+
+const person1 = {
+  name: 'Tom',
+  age: 27,
+
+  get isAdult () {
+    return this.age >= 18;
+  }
+};
+
+Object.defineProperty(person1, 'age', {
+  value: 21,
+  writable: false
+});
+
+Object.defineProperties(person1, {
+  age: {
+    value: 21,
+    writable: false
+  },
+  surname: {
+    value: 'Vim',
+  }
+});
+
+// person1.age = 20; // read only
+// person1.surname = 'Bulatov'; // read only
+
+const descriptor = Object.getOwnPropertyDescriptor(person1, 'surname');
+// console.log('-- descriptor --', descriptor);
+
+const descriptors = Object.getOwnPropertyDescriptors(person1);
+// console.log('== descriptors ==', descriptors);
+
+const person2 = Object.create(
+    Object.prototype,
+    {
+      name: {
+        value: 'Monica',
+        enumerable: true,
+        writable: true,
+        configurable: true,
+      },
+      age: {
+        value: 24,
+        enumerable: true,
+        writable: true,
+        configurable: true,
+      },
+
+      isAdult: {
+        get () {
+          return this.age >= 18;
+        },
+        // set () {
+        //
+        // }
+
+      }
+    }
+)
+
+// person1.name = 'Leonid';
+// person2.name = 'Julia';
+
+// delete person1.name;
+// delete person2.name;
+
+console.log(
+    // 'PERSON-1 NAME', person1.name,
+    // 'PERSON-2 NAME', person2.name,
+);
+
+console.log(
+    // 'Person1', person1.isAdult,
+    // 'Person2', person2.isAdult,
+);
+
+
+function isGetter (obj, field) {
+  const descriptor = Object.getOwnPropertyDescriptor(obj, field)
+  return descriptor.hasOwnProperty('get')
+}
+
+console.log(
+    // 'NAME', isGetter(person1, 'name'),
+    // 'IsAdult', isGetter(person1, 'isAdult'),
+);
+
+
+
+
 
 
 
