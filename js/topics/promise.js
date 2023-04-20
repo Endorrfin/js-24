@@ -284,4 +284,29 @@ asyncDelay();
 
 
 
+// ------- CASE QUIZ - Execution order -------
+/*
+* Call back отрабатывает синхронно, а resolve асинхронно
+*
+* */
+
+function executionOrder () {
+    console.log('A');
+    const myPromise = new Promise((resolve, reject) => {
+        console.log('B');
+        // setTimeout(() => {
+            resolve('E');
+        // }, 0);
+        console.log('C');
+    }).then((value) => {
+        console.log(value) // it's asynchronous code
+    })
+
+    console.log('D');
+}
+
+// executionOrder();
+
+
+
 
