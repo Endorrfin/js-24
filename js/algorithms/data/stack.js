@@ -55,7 +55,7 @@ function nextArrayItem (len) {
 }
 
 // nextArrayItem(555555);
-console.log('SUCCESS #1')
+// console.log('SUCCESS #1')
 
 
 function nextArrayItemWithTimeout (len) {
@@ -64,6 +64,6 @@ function nextArrayItemWithTimeout (len) {
   }, 0);
 }
 
-nextArrayItemWithTimeout(555555);
-console.log('SUCCESS #2')
+// nextArrayItemWithTimeout(555555);
+// console.log('SUCCESS #2')
 
