@@ -309,4 +309,55 @@ function executionOrder () {
 
 
 
+// ------- CASE - PROMISE CHAINS -------
+const myPromise = new Promise(function(resolve, reject) {
+    setTimeout(function() {
+        resolve();
+    }, 500);
+});
+
+
+// id
+myPromise.then(function() {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            let id = 777;
+            resolve(id);
+        }, 500);
+    });
+})
+
+
+// rawData
+.then(function(id) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            const rawData = {
+                id: id,
+                name: 'Leonid',
+                surname: 'Kirnadz'
+            };
+            resolve(rawData);
+        }, 500);
+    });
+})
+
+
+// data
+.then(function(rawData) {
+    return new Promise(function(resolve, reject) {
+        setTimeout(function() {
+            const data = `${rawData.id} ${rawData.name} ${rawData.surname}`;
+            resolve(data);
+        }, 500);
+    });
+})
+
+
+// set data
+.then(function(data) {
+    // console.log('DATA IS:', data);
+})
+
+
 
