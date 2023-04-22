@@ -26,6 +26,8 @@ const student4 = {
 };
 
 
+// -------------- Case 1.1 - how work stack --------------
+
 const studentArray = [student1, student2, student3, student4];
 
 
@@ -45,3 +47,23 @@ stack.add(student2);
 // console.log(stack);
 // console.log(stack.next());
 // console.log(stack);
+
+
+// -------------- Case 1.2 - how work stack --------------
+function nextArrayItem (len) {
+  if (len > 0) nextArrayItem(len - 1);
+}
+
+// nextArrayItem(555555);
+console.log('SUCCESS #1')
+
+
+function nextArrayItemWithTimeout (len) {
+  if (len > 0) setTimeout(function() {
+    nextArrayItem(len - 1);
+  }, 0);
+}
+
+nextArrayItemWithTimeout(555555);
+console.log('SUCCESS #2')
+
