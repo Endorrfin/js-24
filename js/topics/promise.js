@@ -308,5 +308,42 @@ function executionOrder () {
 // executionOrder();
 
 
+// ------- EXAMPLES  -------
+
+const greetAfter5Sec = () => {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
+            console.log('HEYYY!!!');
+            resolve();
+        }, 5000);
+    });
+};
+
+// greetAfter5Sec().then(() => {
+    // greetAfter5Sec();
+// });
+
+const fakeRequest = () => {
+    return new Promise((resolve, reject) => {
+        const rand = Math.random();
+        if (rand > 0.5) {
+            resolve();
+        }
+        else {
+            reject();
+        }
+    });
+};
+
+// fakeRequest()
+//     .then(() => {
+//         console.log('INSIDE .THEN()');
+//     })
+//     .catch(() => {
+//         console.log('INSIDE .CATCH() SOMETHING WENT WRONG!!! REJECTED!');
+//     });
+
+
+
 
 
