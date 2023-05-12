@@ -36,24 +36,8 @@ const removeDuplicates = (array) => {
 };
 
 // console.log(removeDuplicates(array));
-
-
-// Case III
-const removeDuplicatesName = (array3) => {
-    // debugger;
-    const uniqueValues = [];
-    const seenMap = {};
-
-    for (const item of array3) {
-        if (seenMap[item]) continue;
-        seenMap[item] = true;
-        uniqueValues.push(item);
-    }
-
-    return uniqueValues;
-};
-
-// console.log(removeDuplicatesName(array3));
+// console.log(removeDuplicates(array2));
+// console.log(removeDuplicates(array3));
 
 
 // ------- Example II - Получить параметры из URL-адреса и преобразовать их в объект -------
