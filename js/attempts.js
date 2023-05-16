@@ -1,5 +1,31 @@
 // -------------- Solution 1.1 case I --------------
 
+const array = [1, 2, 3, 4, 5, 7, 9, 11, 12, 14, 16, 18, 20];
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+let a1 = [[1,2,3],[4,5,6],[7,8,9]];
+let b1 = a1[0][2];
+// console.log(b1);
+
+const even = (element) => element % 2 === 0;
+// console.log(array.some(even));
+
+
 
 var f = function() {
   console.log(1);

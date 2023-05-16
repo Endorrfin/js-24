@@ -1,9 +1,15 @@
 let arrayNumbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 
+const users = [
+  { id: 'fe34', permissions: ['read', 'write'], },
+  { id: 'a198', permissions: ['edit'], },
+  { id: '18aa', permissions: ['delete', 'read', 'write'], }
+];
+
 
 // ============ HOW WORK EVERY ============
 
-// -------------- Example 1.1 case I --------------
+// -------------- Case 1.1 --------------
 /*
 * Написать аналог метода every.
 * Создайте функцию every, она должна принимать первым аргументом массив чисел (обязательно проверьте что передан массив) вторым аргументом callback (обязательно проверьте что передана функция) функция должна возвращать true или false в зависимости от результата вызова callback (проверить число больше 5).
@@ -31,6 +37,8 @@ const checkIsNumber = everyFunc([1, 2, 3, 4, 5, 6, 7, 8, 9, 10], function(num) {
 // console.log('checkIsNumber', checkIsNumber);
 
 
-// -------------- Example 2.1 case I --------------
+// -------------- Case 2.1 --------------
+const hasAllReadPermission = users.every(user => user.permissions.includes('read'));
 
+// console.log(hasAllReadPermission);
 
