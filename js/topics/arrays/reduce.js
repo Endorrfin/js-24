@@ -110,3 +110,46 @@ const mostExperiencePilot = pilots.reduce((oldest, pilot) => {
 // console.log(mostExperiencePilot);
 
 
+
+// !====================================================================================
+/*
+
+Метод reduce() настолько хорош, что с его помощью можно создавать остальные методы массива, например map() или filter():
+
+* */
+
+// -------------- Case 5.1 - map --------------
+
+const myMap = (array, fn) => {
+    return array.reduce((mappedArray, element) => {
+        return [...mappedArray, fn(element)]
+    }, [])
+}
+
+// console.log(myMap(array, n => n * 5));
+
+
+// -------------- Case 5.2 - filter --------------
+const myFilter = (array, fn) => {
+    return array.reduce((filteredArray, element) => {
+        return fn(element)
+            ? [...filteredArray]
+            : [...filteredArray, element]
+    }, [])
+}
+
+
+// console.log(myFilter(array, n => n % 5 !== 0));
+
+
+// -------------- Case 5.3 - flat --------------
+function flatDeep(array) {
+    return array.reduce((flattenArray, element) => {
+        return Array.isArray(element)
+            ? [...flattenArray, ...flatDeep(element)]
+            : [...flattenArray, element]
+    }, [])
+}
+
+// console.log(flatDeep([1, 2, 3, [4, [[[5, [6, 7]]]], 8, [[[9, [[[[[10]]]]]]]]]]));
+

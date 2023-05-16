@@ -5,6 +5,8 @@
 const nums1 = [1, 2, 3, 4, 5];
 const nums2 = [6, 7, 8, 9, 10];
 
+// -------------- Case 1.1 --------------
+
 // ! Длинный способ
 let newArrayLong = nums1.concat(nums2);
 // console.log(newArrayLong);
@@ -14,6 +16,9 @@ let newArrayShort = [...nums1, ...nums2];
 // console.log(newArrayShort);
 
 
+
+
+// -------------- Case 2.1 --------------
 
 /*
 Оператор spread с деструктуризацией можно применять для присвоения оставшихся элементов новой переменной:
@@ -44,6 +49,8 @@ const {
 // console.log(student);
 
 
+// -------------- Case 3.1 --------------
+
 /*
 Удаление повторяющихся элементов из массива
 */
@@ -54,3 +61,9 @@ const uniqueNumbers = [...new Set(numbers)]
 
 // console.log([... 'Vasyl Krupka']);
 // console.log({... 'Vasyl Krupka'});
+
+
+
+// -------------- Case 4.1 --------------
+const todos = ['Написание статьи', 'Вычитка'];
+// console.log([...todos, 'Публикация']);
