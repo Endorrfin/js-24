@@ -201,6 +201,18 @@ function doSomething2 () {
 // console.log(value2); // 2
 
 
+// -------------- Case 2.1 - Temporal dead zone (TDZ) --------------
+let someVariable = 'Hello';
+
+if (true) {
+  // console.log(someVariable); // Uncaught ReferenceError: Cannot access 'someVariable' before initialization
+
+
+  let someVariable = 'world';
+}
+
+
+
 
 
 

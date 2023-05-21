@@ -1,8 +1,23 @@
 
 // ============ RECURSION ============
-const array = [0, 3, 2, 5, 6, 8, 1, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6, 3, 32] // [-5, -1, 0, 1, 1, 1, 2...]
+const array = [0, 3, 2, 5, 6, 8, 1, 9, 4, 2, 1, 2, 9, 6, 4, 1, 7, -1, -5, 23, 6, 2, 35, 6, 3, 32];
 let count = 0;
 
+
+// ------------ Solution 1.0 - Factorial ------------
+const sum = (n) => {
+  if (n === 0) return 0;
+  if (n === 1) return 1;
+
+  return n + sum(n - 1);
+}
+
+// console.log(sum(0));
+// console.log(sum(1));
+// console.log(sum(5));
+// console.log(sum(10));
+// console.log(sum(100));
+// console.log(sum(1000));
 
 // ------------ Solution 1.1 - Factorial ------------
 const factorial = (n) => {
