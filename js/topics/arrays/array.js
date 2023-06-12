@@ -146,6 +146,26 @@ const newListOfCountry = listOfCountry.map(({
 
 
 
+// ============ COPY ARRAY -  How it affects performance  ============
+const initialArray = new Array(10_000);
+
+// -------------- Example 1.1 - 367 ms --------------
+const copyArray1 = initialArray.slice(0);
+
+
+
+// -------------- Example 1.2 - 469 ms --------------
+const copyArray2 = initialArray.map((element) => element);
+
+
+// -------------- Example 1.3 - 512 ms --------------
+const copyArray3 = [...initialArray];
+
+
+// -------------- Example 1.4 - 1436 ms --------------
+const copyArray4 = Array.from(initialArray);
+
+
 
 
 
