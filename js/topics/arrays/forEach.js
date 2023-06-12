@@ -210,3 +210,62 @@ function vowelCountOptimize(str) {
 // console.log('case II', vowelCountOptimize('Madagascar'));
 // console.log('case II', vowelCountOptimize('Ukraine'));
 
+
+// -------------- Example 2.1 - case I - 2.1 ms --------------
+const myHugeArray1 = Array.from(Array(1000).keys());
+// console.log('1️⃣ ------- myHugeArray1 -------', myHugeArray1);
+
+const myHugeArray2 = [...Array(100).keys()];
+// console.log('2️⃣ ------- myHugeArray2 -------', myHugeArray2);
+
+const n = 1000;
+const myHugeArray3 = [...Array(n + 1).keys()].slice(1);
+// console.log('3️⃣ ------- myHugeArray3 -------', myHugeArray3);
+
+
+
+const hugeArray1 = new Array(1_000_0);
+const timeStart1 = performance.now();
+hugeArray1.forEach((element, index, array) => {
+    // console.log('Case #1', element, index);
+});
+
+const timeFinish1 = performance.now();
+// console.log(`#1. TIME Elapsed: ${(timeFinish1 - timeStart1).toFixed(2) / 1000} seconds.`);
+
+
+// -------------- Example 2.2 - case II (for -> forward) - 1.6 ms --------------
+const hugeArray2 = new Array(1_000_0);
+const timeStart2 = performance.now();
+for (let index = 0; index < hugeArray2.length; index++) {
+    // console.log('Case #2', hugeArray2[index]);
+};
+
+const timeFinish2 = performance.now();
+// console.log(`#2. TIME Elapsed: ${(timeFinish2 - timeStart2).toFixed(2) / 1000} seconds.`);
+
+
+// -------------- Example 2.3 - case III (for -> reverse) - 1.5 ms --------------
+const hugeArray3 = new Array(1_000_0);
+const timeStart3 = performance.now();
+for (let index = hugeArray3.length; index > 0; index--) {
+    // console.log('Case #3', hugeArray3[index]);
+};
+
+const timeFinish3 = performance.now();
+// console.log(`#3. TIME Elapsed: ${(timeFinish3 - timeStart3).toFixed(2) / 1000} seconds.`);
+
+
+
+// -------------- Example 2.4 - case IV - 11.7 ms --------------
+const hugeArray4 = new Array(1_000_0);
+const timeStart4 = performance.now();
+for (const element of hugeArray4) {
+    // console.log('Case #4', element);
+};
+
+const timeFinish4 = performance.now();
+// console.log(`#4. TIME Elapsed: ${(timeFinish4 - timeStart4).toFixed(2) / 1000} seconds.`);
+
+
+

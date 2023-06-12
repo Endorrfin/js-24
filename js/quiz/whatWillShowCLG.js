@@ -262,6 +262,54 @@ const whatShowConsole = () => {
 // console.log(whatShowConsole());
 
 
+const arrayNumbers = [1, 2, 3, 4];
+for (var index = 0; index < arrayNumbers.length; index++); {
+  // console.log(`The number is ${arrayNumbers[index]}`) // reason ;
+}
+
+for (var index = 0; index < arrayNumbers.length; index++) {
+  // console.log(`The number is ${arrayNumbers[index]}`)
+}
+
+
+
+const fruits1 = ['mango', 'apple'];
+fruits1.length = 0;
+// console.log(fruits1[0]); // array become clearable
+
+
+const fruits2 = ['mango', 'apple'];
+fruits2.length = 3;
+// console.log(fruits2) // ['mango', 'apple', undefined];
+
+
+// -------------- case 14 - context --------------
+var length = 4;
+function callback() {
+  // console.log(this.length);
+}
+
+const object = {
+  length: 5,
+  method() {
+    arguments[0](); // context
+  }
+};
+
+object.method(callback, 1, 2);
+
+
+
+// -------------- case 15 - 1,5 !== 1.5 --------------
+const someResult = (1,5 - 1) * 2; // 1,5 return the most right value
+// console.log(someResult);
+
+
+// -------------- case 16 - return boolean --------------
+const groceries = ['apple', null, 'milk', undefined, 'bread', '']
+const list = groceries.filter(Boolean); // will remove all value that transform to false
+// console.log(list);
+
 
 
 
