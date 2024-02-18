@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Pseudo Scatter Plot</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+        text {
+            font-size: 72px;
+            font-family: 'Share Tech', sans-serif;
+        }
+        .first-bar {
+            fill: white;
+            stroke: black;
+            stroke-width: 20px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>Pseudo Visualizations</h2>
+<hr>
+<h3>SVG #1 Pseudo Scatter Plot</h3>
+<div>
+    <svg
+            width="960"
+            height="500"
+            viewBox="0 0 960 500"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <rect width="960" height="500" fill="white" />
+        <circle cx="132.5" cy="391.5" r="34.5" fill="black" />
+        <circle cx="330.5" cy="349.5" r="34.5" fill="black" />
+        <circle cx="410.5" cy="192.5" r="34.5" fill="black" />
+        <circle cx="527.5" cy="257.5" r="34.5" fill="black" />
+        <circle cx="688.5" cy="119.5" r="34.5" fill="black" />
+        <circle cx="878.5" cy="55.5" r="34.5" fill="black" />
+    </svg>
+</div>
+
+
+<hr>
+<h3>SVG #2 Pseudo Bar Chart</h3>
+<div>
+    <svg
+            width="960"
+            height="500"
+    >
+<!--        <rect width="960" height="500" fill="white"/>-->
+        <rect
+                x="43"
+                y="34"
+                width="190"
+                height="424"/>
+        <rect
+                x="270"
+                y="161"
+                width="190"
+                height="297"/>
+        <rect
+                x="497"
+                y="253"
+                width="190"
+                height="205"/>
+        <rect
+                x="724"
+                y="343"
+                width="190"
+                height="115"/>
+
+    </svg>
+</div>
+
+
+<hr>
+<h3>SVG #3 Pseudo Horizontal Bar Chart</h3>
+<div>
+    <svg
+            width="960"
+            height="500"
+            viewBox="0 0 960 500"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+    >
+        <rect width="960" height="500" fill="white" />
+        <rect
+                class="first-bar"
+                x="122"
+                y="27"
+                width="802"
+                height="97"
+                style="fill: blue"
+        />
+        <rect
+                x="122"
+                y="143"
+                width="515"
+                height="97"
+                fill="black"
+        />
+        <rect
+                x="122"
+                y="260"
+                width="361"
+                height="97"
+                fill="black"
+        />
+        <rect
+                x="122"
+                y="376"
+                width="241"
+                height="97"
+                fill="black"
+        />
+        <text fill="black" x="50" y="100">A</text>
+        <text fill="black" x="50" y="210">B</text>
+        <text fill="black" x="50" y="330">C</text>
+        <text fill="black" x="50" y="450">D</text>
+    </svg>
+</div>
+
+<hr>
+<h3>SVG #4 Pseudo Line Chart</h3>
+<div>
+    <svg width="960" height="300" viewBox="0 0 960 500" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect width="960" height="500" fill="white"/>
+        <path d="M72 438L264.685 175.971L387.048 318.255L520.662 175.971L659.901 298.533L899 52" stroke="black" stroke-width="28" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+</div>
+
+</body>
+</html>

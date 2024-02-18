@@ -1,2 +1,6 @@
+
+# file: ~/.gitignore_global
 .DS_Store
+.idea
 node_modules
+js-24.iml

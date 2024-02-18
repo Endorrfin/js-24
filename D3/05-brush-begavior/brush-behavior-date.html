@@ -1,0 +1,90 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3 Brush Behavior with Dates</title>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+</head>
+<body>
+    <svg width="600" height="300"></svg>
+
+    <script>
+      // Sample data with date values
+      const data = [
+        { date: new Date("2022-01-01"), value: 10 },
+        { date: new Date("2022-02-01"), value: 20 },
+        { date: new Date("2022-03-01"), value: 15 },
+        { date: new Date("2022-04-01"), value: 25 },
+        { date: new Date("2022-05-01"), value: 18 },
+        { date: new Date("2022-06-01"), value: 14 },
+        { date: new Date("2022-07-01"), value: 24 },
+        { date: new Date("2022-08-01"), value: 28 },
+        { date: new Date("2022-09-01"), value: 12 },
+        { date: new Date("2022-10-01"), value: 6 },
+        { date: new Date("2022-11-01"), value: 34 },
+        { date: new Date("2022-12-01"), value: 26 },
+        { date: new Date("2023-01-01"), value: 18 },
+        { date: new Date("2023-02-01"), value: 20 },
+        { date: new Date("2023-03-01"), value: 16 },
+        // Add more data points as needed
+      ];
+
+      // Create an SVG container
+      const svg = d3.select("svg");
+
+      // Create a time scale for the x-axis
+      const xScale = d3.scaleTime()
+          .domain(d3.extent(data, d => d.date))
+          .range([0, 600]);
+
+      // Create a linear scale for the y-axis
+      const yScale = d3.scaleLinear()
+          .domain([0, d3.max(data, d => d.value)])
+          .range([300, 0]);
+
+      // Create a line function
+      const line = d3.line()
+          .x(d => xScale(d.date))
+          .y(d => yScale(d.value));
+
+      // Append the line to the SVG
+      svg.append("path")
+          .data([data])
+          .attr("fill", "none")
+          .attr("stroke", "steelblue")
+          .attr("d", line);
+
+      // Create a brush
+      const brush = d3.brushX()
+          .extent([[0, 0], [600, 300]])
+          .on("brush", brushed);
+
+      // Append the brush to the SVG
+      const brushGroup = svg.append("g")
+          .call(brush);
+
+      // Function to handle the brushing event
+      function brushed() {
+        const selection = d3.event.selection;
+
+        // Update the xScale domain based on the brush selection
+        if (selection) {
+          const selectedDomain = selection.map(xScale.invert);
+          xScale.domain(selectedDomain);
+        }
+
+        // Update the x-axis and line chart
+        svg.select("path")
+            .attr("d", line);
+
+        svg.select("g").call(d3.axisBottom(xScale));
+
+        // Log the selected date range to the console
+        console.log("Selected Date Range:", xScale.domain());
+      }
+    </script>
+
+</body>
+</html>

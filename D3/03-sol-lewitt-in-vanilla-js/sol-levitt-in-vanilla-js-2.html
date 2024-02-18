@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Sol LeWitt Reproduction Vertical</title>
+    <link
+            href="https://fonts.googleapis.com/css2?family=Share+Tech&display=swap"
+            rel="stylesheet"
+    />
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Sol LeWitt in Vanilla JS</h2>
+<hr>
+
+<script>
+  const width = window.innerWidth; // window is optional, sometimes
+  const height = window.innerHeight;
+
+  const svg = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'svg'
+  );
+  svg.setAttribute('width', width);
+  svg.setAttribute('height', height);
+  document.body.appendChild(svg);
+
+  const mask = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'mask'
+  );
+  mask.setAttribute('id', 'circle-mask');
+  svg.appendChild(mask);
+
+  const circle = document.createElementNS(
+      'http://www.w3.org/2000/svg',
+      'circle'
+  );
+  circle.setAttribute('cx', width / 2);
+  circle.setAttribute('cy', height / 2);
+  circle.setAttribute('r', 200);
+  circle.setAttribute('fill', 'white');
+  mask.appendChild(circle);
+
+  const n = 100;
+  for (let i = 0; i < n; i++) {
+    const rect = document.createElementNS(
+        'http://www.w3.org/2000/svg',
+        'rect'
+    );
+    rect.setAttribute('y', i * 20);
+    rect.setAttribute('width', width);
+    rect.setAttribute('height', 10);
+    rect.setAttribute('mask', 'url(#circle-mask)');
+    svg.appendChild(rect);
+  }
+</script>
+
+
+</body>
+</html>
