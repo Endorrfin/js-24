@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>D3.js</title>
+    <style>
+        body {
+            margin: 50px;
+            overflow: hidden;
+        }
+
+        rect {
+            margin-top: 30px;
+            stroke: black;
+            fill: red;
+            stroke-width: 20px;
+            transition: all 2000ms;
+        }
+        rect:hover {
+            fill: green;
+            stroke-width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+
+<h2>SVG Fundamentals</h2>
+<!-- UNIT 1. Introduction -->
+
+<h3>SVG #1</h3>
+<div>
+    <svg>
+        <circle cx="50" cy="50" r="50" fill="yellow"></circle>
+    </svg>
+</div>
+
+<h3>SVG #2</h3>
+<div>
+    <svg>
+        <circle cx="100" cy="50" r="500"></circle>
+    </svg>
+</div>
+
+<h3>SVG #3</h3>
+<div>
+    <svg width="640" height="260">
+        <circle cx="150" cy="50" r="50" fill="red"></circle>
+    </svg>
+</div>
+
+<h3>SVG #4</h3>
+<div>
+    <svg width="640" height="500">
+        <circle cx="50" cy="50" r="50"></circle>
+        <circle cx="200" cy="50" r="50" fill="red"></circle>
+        <circle cx="200" cy="50" r="30" fill="green"></circle>
+        <circle cx="350" cy="50" r="50" fill="blue"></circle>
+        <circle cx="50" cy="50" r="50"></circle>
+
+        <rect
+                x="200"
+                y="100"
+                width="400"
+                height="200"
+                fill="yellow"
+                stroke="navy"
+                stroke-width="10"
+        />
+
+        <line
+                x1="0"
+                y1="0"
+                x2="100"
+                y2="100"
+                stroke="navy"
+        ></line>
+    </svg>
+</div>
+
+<script type="module" src="01-svg/introduction.js"></script>
+
+</body>
+</html>

@@ -74,7 +74,7 @@ const counterB = new Counter({ initialValue: 100, step: 15 });
 
 
 
-// -------------- General introduction to PROTOTYPE INHERITANCE --------------
+// -------------- General 01-svg to PROTOTYPE INHERITANCE --------------
 
 /**
  * У каждой функции, кроме стрелочных есть внутреннее свойство prototype, которое содержит объект и хранит ссылку на саму эту функцию.
