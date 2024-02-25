@@ -3,35 +3,35 @@
 JAVASCRIPT
 1. algorithms & data structures
 2. design-patterns
-   3. behavioral
-      4. chain-of-responsibility
-      5. command
-      6. iterator
-      7. mediator
-      8. memento
-      9. observer
-      10. state
-      11. strategy
-      12. template
-      13. visitor
-   14. creational
-       15. abstract-factory
-       15. builder
-       16. factory-method
-       17. prototype
-       18. singleton
-   19. structural
-       20. adapter
-       21. bridge
-       22. composite
-       23. decorator
-       24. facade
-       25. flyweight
-       26. proxy
+   1. behavioral
+         chain-of-responsibility
+         command 
+         iterator
+         mediator
+         memento
+         observer
+         state
+         strategy
+         template
+         visitor
+   2. creational
+         abstract-factory
+         builder
+         factory-method
+         prototype
+         singleton
+   3. structural
+         adapter
+         bridge
+         composite
+         decorator
+         facade
+         flyweight
+         proxy
 3. topics
-   4. arrays
-   5. objects
-   6. oop
+      arrays
+      objects
+      oop
 4. testing
 
 
@@ -47,3 +47,4 @@ TYPESCRIPT
      4.1.4 readonly
      4.1.5 record
      4.1.6 required
+5. unit-05-advanced utility types

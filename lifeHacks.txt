@@ -35,7 +35,8 @@ TYPESCRIPT
 2. ts | unit-02-advancedTypes
 3. ts | unit-03-classes
 4. ts | unit-04-advanced | utilityTypes
-
+5. ts | utility types | omit, partial, pick, readonly, record, required
+6. ts | advanced | utility types
 
 
 GIT
@@ -44,15 +45,14 @@ ts | utility-types
 js | sum-tree & prototype-delay
 js | optimize & refactoring
 
-ts | utility types | pick, omit, partial, required, readonly, record
-ts | advanced | utility types
 
 solid principles
 
 node.js | basic concepts
 node-js | complete-guide | introduction
 
-
+D3
+js | d3 | data-visualisation
 
 
 
