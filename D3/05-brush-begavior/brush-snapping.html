@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brush snapping in D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <svg width="800" height="200"></svg>
+
+    <script>
+
+      const margin = {top: 10, right: 10, bottom: 100, left: 40};
+      const margin2 = {top: 150, right: 10, bottom: 20, left: 40};
+      const width = 800 - margin.left - margin.right;
+      const height = 200 - margin.top - margin.bottom;
+      const height2 = 200 - margin2.top - margin2.bottom;
+
+      const parseDate = d3.timeParse('%b %Y');
+      const formatDate = d3.timeFormat('%b %Y');
+      const bisectDate = d3.bisector(d => d.date).left;
+
+      const x = d3.scaleTime().range([0, width]);
+      const x2 = d3.scaleTime().range([0, width]);
+      const y = d3.scaleLinear().range([height, 0]);
+      const y2 = d3.scaleLinear().range([height2, 0]);
+
+      const xAxis = d3.axisBottom(x);
+      const xAxis2 = d3.axisBottom(x2);
+      const yAxis = d3.axisLeft(y);
+
+      const brush = d3.brushX()
+          .extent([[0, 0], [width, height2]])
+          .on('brush', brushed)
+          .on('end', brushended);
+
+      const zoom = d3.zoom()
+          .scaleExtent([1, Infinity])
+          .translateExtent([[0, 0], [width, height]])
+          .extent([[0, 0], [width, height]])
+          .on('zoom', zoomed);
+
+      const area = d3.area()
+          .curve(d3.curveMonotoneX)
+          .x(d => x(d.date))
+          .y0(height)
+          .y1(d => y(d.price));
+
+      const area2 = d3.area()
+          .curve(d3.curveMonotoneX)
+          .x(d => x2(d.date))
+          .y0(height2)
+          .y1(d => y2(d.price));
+
+      const svg = d3.select('svg')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom);
+
+      svg.append('defs').append('clipPath')
+          .attr('id', 'clip')
+          .append('rect')
+          .attr('width', width)
+          .attr('height', height);
+
+      const focus = svg.append('g')
+          .attr('class', 'focus')
+          .attr('transform', `translate(${margin.left},${margin.top})`);
+
+      const context = svg.append('g')
+          .attr('class', 'context')
+          .attr('transform', `translate(${margin2.left},${margin2.top})`);
+
+      d3.csv('data.csv').then(data => {
+        data.forEach(d => {
+          d.date = parseDate(d.date);
+          d.price = +d.price;
+        });
+
+        x.domain(d3.extent(data, d => d.date));
+        y.domain([0, d3.max(data, d => d.price)]);
+        x2.domain(x.domain());
+        y2.domain(y.domain());
+
+        focus.append('path')
+            .datum(data)
+            .attr('class', 'area')
+            .attr('d', area);
+
+        focus.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', `translate(0,${height})`)
+            .call(xAxis);
+
+        focus.append('g')
+            .attr('class', 'y axis')
+            .call(yAxis);
+
+        context.append('path')
+            .datum(data)
+            .attr('class', 'area')
+            .attr('d', area2);
+
+        context.append('g')
+            .attr('class', 'x axis')
+            .attr('transform', `translate(0,${height2})`)
+            .call(xAxis2);
+
+        context.append('g')
+            .attr('class', 'brush')
+            .call(brush)
+            .call(brush.move, x.range());
+
+        svg.append('rect')
+            .attr('class', 'zoom')
+            .attr('width', width)
+            .attr('height', height)
+            .attr('transform', `translate(${margin.left},${margin.top})`)
+            .call(zoom);
+      });
+
+      function brushed(event) {
+        if (event.selection) {
+          const [x0, x1] = event.selection.map(x2.invert);
+          focus.select('.area').attr('d', area.defined(d => x0 <= d.date && d.date <= x1));
+          focus.select('.x.axis').call(xAxis);
+        }
+      }
+
+      function brushended(event) {
+        if (!event.selection) {
+          context.select('.brush').call(brush.move, x2.range());
+        }
+      }
+
+      function zoomed(event) {
+        if (event.sourceEvent && event.sourceEvent.type === 'brush') return; // ignore zoom-by-brush
+        const t = event.transform;
+        x.domain(t.rescaleX(x2).domain());
+        focus.select('.area').attr('d', area);
+        focus.select('.x.axis').call(xAxis);
+        context.select('.brush').call(brush.move, x.range().map(t.invertX, t));
+      }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .container {
+            border: 1px dashed darkred;
+            /*background-color: #9fff00;*/
+            color: blue;
+            font-size: 300%;
+        }
+    </style>
+    <title>BrushBehavior Gemini</title>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <svg width="900" height="500"></svg>
+    </div>
+
+
+    <script>
+      // Sample data
+      const data = [
+        { x: 10, y: 5 },
+        { x: 20, y: 10 },
+        { x: 30, y: 15 },
+        { x: 40, y: 20 },
+        { x: 50, y: 25 },
+        { x: 60, y: 30 },
+        { x: 70, y: 35 },
+        { x: 80, y: 25 },
+        { x: 90, y: 20 },
+        { x: 100, y: 15 },
+        // ... more data points
+      ];
+
+      // Set up SVG
+      const svg = d3.select("svg")
+          .append("g")  // Add a <g> element for better organization
+          .attr("transform", "translate(30,30)"); // Margin
+
+      // Scales
+      const xScale = d3.scaleLinear().range([0, 500]).domain(d3.extent(data, d => d.x));
+      const yScale = d3.scaleLinear().range([300, 0]).domain(d3.extent(data, d => d.y));
+
+      // Axes
+      svg.append("g")
+          .attr("transform", "translate(0,300)")
+          .call(d3.axisBottom(xScale));
+      svg.append("g")
+          .call(d3.axisLeft(yScale));
+
+      // Create the brush
+      const brush = d3.brush()
+          .extent([[0, 0], [600, 400]]) // Define brush area within scales
+          .on("start brush end", brushed);
+
+      // Initial circle rendering
+      svg.selectAll("circle")
+          .data(data)
+          .enter()
+          .append("circle")
+          .attr("cx", d => xScale(d.x))
+          .attr("cy", d => yScale(d.y))
+          .attr("r", 7)
+          .attr("fill", "steelblue");
+
+      // Add the brush to the SVG
+      svg.call(brush);
+
+      // Brush event handler
+      function brushed(event) {
+        if (d3.event.selection) {
+          const [[x0, y0], [x1, y1]] = d3.event.selection;
+
+          svg.selectAll("circle")
+              .attr("fill", d => {
+                // Check if within the brushed area
+                return x0 <= xScale(d.x) && xScale(d.x) <= x1 && y0 <= yScale(d.y) && yScale(d.y) <= y1 ? "red" : "steelblue";
+              });
+        } else {
+          // Reset styling if brush is cleared
+          svg.selectAll('circle').attr("fill", "steelblue");
+        }
+      }
+    </script>
+
+</body>
+</html>

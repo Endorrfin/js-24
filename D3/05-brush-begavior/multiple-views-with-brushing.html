@@ -1,0 +1,140 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Multiple Views with Brushing in D3.js</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <div id="chart1"></div>
+    <div id="chart2"></div>
+
+    <script>
+
+      // Sample data
+      const data = [
+        { date: '2020-01-01', value: 10 },
+        { date: '2020-01-02', value: 20 },
+        { date: '2020-01-03', value: 15 },
+        { date: '2020-01-04', value: 25 },
+        { date: '2020-01-05', value: 18 },
+      ];
+
+      // Parse the date
+      const parseDate = d3.timeParse('%Y-%m-%d');
+
+      data.forEach(d => {
+        d.date = parseDate(d.date);
+      });
+
+      // Chart dimensions
+      const margin = { top: 20, right: 30, bottom: 30, left: 40 };
+      const width = 400 - margin.left - margin.right;
+      const height = 200 - margin.top - margin.bottom;
+
+      // Create the x scale
+      const x = d3.scaleTime()
+          .domain(d3.extent(data, d => d.date))
+          .range([0, width]);
+
+      // Create the y scale
+      const y = d3.scaleLinear()
+          .domain([0, d3.max(data, d => d.value)])
+          .nice()
+          .range([height, 0]);
+
+      // Create the line function
+      const line = d3.line()
+          .x(d => x(d.date))
+          .y(d => y(d.value));
+
+      // Create SVG for Chart 1
+      const svg1 = d3.select('#chart1')
+          .append('svg')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+          .attr('transform', `translate(${margin.left},${margin.top})`);
+
+      // Create SVG for Chart 2
+      const svg2 = d3.select('#chart2')
+          .append('svg')
+          .attr('width', width + margin.left + margin.right)
+          .attr('height', height + margin.top + margin.bottom)
+          .append('g')
+          .attr('transform', `translate(${margin.left},${margin.top})`);
+
+      // Create the x axis
+      const xAxis = g => g
+          .attr('transform', `translate(0,${height})`)
+          .call(d3.axisBottom(x));
+
+      // Create the y axis
+      const yAxis = g => g
+          .call(d3.axisLeft(y));
+
+      // Draw the line for Chart 1
+      svg1.append('path')
+          .datum(data)
+          .attr('fill', 'none')
+          .attr('stroke', 'steelblue')
+          .attr('stroke-width', 2)
+          .attr('d', line);
+
+      // Draw the line for Chart 2
+      svg2.append('path')
+          .datum(data)
+          .attr('fill', 'none')
+          .attr('stroke', 'steelblue')
+          .attr('stroke-width', 2)
+          .attr('d', line);
+
+      // Add the x axis to Chart 1
+      svg1.append('g')
+          .call(xAxis);
+
+      // Add the y axis to Chart 1
+      svg1.append('g')
+          .call(yAxis);
+
+      // Add the x axis to Chart 2
+      svg2.append('g')
+          .call(xAxis);
+
+      // Add the y axis to Chart 2
+      svg2.append('g')
+          .call(yAxis);
+
+      // Create a brush
+      const brush = d3.brushX()
+          .extent([[0, 0], [width, height]])
+          .on('brush', brushed);
+
+      // Add the brush to Chart 1
+      svg1.append('g')
+          .attr('class', 'brush')
+          .call(brush);
+
+      // Function to handle brushing
+      function brushed(event) {
+        if (event.selection) {
+          const [x0, x1] = event.selection.map(x.invert);
+          const filteredData = data.filter(d => x0 <= d.date && d.date <= x1);
+
+          // Update Chart 2 based on the brush selection
+          svg2.selectAll('path').remove(); // Clear existing line
+          svg2.append('path')
+              .datum(filteredData)
+              .attr('fill', 'none')
+              .attr('stroke', 'steelblue')
+              .attr('stroke-width', 2)
+              .attr('d', line);
+        }
+      }
+
+    </script>
+
+</body>
+</html>

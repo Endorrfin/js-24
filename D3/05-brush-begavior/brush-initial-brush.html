@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .brush .handle {
+            fill: #abaaaa;
+            /*stroke: #000;*/
+        }
+        .brush .overlay {
+            fill-opacity: 0.1;
+            cursor: crosshair;
+        }
+        .brush .selection {
+            fill: #5ca4ff;
+        }
+        .event-rect {
+            fill: #ff0000;
+            opacity: 0.5;
+        }
+    </style>
+    <title>D3 Brush & Initial Brush</title>
+</head>
+<body>
+
+    <svg width="1200" height="200"></svg>
+
+    <script>
+      const svgWidth = 960;
+      const svgHeight = 80;
+
+      const svg = d3.select("body")
+          .append("svg")
+          .attr("width", svgWidth)
+          .attr("height", svgHeight);
+      console.log('SVG', svg);
+
+      const xScale = d3.scaleTime()
+          .domain([new Date(2024, 0, 1), new Date(2024, 11, 31)])
+          .range([0, svgWidth]);
+      console.log('X-SCALE', xScale);
+
+      const brush = d3.brushX()
+          .extent([[0, 0], [svgWidth, svgHeight]])
+          .on("brush", brushed);
+      console.log('BRUSH', brush);
+
+      const brushGroup = svg.append("g")
+          .attr("class", "brush")
+          .call(brush);
+      console.log('BRUSH-GROUP', brushGroup);
+
+      const initialBrushExtent = [new Date(2024, 0, 1), new Date(2024, 2, 31)];
+      brushGroup.call(brush.move, initialBrushExtent.map(xScale));
+
+      function brushed() {
+        if (!d3.event.sourceEvent) return; // Ignore zoom
+        const selection = d3.event.selection.map(xScale.invert);
+        console.log("Selected range:", selection);
+        // Do something with the selected range, like filtering data
+      }
+    </script>
+
+</body>
+</html>

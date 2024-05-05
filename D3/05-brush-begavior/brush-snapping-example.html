@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Brush Snapping Example</title>
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+    <svg width="600" height="100">
+        <g id="brushGroup"></g>
+    </svg>
+
+    <script>
+
+      // Data
+      const data = d3.range(0, 24).map(d => new Date(2024, 1, 1, d, 0));
+
+      // SVG and scales
+      const svg = d3.select("svg");
+      const width = +svg.attr("width");
+      const height = +svg.attr("height");
+      const x = d3.scaleTime()
+          .domain([new Date(2024, 1, 1, 0, 0), new Date(2024, 1, 2, 0, 0)])
+          .range([0, width]);
+
+      // Brush
+      const brush = d3.brushX()
+          .extent([[0, 0], [width, height]])
+          .on("end", brushed);
+
+      // Brush snapping
+      function brushed(event) {
+        if (event.sourceEvent && event.sourceEvent.type === "brush") return; // Avoid recursive event
+        const selection = event.selection || x.range();
+        const snappedSelection = selection.map(d => d3.timeHour.round(x.invert(d)));
+        d3.select(this)
+            .transition()
+            .call(brush.move, snappedSelection.map(x));
+      }
+
+      // Draw brush
+      const brushGroup = svg.select("#brushGroup")
+          .call(brush)
+          .call(brush.move, [x(new Date(2024, 1, 1, 8, 0)), x(new Date(2024, 1, 1, 16, 0))]); // Initial brush position
+
+      // Axis
+      const axis = d3.axisBottom(x)
+          .tickFormat(d3.timeFormat("%I %p"))
+          .tickSize(10)
+          .tickPadding(5);
+
+      svg.append("g")
+          .attr("transform", "translate(0," + height / 2 + ")")
+          .call(axis);
+
+    </script>
+
+</body>
+</html>
