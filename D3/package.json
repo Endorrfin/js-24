@@ -3,16 +3,18 @@
   "version": "1.0.0",
   "description": "study D3.js library",
   "main": "index.js",
+  "dependencies": {
+    "d3": "^7.8.5"
+  },
   "scripts": {
     "start": "npm run",
     "test": "npm run test"
   },
   "keywords": [
-    "D3.js, SVG, visualization"
+    "D3.js",
+    "SVG",
+    "visualization"
   ],
   "author": "KvN",
-  "license": "ISC",
-  "dependencies": {
-    "d3": "^7.8.5"
-  }
+  "license": "ISC"
 }

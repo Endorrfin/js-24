@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .brush .handle {
+            fill: #abaaaa;
+            /*stroke: #000;*/
+        }
+        .brush .overlay {
+            fill-opacity: 0.1;
+            cursor: crosshair;
+        }
+        .brush .selection {
+            fill: #5ca4ff;
+        }
+        .event-rect {
+            fill: #ff0000;
+            opacity: 0.5;
+        }
+    </style>
+    <title>D3 Brush & Initial Brush plus rect</title>
+</head>
+<body>
+
+<script>
+  const svgWidth = 600;
+  const svgHeight = 100;
+
+  const margin = { top: 30, right: 20, bottom: 30, left: 50 };
+  const width = svgWidth - margin.left - margin.right;
+  const height = svgHeight - margin.top - margin.bottom;
+
+  const data = d3.range(100).map(() => Math.random() * 50);
+  console.log('DATA', data);
+
+  const svg = d3.select("body")
+      .append("svg")
+      .attr("width", svgWidth)
+      .attr("height", svgHeight)
+      .append("g")
+      .attr("transform", `translate(${margin.left},${margin.top})`);
+  console.log('SVG', svg);
+
+  const xScale = d3.scaleLinear()
+      .domain([0, data.length - 1])
+      .range([0, width]);
+  console.log('xScale', xScale);
+
+  const yScale = d3.scaleLinear()
+      .domain([0, d3.max(data)])
+      .range([height, 0]);
+
+  const brushWidth = 100;
+  const brushHeight = height;
+
+  const brushSelection = svg.append("g")
+      .attr("class", "brush")
+      .call(createBrush);
+
+  function createBrush(selection) {
+    selection.append("rect")
+        .attr("class", "background")
+        .attr("width", width)
+        .attr("height", height)
+        .style("fill", "#eee")
+        .style("cursor", "move");
+
+    const brushRect = selection.append("rect")
+        .attr("class", "brush-rect")
+        .attr("width", brushWidth)
+        .attr("height", brushHeight)
+        .attr("x", 0)
+        .attr("y", 0)
+        .style("fill", "lightblue")
+        .style("cursor", "move")
+        .call(d3.drag().on("drag", dragged));
+
+    function dragged() {
+      const x = d3.event.x;
+      const newX = Math.max(0, Math.min(width - brushWidth, x));
+      brushRect.attr("x", newX);
+      const startIndex = Math.round(xScale.invert(newX));
+      const endIndex = Math.round(xScale.invert(newX + brushWidth));
+      const selectedData = data.slice(startIndex, endIndex + 1);
+      console.log("Selected data:", selectedData);
+    }
+  }
+</script>
+
+</body>
+</html>

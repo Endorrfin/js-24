@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .container {
+            border: 1px dashed darkred;
+            /*background-color: #9fff00;*/
+            color: blue;
+            font-size: 300%;
+        }
+    </style>
+    <title>BrushBehavior chatGPT</title>
+</head>
+<body>
+    <div id="wrapper" class="container">
+        <svg width="900" height="500"></svg>
+    </div>
+
+
+    <script>
+      // Create some sample data
+      const data = [10, 40, 70, 110, 150, 190];
+
+      // Create the SVG
+      const svg = d3.select("svg");
+      const width = +svg.attr("width");
+      const height = +svg.attr("height");
+
+      // Create scales
+      const xScale = d3.scaleLinear()
+          .domain([0, data.length - 1])
+          .range([0, width]);
+
+      const yScale = d3.scaleLinear()
+          .domain([0, d3.max(data)])
+          .range([height, 0]);
+
+      // Add the data as circles
+      svg.selectAll("circle")
+          .data(data)
+          .enter().append("circle")
+          .attr("cx", (d, i) => xScale(i))
+          .attr("cy", d => yScale(d))
+          .attr("r", 5);
+
+      // Create the brush
+      const brush = d3.brushX()
+          .extent([[0, 0], [width, height]])
+          .on("start brush end", brushed);
+
+      // Append brush to SVG
+      const gBrush = svg.append("g")
+          .attr("class", "brush")
+          .call(brush);
+
+      // Brushed function
+      function brushed() {
+        const selection = d3.event.selection;
+        if (selection) {
+          const [x0, x1] = selection.map(xScale.invert);
+          // Do something with the selected range, like filter data, etc.
+          console.log("Selected range:", [x0, x1]);
+        }
+      }
+
+    </script>
+
+</body>
+</html>

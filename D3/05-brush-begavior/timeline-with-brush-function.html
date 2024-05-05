@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .brush .handle {
+            fill: #abaaaa;
+            /*stroke: #000;*/
+        }
+        .brush .overlay {
+            fill-opacity: 0.1;
+            cursor: crosshair;
+        }
+        .brush .selection {
+            fill: #5ca4ff;
+        }
+        .event-rect {
+            fill: #ff0000;
+            opacity: 0.5;
+        }
+    </style>
+    <title>D3 Timeline with Brush and Event Rectangles</title>
+</head>
+<body>
+
+    <svg width="1200" height="200"></svg>
+
+    <script>
+      function createTimeline(data, svg) {
+        var margin = { top: 20, right: 30, bottom: 20, left: 30 },
+            width = 1000 - margin.left - margin.right,
+            height = 80 - margin.top - margin.bottom;
+
+        var x = d3.scaleTime()
+            .domain([new Date(2024, 0, 1), new Date(2024, 11, 31)])
+            .range([0, width]);
+        console.log('X-X-X', x);
+
+        var xAxis = d3.axisBottom(x)
+            .tickFormat(d3.timeFormat("%b"));
+        console.log('---- xAxis', xAxis);
+
+        svg.append("g")
+            .attr("class", "x axis")
+            .attr("transform", "translate(0," + height / 2 + ")")
+            .call(xAxis);
+
+        var brush = d3.brushX()
+            .extent([[0, 0], [width, height]])
+            .on("end", brushed);
+        console.log('brush', brush);
+
+        // Initial brush extent (one month)
+        var defaultExtent = [new Date(2024, 10, 1), new Date(2024, 10, 31)];
+        console.log('🅾️ ↔️ defaultExtent', defaultExtent);
+
+        var brushGroup = svg.append("g")
+            .attr("class", "brush")
+            .call(brush)
+            .call(brush.move, defaultExtent.map(x));
+        console.log('brushGroup', brushGroup);
+
+        function brushed() {
+          var selection = d3.event.selection;
+          if (selection !== null) {
+            var extent = selection.map(x.invert, x);
+            console.log("New brush extent:", extent);
+          }
+        }
+
+        // Add event rectangles
+        svg.selectAll(".event-rect")
+            .data(data)
+            .enter().append("rect")
+            .attr("class", "event-rect")
+            .attr("x", function(d) { return x(d); })
+            .attr("y", 0)
+            .attr("width", function(d, i) { return i < data.length - 1 ? x(data[i + 1]) - x(d) : 0; })
+            .attr("height", height)
+            .style("pointer-events", "none") // so that event rectangles do not interfere with brush
+            .style("display", "none"); // initially hide event rectangles
+
+        // Show event rectangles on brush hover
+        brushGroup.on("mousemove", function() {
+          var mouseX = d3.mouse(this)[0];
+          svg.selectAll(".event-rect")
+              .style("display", function(d) {
+                return mouseX >= x(d) && mouseX <= (data.indexOf(d) < data.length - 1 ? x(data[data.indexOf(d) + 1]) : width) ? "block" : "none";
+              });
+        });
+      }
+
+      // Sample data for the timeline
+      var data = d3.timeDay.range(new Date(2024, 0, 1), new Date(2024, 11, 31));
+      console.log('DATA', data);
+
+      var svg = d3.select("svg")
+          .attr("width", 1000)
+          .attr("height", 80);
+
+      createTimeline(data, svg);
+    </script>
+
+</body>
+</html>

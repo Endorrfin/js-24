@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <style>
+        .container {
+            border: 1px dashed darkred;
+            /*background-color: #9fff00;*/
+            color: blue;
+            font-size: 300%;
+        }
+    </style>
+    <title>BrushBehavior copilot</title>
+</head>
+<body>
+    <div id="wrapper" class="container"></div>
+
+    <script>
+      // Create SVG container
+      var svg = d3.select("#wrapper").append("svg")
+          .style("border", "blue")
+          .attr("width", 960)
+          .attr("height", 500);
+
+      // Define brush
+      var brush = d3.brush()
+          .extent([[0, 0], [960, 500]])
+          .on("brush", brushed);
+
+      // Append brush to SVG
+      svg.append("g")
+          .attr("class", "brush")
+          .call(brush);
+
+      // Define brushed function
+      function brushed() {
+        var selection = d3.event.selection;
+        console.log(selection);
+      }
+    </script>
+
+</body>
+</html>
