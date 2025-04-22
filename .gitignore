@@ -1,6 +1,31 @@
 
-# file: ~/.gitignore_global
-.DS_Store
+# IDE'S project files
 .idea
+.idea/
+.vscode
+.sass-cache
+
+# Mac DS_Store Files
+.DS_Store
+
+# Node packages
 node_modules
+
+# Build version
+dist
+
+# Windows thumbnail cache
+Thumbs.db
+
+# composer vendor dir
+/vendor
+
+# Large output files
+build/output/*
+
+# machine-specific configuration files
+.env
+config/dev-env.conf
+
+# file: ~/.gitignore_global
 js-24.iml
