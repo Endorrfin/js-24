@@ -61,7 +61,7 @@ const getMaxWaterContainer = function (heights) {
 
       maxArea = Math.max(maxArea, area);
     }
-  };
+  }
 
   return maxArea;
 }

@@ -77,5 +77,5 @@ class QueueWithStacks {
   empty() {
     return this.in.length === 0 && this.out.length === 0;
   }
-};
+}
 
