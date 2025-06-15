@@ -1,6 +1,6 @@
 # js-24
-
-JAVASCRIPT
+🔺🔹
+🔸 JAVASCRIPT
 1. algorithms & data structures
 2. design-patterns
    1. behavioral
@@ -35,7 +35,7 @@ JAVASCRIPT
 4. testing
 
 
-TYPESCRIPT
+🔸 TYPESCRIPT
 1. unit-01-basicTypes
 2. unit-02-advancedTypes
 3. unit-03-classes
