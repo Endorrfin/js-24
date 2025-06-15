@@ -58,7 +58,7 @@ function flattenSimple(...data) {
 // console.log(flattenSimple('flattenSimple', [[1], [[2]], [[[3]]], [[[[4]]]], [[[[[5]]]]], [[[[[[6, 7, 8, 9]]]]]], 0]));
 // console.log(flattenSimple('flattenSimple', ['a', ['b', 2], 3, null, [[4], ['c']]]));
 
-// ------------ Solution 1.3 - FlattenHard ------------
+// ------------ Solution 1.4 - FlattenHard ------------
 function flattenHard(...data) {
   const result = [];
   for (let i = 0; i < data.length; i++) {
