@@ -23,26 +23,32 @@
   </style>
 </head>
 <body>
+
+<!--Best Global Brands 2024 Top 100-->
+<!--https://interbrand.com/best-global-brands/-->
+
 <div style="color: grey; font: 13px/25.5px var(--sans-serif); text-transform: uppercase;">
-  <h1 style="display: none;">Bar Chart Race</h1>
-  <a href="https://d3js.org/">D3</a> › Gallery
+  <h1 style="display: none;">Bar Chart: Global brand race 2000-2024</h1>
+<!--  <a href="https://d3js.org/">Made using D3.js</a> › BAR Chart-->
 </div>
 
-<h1>Bar Chart: Global brands race</h1>
-<p>This chart animates the value (in $M) of the top global brands from 2000 to 2024. Color indicates sector.</p>
+<h1>The Race of Global Brands 2000-2024</h1>
 
-<div class="controls">
-  <button id="replay">Replay</button>
-</div>
+<!--<div class="controls">-->
+<!--  <button id="replay">Replay</button>-->
+<!--</div>-->
 
-<div id="chart"></div>
+<div id="bar-chart"></div>
+
+<p style="color: #900000; font-size: 11px">* Current chart animates the value (💲<span style="color: #00a31b; font-weight: bold">M</span>) of the top global brands. Color indicates sector / category.</p>
+<p style="color: #640D5F; font-size: 10px">Made using <span style="color: #FE5D26; font-weight: bold;">D3.js</span></p>
 
 <script>
   // Configuration constants
-  const duration = 250;
-  const n = 12;
-  const k = 10;
-  const barSize = 48;
+  const duration =350;
+  const n = 16;
+  const k = 8;
+  const barSize = 42;
   const marginTop = 16;
   const marginRight = 6;
   const marginBottom = 6;
@@ -139,8 +145,11 @@
   }
 
   // CHANGED: Simplified color function
-  function createColorScale () {
-    const scale = d3.scaleOrdinal(d3.schemeTableau10);
+  function createColorScale() {
+    // const scale = d3.scaleOrdinal(d3.schemeTableau10);
+    // const scale = d3.scaleOrdinal(d3.schemeSet3);
+    // const scale = d3.scaleOrdinal(d3.schemeCategory10);
+    const scale = d3.scaleOrdinal(d3.schemePaired);
     if (data.some(d => d.category !== undefined)) {
       const categoryByName = new Map(data.map(d => [d.name, d.category]));
       scale.domain(Array.from(new Set(categoryByName.values())));
@@ -256,10 +265,12 @@
       const now = svg.append("text")
           .style("font", `bold ${barSize}px var(--sans-serif)`)
           .style("font-variant-numeric", "tabular-nums")
+          .style("fill","#D50B8B")
+          .attr("fill", "navy")
           .attr("text-anchor", "end")
           .attr("x", width - 6)
           .attr("y", marginTop + barSize * (n - 0.45))
-          .attr("dy", "0.32em")
+          .attr("dy", "0.38em")
           .text(formatDate(keyframes[0][0]));
 
       return ([date], transition) => {
@@ -285,9 +296,9 @@
     const color = createColorScale();
 
     // Clear previous chart
-    d3.select("#chart").selectAll("*").remove();
+    d3.select("#bar-chart").selectAll("*").remove();
 
-    const svg = d3.select("#chart")
+    const svg = d3.select("#bar-chart")
         .append("svg")
         .attr("viewBox", [0, 0, width, height])
         .attr("width", width)
@@ -327,7 +338,7 @@
     runAnimation();
   }
 
-  // CHANGED: Event listeners
+  // RUN: Event listeners
   document.addEventListener('DOMContentLoaded', () => {
     document.getElementById('replay').addEventListener('click', () => {
       if (!isAnimating) {
@@ -337,6 +348,8 @@
 
     loadData();
   });
+
+  loadData();
 </script>
 </body>
 </html>
