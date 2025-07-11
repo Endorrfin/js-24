@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Drawing SVG Shapes with D3</title>
+  <script src="https://d3js.org/d3.v3.min.js" charset="utf-8"></script>
+</head>
+<body>
+
+<!--<svg>-->
+<!--  <rect width="50" height="200" style="fill: blue;"/>-->
+<!--</svg>-->
+
+<h3>SVG Circle</h3>
+<svg width="50" height="50">
+  <circle cx="25" cy="25" r="25" style="fill: blue"/>
+</svg>
+
+<script>
+  d3.select("body")
+      .append("svg")
+      .attr("width", 50)
+      .attr("height", 50)
+      .append("circle")
+      .attr("cx", 25)
+      .attr("cy", 25)
+      .attr("r", 25)
+      .style("fill", "purple");
+</script>
+
+
+<h3>SVG Bar</h3>
+
+<svg>
+  <rect
+          width="50"
+          height="200"
+          style="fill: blue"/>
+</svg>
+
+
+<h3>D3 Bar</h3>
+
+<script>
+  d3.select("body") // selects <body> html tag
+      .append("svg") // add an <svg> html element
+      .append("rect") // add <rect> svg element
+      .attr("width", 50) // set the attribute of with
+      .attr("height", 200) // set the attribute of height
+      .style("fill", "red"); // add some style
+</script>
+
+
+
+<svg width="250" height="50">
+  <text x="0" y="25">Easy Peasy</text>
+</svg>
+
+
+<script>
+  d3.select("body")
+      .append("svg")
+      .attr("width", 250)
+      .attr("height", 50)
+      .append("text")
+      .text("Easy Peasy")
+      .attr("y", 25)
+      .attr("x",0)
+      .style("fill", "blue");
+</script>
+
+
+
+<!--<script>-->
+<!--  console.log('Hi D3.js');-->
+<!--  let w = 500;-->
+<!--  let h = 100;-->
+<!--  let padding = 2;-->
+<!--  let dataset = [5, 10, 15, 20, 25];-->
+
+<!--  let svg = d3.select("body")-->
+<!--      .append("svg")-->
+<!--        .attr("width", w)-->
+<!--        .attr("height", h)-->
+<!--        .style("fill", "orange");-->
+
+<!--  svg.selectAll("rect")-->
+<!--      .data(dataset)-->
+<!--      .enter()-->
+<!--      .append("rect")-->
+<!--        .attr("x", function (d, i) {-->
+<!--          return i * 21;-->
+<!--        })-->
+<!--        .attr("y", 0)-->
+<!--        .attr("width", 20)-->
+<!--        .attr("height", 100)-->
+<!--        .style("fill", "purple");-->
+<!--</script>-->
+
+
+<script>
+  console.log('Hi D3.js II');
+  let w = 100;
+  let h = 100;
+  let padding = 2;
+  let dataset = [5, 10, 15, 20, 25];
+
+  let svg = d3.select("body")
+      .append("svg")
+      .attr("width", w)
+      .attr("height", h)
+
+  svg.selectAll("rect")
+      .data(dataset)
+      .enter()
+      .append("rect")
+      .attr("x", function (d, i) {
+        return i * (w / dataset.length);
+      })
+      .attr("y", function (d) {
+        return h - (d * 4);
+      })
+      .attr("width", w / dataset.length - padding)
+      .attr("height", function (d) {
+        return d * 4;
+      })
+
+</script>
+
+
+</body>
+</html>
