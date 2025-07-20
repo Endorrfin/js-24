@@ -1,0 +1,103 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background: #f8f9fa;
+}
+
+.chart-container {
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    color: #1ECD97;
+    text-transform: uppercase;
+}
+
+.description {
+    font-size: 12px;
+    /*color: #8A784E;*/
+    /*color: #FFA725;*/
+    /*color: #255F38;*/
+    color: #41644A;
+    margin-bottom: 20px;
+    line-height: 1.4;
+}
+
+/* ADDED: Custom scrubber styles */
+.scrubber-container {
+    margin-bottom: 10px;
+    padding: 5px 0;
+}
+
+.scrubber-controls {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 10px;
+    /*background-color: #ececec;*/
+    color: #1ECD97;
+    /*color: darkred;*/
+}
+
+
+button {
+    outline: none;
+    height: 30px;
+    text-align: center;
+    width: 90px;
+    border-radius: 40px;
+    background: #fff;
+    border: 2px solid #1ECD97;
+    color: #1ECD97;
+    letter-spacing: 1px;
+    font-size: 12px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    /*text-shadow: 0;*/
+    &:hover {
+        color:white;
+        background: #1ECD97;
+    }
+    &:active {
+        letter-spacing: 4px ;
+    }
+    &:after {
+        content:"";
+    }
+}
+
+.scrubber-slider {
+    flex: 1;
+    margin: 0 10px;
+    /*color: red;*/
+}
+
+.year-display {
+    font-weight: bold;
+    min-width: 50px;
+    text-align: center;
+}
+
+/* ADDED: Loading indicator */
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+}
+
+.error {
+    color: #dc3545;
+    background: #f8d7da;
+    border: 1px solid #f5c6cb;
+    border-radius: 4px;
+    padding: 10px;
+    margin: 20px 0;
+}
