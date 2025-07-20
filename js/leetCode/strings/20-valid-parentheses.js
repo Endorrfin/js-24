@@ -65,7 +65,7 @@ const isValidParentheses = function(s) {
 
 
 
-// ------------ Solution 1.2 (time complexity O(n) | space complexity O(n) ------------
+// ------------ Solution 1.2 (barChart_time_ua complexity O(n) | space complexity O(n) ------------
 function isValidBrackets(string) {
   let stack = [];
   let mapBrackets = {
