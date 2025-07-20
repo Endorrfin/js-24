@@ -30,7 +30,7 @@ for (let i = 0; i < arrayPair.length; i++) {
 };
 
 const end = Date.now();
-// console.log(`Execution time: ${end - start} ms`);
+// console.log(`Execution barChart_time_ua: ${end - start} ms`);
 // console.log('sumPair', sumPair);
 
 

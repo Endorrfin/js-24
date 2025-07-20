@@ -26,7 +26,7 @@ Constraints:
 -109 <= target <= 109
 Only one valid answer exists.
 
-Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
+Follow-up: Can you come up with an algorithm that is less than O(n2) barChart_time_ua complexity?
 
 Hint 1
 A really brute force way would be to search for all possible pairs of numbers but that would be too slow. Again, it's best to try out brute force solutions for just for completeness. It is from these brute force solutions that you can come up with optimizations.
