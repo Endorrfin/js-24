@@ -55,11 +55,11 @@ Stops the profiler. You can see the resulting profile in the browser's performan
 console.table()
 Displays tabular data as a table.
 
-console.time()
+console.barChart_time_ua()
 Starts a timer with a name specified as an input parameter. Up to 10,000 simultaneous timers can run on a given page.
 
 console.timeEnd()
-Stops the specified timer and logs the elapsed time in milliseconds since it started.
+Stops the specified timer and logs the elapsed barChart_time_ua in milliseconds since it started.
 
 console.timeLog()
 Logs the value of the specified timer to the console.

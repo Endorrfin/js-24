@@ -230,7 +230,7 @@ if (true) {
 
 
 // let today = new Date();
-// let text = `The time and date is ${today.toLocaleString()}`;
+// let text = `The barChart_time_ua and date is ${today.toLocaleString()}`;
 
 
 

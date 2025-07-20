@@ -34,7 +34,7 @@
       // Create an SVG container
       const svg = d3.select("svg");
 
-      // Create a time scale for the x-axis
+      // Create a barChart_time_ua scale for the x-axis
       const xScale = d3.scaleTime()
           .domain(d3.extent(data, d => d.date))
           .range([0, 600]);

@@ -19,7 +19,7 @@ function addUpTo(n) {
 let timeStart = performance.now();
 // console.log(addUpTo(1000000000));
 let timeFinish = performance.now();
-// console.log(`#1. time Elapsed: ${(timeFinish - timeStart).toFixed(2) / 1000} seconds.`);
+// console.log(`#1. barChart_time_ua Elapsed: ${(timeFinish - timeStart).toFixed(2) / 1000} seconds.`);
 
 
 // ------------ Solution 1.2 - using math methods ------------
@@ -30,5 +30,5 @@ function addUppToOptimize(n) {
 let t1 = performance.now();
 // console.log(addUppToOptimize(1000000000));
 let t2 = performance.now();
-// console.log(`#2. time Elapsed: ${(t2 - t1).toFixed(2) / 1000} seconds.`);
+// console.log(`#2. barChart_time_ua Elapsed: ${(t2 - t1).toFixed(2) / 1000} seconds.`);
 
