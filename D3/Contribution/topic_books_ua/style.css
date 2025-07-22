@@ -1,0 +1,143 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    margin-bottom: 20px;
+}
+
+.genre-selector {
+    margin-bottom: 20px;
+}
+
+select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+}
+
+.chart-container {
+    margin-bottom: 20px;
+}
+
+.bar {
+    fill: #2196F3;
+    fill: #0D5EA6;
+    fill: #0057B7;
+    cursor: pointer;
+}
+
+.bar:hover {
+    fill: #1976D2;
+    fill: #FFFA8D;
+    fill: #FFFA8D;
+    fill: #FCF259;
+    fill: #FFEB00;
+    fill: #FFE31A;
+    fill: #FFD700	;
+}
+
+.book-title {
+    font-weight: bold;
+    font-size: 12px;
+    fill: #333;
+    fill: #06923E;
+}
+
+.book-author {
+    font-style: italic;
+    font-size: 11px;
+    fill: #666;
+    fill: #DC3C22;
+    fill: #B13BFF;
+}
+
+.pages-value {
+    fill: #2196F3;
+    fill: #0D5EA6;
+    fill: #0057B7;
+    font-size: 10px;
+    /*font-weight: 500;*/
+    font-weight: bold;
+}
+
+.audio-value {
+    fill: #FF9800;
+    fill: #006A67;
+    fill: #FF6500;
+    font-size: 10px;
+    /*font-weight: 500;*/
+    font-weight: bold;
+}
+
+.axis {
+    font-size: 12px;
+}
+
+.axis-label {
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    z-index: 1000;
+    max-width: 250px;
+}
+
+.summary {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+.summary h3 {
+    margin: 0 0 10px 0;
+    color: #333;
+}
+
+.summary-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 10px;
+}
+
+.summary-item {
+    text-align: center;
+    padding: 8px;
+    background: white;
+    border-radius: 4px;
+    border: 1px solid #ddd;
+}
+
+.summary-label {
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 4px;
+}
+
+.summary-value {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+}
