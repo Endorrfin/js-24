@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Top books chart</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Top Books Analysis</h1>
+  </div>
+
+  <div class="genre-selector">
+    <label for="genreSelect">Select Genre: </label>
+    <select id="genreSelect">
+      <!-- Options will be populated by JavaScript -->
+    </select>
+  </div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+
+  <div class="summary" id="summary">
+    <!-- Summary will be populated by JavaScript -->
+  </div>
+</div>
+
+
+<script src="topBooks.js"></script>
+</body>
+</html>
