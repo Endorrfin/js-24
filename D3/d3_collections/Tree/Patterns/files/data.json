@@ -1,0 +1,231 @@
+
+{
+  "name": "Patterns",
+  "children": [
+    {
+      "name": "GOF Design patterns",
+      "children": [
+        {
+          "name": "Creational patterns",
+          "children": [
+            {
+              "name": "Factory Method",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Creates an instance of several derived classes"}
+              ]
+            },
+            {
+              "name": "Abstract Factory",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Creates an instance of several families of classes"}
+              ]
+            },
+            {
+              "name": "Builder",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Separates object construction from its representation"}
+              ]
+            },
+            {
+              "name": "Object Pool",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Avoid expensive acquisition and release of resources by recycling objects that are no longer in use"}
+              ]
+            },
+            {
+              "name": "Prototype",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A fully initialized instance to be copied or cloned"}
+              ]
+            },
+            {
+              "name": "Singleton",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A class of which only a single instance can exist"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Structural patterns",
+          "children": [
+            {
+              "name": "Adapter",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Match interfaces of different classes"}
+              ]
+            },
+            {
+              "name": "Bridge",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Separates an object’s interface from its implementation"}
+              ]
+            },
+            {
+              "name": "Composite",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A tree structure of simple and composite objects"}
+              ]
+            },
+            {
+              "name": "Decorator",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Add responsibilities to objects dynamically"}
+              ]
+            },
+            {
+              "name": "Facade",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A single class that represents an entire subsystem\nFlyweight"}
+              ]
+            },
+            {
+              "name": "Flyweight",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A fine-grained instance used for efficient sharing"}
+              ]
+            },
+            {
+              "name": "Proxy",
+              "children": [
+                {"name": "Definition"},
+                {"name": "An object representing another object"}
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Behavioral patterns",
+          "children": [
+            {
+              "name": "Chain of Responsibility",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A way of passing a request between a chain of objects"}
+              ]
+            },
+            {
+              "name": "Command",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Encapsulate a command request as an object"}
+              ]
+            },
+            {
+              "name": "Iterator",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Sequentially access the elements of a collection"}
+              ]
+            },
+            {
+              "name": "Mediator",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Defines simplified communication between classes"}
+              ]
+            },
+            {
+              "name": "Memento",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Capture and restore an object's internal state"}
+              ]
+            },
+            {
+              "name": "Null Object",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Designed to act as a default value of an object"}
+              ]
+            },
+            {
+              "name": "Observer",
+              "children": [
+                {"name": "Definition"},
+                {"name": "A way of notifying change to a number of classes"}
+              ]
+            },
+            {
+              "name": "State",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Alter an object's behavior when its state changes"}
+              ]
+            },
+            {
+              "name": "Strategy",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Encapsulates an algorithm inside a class"}
+              ]
+            },
+            {
+              "name": "Template Method",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Defer the exact steps of an algorithm to a subclass"}
+              ]
+            },
+            {
+              "name": "Visitor",
+              "children": [
+                {"name": "Definition"},
+                {"name": "Defines a new operation to a class without change"}
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "GRASP patterns",
+      "children": [
+        {"name": "Information Expert"},
+        {"name": "Creator"},
+        {"name": "Controller"},
+        {"name": "Low Coupling"},
+        {"name": "High Cohesion"},
+        {"name": "Polymorphism"},
+        {"name": "Pure Fabrication"},
+        {"name": "Indirection"},
+        {"name": "Protected Variations"}
+      ]
+    }
+  ]
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
