@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Indented tree</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+<!--<h1>Populated areas of Ukraine are presented in the form of a tree</h1>-->
+<h1>Populated places of Ukraine shown in tree view</h1>
+<h5>Created for educational purposes using: python, javascript, d3.js.</h5>
+
+
+<!-- Added control buttons -->
+<div class="controls">
+<!--  <button class="control-button" onclick="expandAll()">🗃️Expand All</button>-->
+  <button class="control-button" onclick="expandAll()">🔓 Expand All</button>
+<!--  <button class="control-button" onclick="collapseAll()">📦 Collapse All</button>-->
+  <button class="control-button" onclick="collapseAll()">🔐 Collapse All</button>
+</div>
+
+<div id="chart-container">
+  <div class="loading">Loading data...</div>
+</div>
+
+<div class="legend">
+  <strong>Color legend by nesting level:</strong>
+  <div id="legend-items"></div>
+</div>
+
+<div class="instructions">
+  <strong>Instructions:</strong> Click on circles with ➕ or ➖ signs to expand or collapse tree branches. Solid circles represent leaf nodes (no children).
+</div>
+
+<script src="settlements.js"></script>
+</body>
+</html>

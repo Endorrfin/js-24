@@ -1,0 +1,66 @@
+{
+ "name": "Level-0_Oblast",
+ "children": [
+  {"name": "Autonomous Republic of Crime"},
+  {
+   "name": "Cherkaska",
+   "children": [
+    {"name":  "Cherkaskyi"},
+    {
+     "name":  "Umanskyi",
+     "children": [
+      {"name":  "Babanska"},
+      {"name":  "Bashtechkivska"},
+      {"name":  "Butska"},
+      {"name":  "Dmytrushkivska"},
+      {
+       "name":  "Ivankivska",
+       "children": [
+        {"name":  "Berezivka", "value": "615"},
+        {"name":  "Chorna Kamianka", "value": "1015"},
+        {"name":  "Ivanky", "value": "3078"},
+        {"name":  "Krachkivka", "value": "799"},
+        {"name":  "Tymoshivka", "value": "273"},
+        {"name":  "Yurpil", "value": "177"}
+       ]
+      },
+      {"name":  "Khrystynivska"},
+      {"name":  "Ladyzhynska"},
+      {"name":  "Mankivska"},
+      {"name":  "Monastyryshchenska"},
+      {"name":  "Palanska"},
+      {"name":  "Umanska"},
+      {"name":  "Zhashkivska"}
+     ]
+    },
+    {"name":  "Zolotoniskyi"},
+    {"name":  "Zvenyhorodskyi"}
+   ]
+  },
+  {"name": "Chernihivska"},
+  {"name": "Chernivetska"},
+  {"name": "Dnipropetrovska"},
+  {"name": "Donetska"},
+  {"name": "Ivano-Frankivska"},
+  {"name": "Kharkivska"},
+  {"name": "Khersonska"},
+  {"name": "Khmelnytska"},
+  {"name": "Kirovohradska"},
+  {"name": "Kyiv"},
+  {"name": "Kyivska"},
+  {"name": "Luhanska"},
+  {"name": "Lvivska"},
+  {"name": "Mykolaivska"},
+  {"name": "Odeska"},
+  {"name": "Poltavska"},
+  {"name": "Rivnenska"},
+  {"name": "Sevastopol"},
+  {"name": "Sumska"},
+  {"name": "Ternopilska"},
+  {"name": "Vinnytska"},
+  {"name": "Volynska"},
+  {"name": "Zakarpatska"},
+  {"name": "Zaporizka"},
+  {"name": "Zhytomyrska"}
+ ]
+}

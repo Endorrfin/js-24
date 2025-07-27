@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Indented tree</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+<h1>Населені пункти України представлені у вигляді дерева</h1>
+<h5>Створено для освітніх цілей з використанням: python, javascript, d3.js.</h5>
+
+<!-- Added control buttons -->
+<div class="controls">
+<!--  <button class="control-button" onclick="expandAll()">🗃️Expand All</button>-->
+  <button class="control-button" onclick="expandAll()">🔓 Розгорнути все</button>
+<!--  <button class="control-button" onclick="collapseAll()">📦 Collapse All</button>-->
+  <button class="control-button" onclick="collapseAll()">🔐 Згорнути все</button>
+</div>
+
+<div id="chart-container">
+  <div class="loading">Loading data...</div>
+</div>
+
+<div class="legend">
+<!--  <strong>Color legend by nesting level:</strong>-->
+  <strong>Кольори легенди розташовані за рівнем вкладеності:</strong>
+  <div id="legend-items"></div>
+</div>
+
+<div class="instructions">
+  <strong>Інструкція: </strong>Натисніть на кола зі знаками ➕ або ➖, щоб розгорнути або згорнути гілки дерева. Суцільні кола представляють кінцеві вузли (без дочірніх вузлів).
+</div>
+
+<script src="settlements.js"></script>
+</body>
+</html>
+
+
+

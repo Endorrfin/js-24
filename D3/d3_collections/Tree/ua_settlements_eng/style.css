@@ -1,0 +1,150 @@
+body {
+    font-family: sans-serif;
+    margin: 10px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    /*color: #8A0000;*/
+    color: #0066CC;
+    margin-bottom: 5px;
+}
+
+
+h5 {
+    color: #320A6B;
+    margin-top: 7px;
+    margin-bottom: 7px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+#chart-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#legend-items {
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 20px;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tree-text {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tree-node {
+    cursor: pointer;
+}
+
+.tree-node:hover text {
+    font-weight: bold;
+}
+
+/* Styles for clickable circles */
+.node-circle {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.node-circle:hover {
+    stroke-width: 3px;
+}
+
+/* Style for expand/collapse indicators */
+.expand-text {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #d32f2f;
+}
+
+/* Styles for control buttons */
+.controls {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.control-button {
+    background: #0066CC;
+
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.instructions {
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 5px;
+    padding: 15px;
+    margin-top: 10px;
+    color: #1565c0;
+}
+
+.control-button:hover {
+    background: #FFCC00;
+    color: #0066CC;
+
+}
+
+.control-button:active {
+    background: #21618c;
+}

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Indented tree</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+<h1>Indented tree</h1>
+<p>A tabular layout for hierarchical data, indented trees allow one or more columns of values to be shown alongside indented names.</p>
+
+<div class="instructions">
+  <strong>Instructions:</strong> Click on circles with + or - signs to expand or collapse tree branches. Solid circles represent leaf nodes (no children).
+</div>
+
+<!-- Added control buttons -->
+<div class="controls">
+  <button class="control-button" onclick="expandAll()">🗃️Expand All</button>
+  <button class="control-button" onclick="collapseAll()">📦 Collapse All</button>
+</div>
+
+<div id="chart-container">
+  <div class="loading">Loading data...</div>
+</div>
+
+<div class="legend">
+  <strong>Color Legend by Nesting Level:</strong>
+  <div id="legend-items"></div>
+</div>
+
+<script src="indentedTree.js"></script>
+</body>
+</html>
+
+
+
