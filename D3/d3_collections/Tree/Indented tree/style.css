@@ -1,0 +1,139 @@
+body {
+    font-family: sans-serif;
+    margin: 20px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    color: #666;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+#chart-container {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.legend {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+#legend-items {
+    margin-top: 10px;
+}
+
+.legend-item {
+    display: inline-block;
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
+.legend-color {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.tree-text {
+    font-size: 12px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.tree-node {
+    cursor: pointer;
+}
+
+.tree-node:hover text {
+    font-weight: bold;
+}
+
+/* Styles for clickable circles */
+.node-circle {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.node-circle:hover {
+    stroke-width: 3px;
+}
+
+/* Style for expand/collapse indicators */
+.expand-text {
+    font-family: monospace;
+    font-size: 14px;
+    font-weight: bold;
+    pointer-events: none;
+    user-select: none;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #666;
+    font-style: italic;
+}
+
+.error {
+    color: #d32f2f;
+    background: #ffebee;
+    padding: 15px;
+    border-radius: 5px;
+    border-left: 4px solid #d32f2f;
+}
+
+.instructions {
+    background: #e3f2fd;
+    border: 1px solid #2196f3;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    color: #1565c0;
+}
+
+/* Styles for control buttons */
+.controls {
+    background: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.control-button {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin: 0 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.control-button:hover {
+    background: #2980b9;
+}
+
+.control-button:active {
+    background: #21618c;
+}
