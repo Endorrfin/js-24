@@ -1,0 +1,43 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+#controls {
+    margin: 20px 0;
+    text-align: center;
+}
+
+#dateSlider {
+    width: 600px;
+    margin: 0 20px;
+}
+
+#dateDisplay {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 10px 0;
+}
+
+/* Added store counter styling */
+#storeCounter {
+    font-size: 16px;
+    color: #0066cc;
+    margin: 5px 0;
+}
+
+/* Added speed control styling */
+#speedControls {
+    margin: 10px 0;
+}
+
+#speedDisplay {
+    font-size: 14px;
+    margin: 0 10px;
+}
+
+button {
+    padding: 8px 16px;
+    margin: 0 5px;
+    font-size: 14px;
+}

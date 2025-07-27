@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Walmart's growth</title>
+  <!-- Added topojson library import -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/topojson/3.0.2/topojson.min.js"></script>
+</head>
+<body>
+<h1>Walmart's growth</h1>
+<p>This animation shows the expansion of Walmart over the last fifty years. On July 2, 1962 in Rogers, Arkansas, the first Walton's opened. This dataset includes about 3,100 Walmart locations in the contiguous United States.</p>
+
+<!-- Added animation controls -->
+<div id="controls">
+  <button id="playBtn">Play</button>
+  <button id="pauseBtn">Pause</button>
+  <button id="resetBtn">Reset</button>
+  <br>
+  <!-- Added speed controls -->
+  <div id="speedControls">
+    <button id="slowerBtn">Slower</button>
+    <span id="speedDisplay">Speed: 1x</span>
+    <button id="fasterBtn">Faster</button>
+  </div>
+  <input type="range" id="dateSlider" min="0" max="100" value="0">
+  <div id="dateDisplay">1962</div>
+  <!-- Added store counter -->
+  <div id="storeCounter">Stores: 1</div>
+</div>
+
+<div id="chart"></div>
+
+<script src="walmart.js"></script>
+</body>
+</html>
