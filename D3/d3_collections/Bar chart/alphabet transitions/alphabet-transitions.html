@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Bar chart transitions</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+<h1>Bar chart transitions</h1>
+<p>This bar chart supports animated transitions. For object constancy, bars are keyed by name, making it possible to follow changes in value and order across transitions. Use the dropdown menu to change the sort order.</p>
+
+<div class="controls">
+  <label for="order-select">Sort order: </label>
+  <!-- Added dropdown for sort order selection -->
+  <select id="order-select">
+    <option value="alphabetical">Alphabetical</option>
+    <option value="frequency-ascending">Frequency (ascending)</option>
+    <option value="frequency-descending">Frequency (descending)</option>
+  </select>
+</div>
+
+<div class="chart-container">
+  <div id="loading" class="loading">Loading chart...</div>
+  <div id="error" class="error" style="display: none;"></div>
+  <div id="chart"></div>
+</div>
+
+<script src="alphabet-transitions.js"></script>
+</body>
+</html>
+
+
+
