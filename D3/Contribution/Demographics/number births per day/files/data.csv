@@ -1,0 +1,101 @@
+﻿#,Region,Flags,Country,Number of Births Per Day
+1,Asia,🇮🇳,India,"63,171"
+2,Asia,🇨🇳,China,"23,845"
+3,Africa,🇳🇬,Nigeria,"20,919"
+4,Asia,🇵🇰,Pakistan,"18,917"
+5,Africa,🇨🇩,DR Congo,"12,484"
+6,Asia,🇮🇩,Indonesia,"12,158"
+7,Africa,🇪🇹,Ethiopia,"11,435"
+8,Northern America,🇺🇸,United States,"10,031"
+9,Asia,🇧🇩,Bangladesh,"9,422"
+10,South America,🇧🇷,Brazil,"6,923"
+11,Africa,🇪🇬,Egypt,"6,708"
+12,Africa,🇹🇿,Tanzania,"6,624"
+13,Northern America,🇲🇽,Mexico,"5,486"
+14,Asia,🇵🇭,Philippines,"5,042"
+15,Africa,🇺🇬,Uganda,"4,692"
+16,Africa,🇸🇩,Sudan,"4,608"
+17,Africa,🇰🇪,Kenya,"4,110"
+18,Asia,🇦🇫,Afghanistan,"4,026"
+19,Asia,🇻🇳,Vietnam,"3,803"
+20,Asia,🇾🇪,Yemen,"3,799"
+21,Africa,🇦🇴,Angola,"3,785"
+22,Europe,🇷🇺,Russian Federation,"3,556"
+23,Africa,🇲🇿,Mozambique,"3,455"
+24,Africa,🇿🇦,South Africa,"3,251"
+25,Asia,🇮🇷,Iran,"3,211"
+26,Asia,🇮🇶,Iraq,"3,178"
+27,Africa,🇳🇪,Niger,"3,002"
+28,Asia,🇹🇷,Turkey,"2,937"
+29,Africa,🇲🇬,Madagascar,"2,743"
+30,Africa,🇨🇮,Côte d'Ivoire,"2,731"
+31,Africa,🇨🇲,Cameroon,"2,623"
+32,Africa,🇲🇱,Mali,"2,607"
+33,Asia,🇺🇿,Uzbekistan,"2,585"
+34,Africa,🇩🇿,Algeria,"2,482"
+35,Asia,🇲🇽,Myanmar,"2,476"
+36,Africa,🇬🇭,Ghana,"2,435"
+37,Africa,🇹🇩,Chad,"2,242"
+38,Africa,🇸🇴,Somalia,"2,161"
+39,Asia,🇯🇵,Japan,"2,054"
+40,Africa,🇧🇫,Burkina Faso,"1,997"
+41,Europe,🇩🇪,Germany,"1,970"
+42,South America,🇨🇴,Colombia,"1,932"
+43,Europe,🇬🇧,United Kingdom,"1,887"
+44,Africa,🇿🇲,Zambia,"1,878"
+45,Africa,🇲🇼,Malawi,"1,814"
+46,Europe,🇫🇷,France,"1,750"
+47,Africa,🇲🇦,Morocco,"1,725"
+48,Asia,🇹🇭,Thailand,"1,620"
+49,Asia,🇳🇵,Nepal,"1,574"
+50,Asia,🇸🇦,Saudi Arabia,"1,497"
+51,South America,🇵🇪,Peru,"1,479"
+52,Africa,🇸🇳,Senegal,"1,457"
+53,Asia,🇸🇾,Syria,"1,430"
+54,South America,🇦🇷,Argentina,"1,380"
+55,Africa,🇿🇼,Zimbabwe,"1,361"
+56,Africa,🇬🇫,Guinea,"1,336"
+57,Africa,🇧🇯,Benin,"1,310"
+58,Africa,🇧🇮,Burundi,"1,263"
+59,Asia,🇲🇾,Malaysia,"1,194"
+60,South America,🇻🇪,Venezuela,"1,170"
+61,Asia,🇰🇿,Kazakhstan,"1,122"
+62,Africa,🇷🇼,Rwanda,"1,084"
+63,Europe,🇮🇹,Italy,"1,054"
+64,South America,🇬🇹,Guatemala,"1,033"
+65,Asia,🇰🇭,Cambodia,991
+66,Northern America,🇨🇦,Canada,978
+67,Asia,🇰🇵,North Korea,937
+68,Europe,🇪🇸,Spain,922
+69,Africa,🇸🇸,South Sudan,900
+70,Asia,🇱🇰,Sri Lanka,888
+71,Europe,🇵🇱,Poland,871
+72,Australia,🇦🇺,Australia,834
+73,Africa,🇹🇬,Togo,794
+74,Asia,🇹🇯,Tajikistan,744
+75,South America,🇪🇨,Ecuador,741
+76,South America,🇧🇴,Bolivia,713
+77,Africa,🇸🇱,Sierra Leone,710
+78,Caribbean,🇭🇹,Haiti,708
+79,Melanesia,🇵🇬,Papua New Guinea,700
+80,Africa,🇨🇫,Central African Republic,654
+81,Asia,🇰🇷,South Korea,647
+82,Asia,🇯🇴,Jordan,646
+83,South America,🇭🇳,Honduras,641
+84,Europe,🇺🇦,Ukraine,581
+85,Caribbean,🇩🇴,Dominican Republic,557
+86,Africa,🇨🇬,Congo,519
+87,Europe,🇷🇴,Romania,503
+88,South America,🇨🇱,Chile,483
+89,Africa,🇲🇷,Mauritania,474
+90,Asia,🇮🇱,Israel,472
+91,Africa,🇱🇷,Liberia,466
+92,Europe,🇳🇱,Netherlands,460
+93,Africa,🇹🇳,Tunisia,459
+94,Asia,🇱🇦,Laos,447
+95,Asia,🇹🇲,Turkmenistan,439
+96,Asia,🇰🇬,Kyrgyzstan,413
+97,Asia,🇵🇸,State of Palestine,401
+98,South America,🇵🇾,Paraguay,375
+99,Asia,🇹🇼,Taiwan,363
+100,South America,🇳🇮,Nicaragua,362

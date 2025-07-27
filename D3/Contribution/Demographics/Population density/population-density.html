@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Population density chart by country</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1>Population density chart by country</h1>
+    <p>Interactive chart showing countries by population <span>(195 countries participate)</span></p>
+  </div>
+
+  <div class="controls">
+    <label for="countryCount">Select:</label>
+    <select id="countryCount">
+      <option value="10" selected>10 countries</option>
+      <option value="20">20 countries</option>
+      <option value="30">30 countries</option>
+      <option value="50">50 countries</option>
+      <option value="100">100 countries</option>
+      <option value="195">All countries</option>
+    </select>
+  </div>
+
+  <div id="loading" class="loading">Loading data...</div>
+  <div id="error" class="error" style="display: none;"></div>
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+
+  <div class="tooltip" id="tooltip"></div>
+</div>
+
+<script src="populationDensity.js"></script>
+</body>
+</html>

@@ -1,0 +1,130 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 10px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.header h1 {
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.controls {
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.controls label {
+    font-weight: 500;
+    color: #34495e;
+}
+
+.controls select {
+    padding: 8px 12px;
+    border: 2px solid #bdc3c7;
+    border-radius: 4px;
+    font-size: 14px;
+    background: white;
+}
+
+.chart-container {
+    overflow-x: auto;
+}
+
+.bar {
+    /*fill: #3498db;*/
+    /*fill: #4ED7F1;*/
+    fill: #89AC46;
+    transition: fill 0.2s ease;
+}
+
+.bar:hover {
+    /*fill: #2980b9;*/
+    /*fill: #B9B28A;*/
+    fill: #626F47;
+    cursor: pointer;
+}
+
+.axis {
+    font-size: 12px;
+}
+
+.axis-label {
+    font-size: 14px;
+    fill: #2c3e50;
+    text-transform: uppercase;
+    color: #0D4715;
+    font-weight: bold;
+}
+
+.country-label {
+    font-size: 11px;
+    fill: #2c3e50;
+    alignment-baseline: middle;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.9);
+    color: white;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    line-height: 1.4;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    max-width: 250px;
+}
+
+.tooltip-flag {
+    font-size: 16px;
+    margin-right: 8px;
+}
+
+.tooltip-country {
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+}
+
+.error {
+    background: #e74c3c;
+    color: white;
+    padding: 15px;
+    border-radius: 4px;
+    margin: 20px 0;
+}
+
+/* Added grid lines styling */
+.grid line {
+    stroke: #87ceeb;
+    stroke-dasharray: 3,3;
+    stroke-width: 1;
+}
+
+.grid path {
+    stroke: none;
+}

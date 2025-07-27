@@ -1,0 +1,154 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 30px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin: 0 0 10px 0;
+}
+
+.subtitle {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin: 0;
+}
+
+.controls {
+    margin-bottom: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.batch-selector {
+    padding: 8px 12px;
+    border: 2px solid #3498db;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+}
+
+.batch-selector:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.2);
+}
+
+.chart-container {
+    position: relative;
+}
+
+.bar {
+    /*fill: #3498db;*/
+    /*fill: #00809D;*/
+    fill: #932F67;
+    /*fill: #3E5F44;*/
+    /*fill: #113F67;*/
+    transition: fill 0.2s ease;
+}
+
+.bar:hover {
+    fill: #2980b9;
+    fill: #DC3C22;
+    fill: #8A0000;
+    fill: #511D43;
+    fill: #0B1D51;
+    fill: #52357B;
+    fill: #52357B;
+    fill: #F97A00;
+    cursor: pointer;
+}
+
+.axis-text {
+    font-size: 12px;
+    fill: #34495e;
+}
+
+.country-label {
+    font-size: 13px;
+    fill: #2c3e50;
+    font-weight: 500;
+}
+
+.flag-emoji {
+    font-size: 16px;
+}
+
+.grid-line {
+    stroke: #e0e0e0;
+    stroke-dasharray: 3,3;
+    stroke-width: 1;
+    opacity: 0.7;
+}
+
+.value-label {
+    font-size: 12px;
+    fill: #2c3e50;
+    font-weight: 600;
+}
+
+.axis-title {
+    font-size: 14px;
+    /*fill: #34495e;*/
+    fill: #932F67;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin: 10px 10px;
+    /*margin-top: 20px;*/
+    letter-spacing: inherit;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    padding: 12px 16px;
+    border-radius: 6px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    z-index: 1000;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.loading {
+    text-align: center;
+    padding: 40px;
+    color: #7f8c8d;
+    font-size: 16px;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #e74c3c;
+    font-size: 16px;
+    background: #fdf2f2;
+    border-radius: 6px;
+    border: 1px solid #fadbd8;
+}
