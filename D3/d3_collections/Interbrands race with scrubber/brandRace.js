@@ -7,7 +7,7 @@ let isStarting = false;
 let animationId = null;
 
 // Configuration constants
-const duration = 300;
+const duration = 200;
 const n = 16;
 const k = 8;
 const barSize = 42;
@@ -47,10 +47,13 @@ function processData(rawData) {
       .map(([date, data]) => [new Date(date), data])
       .sort(([a], [b]) => d3.ascending(a, b));
 
+  console.log('📈 sort data values', datevalues)
+
   function rank(value) {
     const data = Array.from(names, name => ({name, value: value(name)}));
     data.sort((a, b) => d3.descending(a.value, b.value));
     for (let i = 0; i < data.length; ++i) data[i].rank = Math.min(n, i);
+    // console.log('🏔️ rank data', data)
     return data;
   }
 
@@ -80,7 +83,7 @@ function createChart() {
   const updateBars = createBarsUpdater(svg, color);
   const updateAxis = createAxisUpdater(svg);
   const updateLabels = createLabelsUpdater(svg);
-  const updateTicker = createTickerUpdater(svg);
+  // const updateTicker = createTickerUpdater(svg);
 
   return {
     node: svg.node(),
@@ -95,13 +98,14 @@ function createChart() {
       updateAxis(keyframe, transition);
       updateBars(keyframe, transition);
       updateLabels(keyframe, transition);
-      updateTicker(keyframe, transition);
+      // updateTicker(keyframe, transition);
     }
   };
 }
 
 // Individual update functions
 function createBarsUpdater(svg, color) {
+  console.log('Color', color)
   let bar = svg.append("g")
       .attr("fill-opacity", 0.6)
       .selectAll("rect");
@@ -174,21 +178,23 @@ function createAxisUpdater(svg) {
   };
 }
 
-function createTickerUpdater(svg) {
-  const now = svg.append("text")
-      // .style("font", `bold ${barSize}px var(--sans-serif)`)
-      .style("font", "bold 28px var(--sans-serif)")
-      .style("font-variant-numeric", "tabular-nums")
-      .attr("text-anchor", "end")
-      .attr("x", width - 6)
-      .attr("y", margin.top + barSize * (n - 0.45))
-      .attr("dy", "0.32em")
-      .text("2000");
-
-  return ([date], transition) => {
-    transition.end().then(() => now.text(formatDate(date)));
-  };
-}
+// ⚠️ Create and place the date in the lower right corner.
+// function createTickerUpdater(svg) {
+//   const now = svg.append("text")
+//       // .style("font", `bold ${barSize}px var(--sans-serif)`)
+//       .style("font", "bold 18px var(--sans-serif)")
+//       .style("font-variant-numeric", "tabular-nums")
+//       // .attr("text-anchor", "end")
+//       .attr("x", width - 6)
+//       .attr("y", margin.top + barSize * (n - 0.45))
+//       .attr("dy", "0.32em")
+//       .text("2000");
+//
+//   return ([date], transition) => {
+//     console.log('📆 DATE', date, [date])
+//     transition.end().then(() => now.text(formatDate(date)));
+//   };
+// }
 
 function textTween(a, b) {
   const i = d3.interpolateNumber(a, b);
@@ -219,6 +225,11 @@ function initializeScrubber() {
   slider.addEventListener('input', (e) => {
     const index = parseInt(e.target.value);
     goToKeyframe(index);
+
+    // ADDED: Update colors immediately when user drags slider
+    // const percentage = (index / (keyframes.length - 1)) * 100;
+    // slider.style.background =
+    //     `linear-gradient(to right, #dc3545 0%, #dc3545 ${percentage}%, #1ECD97 ${percentage}%, #1ECD97 100%)`;
   });
 
   // Initialize display
@@ -289,8 +300,8 @@ async function initialize() {
     loadingElement.style.display = 'block';
     errorElement.style.display = 'none';
 
-    // Load CSV data from relative path
-    data = await d3.csv('./files/category-brands.csv', d => ({
+    // Load CSV data
+    data = await d3.csv('./files/data.csv', d => ({
       date: new Date(d.date),
       name: d.name,
       category: d.category,

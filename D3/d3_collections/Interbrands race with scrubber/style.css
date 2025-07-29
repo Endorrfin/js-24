@@ -22,28 +22,73 @@ body {
 
 .description {
     font-size: 12px;
-    /*color: #8A784E;*/
-    /*color: #FFA725;*/
-    /*color: #255F38;*/
     color: #41644A;
     margin-bottom: 20px;
     line-height: 1.4;
 }
 
-/* ADDED: Custom scrubber styles */
+/* Custom scrubber styles */
 .scrubber-container {
-    margin-bottom: 10px;
+    margin-bottom: 5px;
     padding: 5px 0;
 }
 
 .scrubber-controls {
     display: flex;
     align-items: center;
-    gap: 10px;
+    font-size: 20px;
+    gap: 5px;
     margin-bottom: 10px;
-    /*background-color: #ececec;*/
     color: #1ECD97;
-    /*color: darkred;*/
+}
+
+.scrubber-slider {
+    flex: 1;
+    margin: 0 10px;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 8px;
+    border-radius: 4px;
+    background: #1ECD97; /* Blue background for unfilled part */
+    outline: none;
+    opacity: 0.7;
+    transition: opacity 0.2s;
+}
+
+.scrubber-slider:hover {
+    opacity: 1;
+}
+
+/* ADDED: Webkit browsers (Chrome, Safari) thumb styling */
+.scrubber-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #ffffff;
+    cursor: pointer;
+    border: 4px solid #1ECD97;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ADDED: Firefox thumb styling */
+.scrubber-slider::-moz-range-thumb {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: #1ECD97; /* Red thumb */
+    cursor: pointer;
+    border: 2px solid white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+
+/* ADDED: Firefox track styling */
+.scrubber-slider::-moz-range-track {
+    height: 8px;
+    border-radius: 4px;
+    background: #1ECD97; /* Blue track */
+    border: none;
 }
 
 
@@ -54,10 +99,10 @@ button {
     width: 90px;
     border-radius: 40px;
     background: #fff;
-    border: 2px solid #1ECD97;
+    border: 1px solid #1ECD97;
     color: #1ECD97;
     letter-spacing: 1px;
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.25s ease;
@@ -72,12 +117,6 @@ button {
     &:after {
         content:"";
     }
-}
-
-.scrubber-slider {
-    flex: 1;
-    margin: 0 10px;
-    /*color: red;*/
 }
 
 .year-display {
