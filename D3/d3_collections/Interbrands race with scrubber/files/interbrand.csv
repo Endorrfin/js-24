@@ -1,4 +1,4 @@
-﻿#,date,country,flag,name,category,value
+﻿id,date,country,flag,name,category,value
 1,2000.01.01,United States,🇺🇸,Coca-Cola,Beverages,72537
 2,2000.01.01,United States,🇺🇸,Microsoft,Technology,70196
 3,2000.01.01,United States,🇺🇸,IBM,Business Services,53183
