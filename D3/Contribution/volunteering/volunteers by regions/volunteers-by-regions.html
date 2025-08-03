@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Number of volunteers</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank Donations Chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+
+
+
+<div class="container">
+  <h1>Registered volunteers by regions of Ukraine 2024</h1>
+<!--  <p class="subtitle">Data visualization showing volunteer registration across Ukrainian regions</p>-->
+
+  <div class="controls">
+    <button class="sort-btn active" id="sort-desc">Sort by count</button>
+    <button class="sort-btn" id="sort-alpha">Sort alphabetically</button>
+  </div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+</div>
+
+<div class="tooltip" id="tooltip"></div>
+
+
+<script src="volunteersByRegions.js"></script>
+</body>
+</html>
