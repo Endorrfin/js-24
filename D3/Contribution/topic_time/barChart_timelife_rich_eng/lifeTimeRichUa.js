@@ -1,22 +1,37 @@
 // Data parsing - converted from Ukrainian table to structured format
 
 const rawData = [
-  { activity: '🛌 Sleep', years: 27, days: 9855, hours: 236520 },
-  { activity: '👷 Work', years: 11, days: 3833, hours: 91980 },
-  { activity: '🚙 On the way', years: 8.5, days: 3103, hours: 74460 },
-  { activity: '👀 View screen', years: 7.6, days: 2774, hours: 66576 },
-  { activity: '🥗 Taking food', years: 5.5, days: 2008, hours: 48180 },
-  { activity: '🤧 Sickness', years: 2.8, days: 1022, hours: 24528 },
-  { activity: '✍️ Schooling', years: 2.6, days: 949, hours: 22776 },
-  { activity: '📚 Reading', years: 2.3, days: 840, hours: 20148 },
-  { activity: '🚬 Smoking (who smokes)', years: 2.0, days: 730, hours: 17520 },
-  { activity: '😊 Doing nothing', years: 1.5, days: 548, hours: 13140 },
-  { activity: '🚿 Personal hygiene', years: 1.5, days: 548, hours: 13140 },
-  { activity: '⚽️ 🎳 🎯 Playing', years: 1, days: 365, hours: 8760 },
-  { activity: '🛒 Shopping', years: 0.8, days: 292, hours: 7008 },
-  { activity: '💕 Intimate relationships', years: 0.2, days: 73, hours: 1752 },
-  { activity: '🏋️ ⛹️‍♀️ Sport', years: 0.2, days: 73, hours: 1752 }
+  { activity: '🛌 Sleeping', years: 24, days: 8760, hours: 210240, percent: 33 },
+  { activity: '👷 Working', years: 11, days: 3833, hours: 91980, percent: 14 },
+  { activity: '🚙 Is on the way', years: 8.5, days: 3103, hours: 74460, percent: 12 },
+  { activity: '👀 🛜 Screen time', years: 7.6, days: 2774, hours: 66576, percent: 10 },
+  { activity: '🏡 Housework', years: 4.5, days: 1643, hours: 39420, percent: 6 },
+  { activity: '🥗 Taking food', years: 3.7, days: 1351, hours: 32412, percent: 5 },
+  { activity: '🤧 Sickness', years: 2.8, days: 1022, hours: 24528, percent: 4 },
+  { activity: '✍️ Schooling', years: 2.6, days: 949, hours: 22776, percent: 4 },
+  { activity: '📚 Reading', years: 2.3, days: 840, hours: 20148, percent: 3 },
+  { activity: '🚬 Smoking (who smokes)', years: 2.0, days: 730, hours: 17520, percent: 3 },
+  { activity: '😜 Doing nothing', years: 1.5, days: 548, hours: 13140, percent: 2.0 },
+  { activity: '🚿 Personal hygiene', years: 1.5, days: 548, hours: 13140, percent: 2.0 },
+  { activity: '🎳 🎯 Playing', years: 1, days: 365, hours: 8760, percent: 1.4 },
+  { activity: '🛒 Shopping', years: 0.8, days: 292, hours: 7008, percent: 1.1 },
+  { activity: '🏋 🏊‍♂️ Sport', years: 0.2, days: 61, hours: 1454, percent: 0.2 },
+  { activity: '💕 Intimate relationships', years: 0.1, days: 25, hours: 604, percent: 0.1 }
 ];
+
+const totals = rawData.reduce((acc, curr) => {
+  acc.years += curr.years;
+  acc.days += curr.days;
+  acc.hours += curr.hours;
+  acc.percent += curr.percent;
+  return acc;
+}, { years: 0, days: 0, hours: 0, percent: 0});
+
+console.info(
+    "total years =", totals.years, '\n',
+    "total days =", totals.days, '\n',
+    "total hours =", totals.hours, '\n',
+    "total percent =", totals.percent);
 
 
 // Chart configuration and dimensions
@@ -28,9 +43,10 @@ const height = 780 - margin.bottom - margin.top;
 const colorScale = d3.scaleOrdinal()
     .domain(rawData.map(d => d.activity))
     .range([
-      '#321E1E', '#7C73E6', '#2ecc71', '#f39c12', '#9b59b6',
-      '#98CD00', '#34495e', '#e67e22', '#CD1818', '#f1c40f',
-      '#1CABE2', '#16a085', '#2c3e50', '#FF2DD1', '#B80000'
+      '#321E1E', '#7C73E6', '#706D54', '#f39c12', '#9b59b6',
+      '#98CD00', '#F72C5B', '#34495e', '#e67e22', '#CD1818',
+      '#f1c40f', '#1CABE2', '#16a085', '#b13bff', '#56DFCF',
+      '#FF2DD1'
     ]);
 
 // Unit labels for better UX
@@ -84,21 +100,21 @@ function updateChart(unit) {
   xScale.domain([0, d3.max(data, d => d[unit])]);
   yScale.domain(data.map(d => d.activity));
 
-  // ❗️ Define minimum bar width for better visibility of small values
-  const minBarWidth = 30;
+  // Define minimum bar width for better visibility of small values
+  const minBarWidth = 20;
 
   // Update grid with transition
   gridGroup.transition()
-      .duration(750)
+      .duration(1750)
       .call(xGrid);
 
   // Update axes with smooth transitions
   xAxisGroup.transition()
-      .duration(750)
+      .duration(2750)
       .call(xAxis);
 
   yAxisGroup.transition()
-      .duration(750)
+      .duration(2750)
       .call(yAxis);
 
   // Data binding for bars with key function for smooth transitions
@@ -108,7 +124,7 @@ function updateChart(unit) {
   // Remove old bars that are no longer needed
   bars.exit()
       .transition()
-      .duration(750)
+      .duration(2750)
       .attr('width', 0)
       .remove();
 
@@ -126,7 +142,7 @@ function updateChart(unit) {
 
   // Animate bar width changes with smooth transition
   barsUpdate.transition()
-      .duration(750)
+      .duration(2750)
       .attr('y', d => yScale(d.activity))
       .attr('width', d => xScale(d[unit]))
       .attr('height', yScale.bandwidth());
@@ -148,8 +164,8 @@ function updateChart(unit) {
         tooltip.style('opacity', 1)
             .html(`
                             <strong>${d.activity}</strong><br/>
-                            ${d[unit].toLocaleString()} ${unitLabels[unit]}<br/>
-                            <small>Роки: ${d.years} | Дні: ${d.days.toLocaleString()} | Години: ${d.hours.toLocaleString()}</small>
+                            ${d[unit].toLocaleString()} ${unitLabels[unit]} | <span>Persent: ${d.percent} %</span> <br/>
+                            <small>Years: ${d.years} | Days: ${d.days.toLocaleString()} | Hours: ${d.hours.toLocaleString()}</small>
                         `)
             .style('left', (event.pageX + 10) + 'px')
             .style('top', (event.pageY - 10) + 'px');
@@ -160,7 +176,7 @@ function updateChart(unit) {
       });
 
   // Value labels on bars - shows actual values for better readability
-  // ❗️ External value labels positioned to the right of bars
+  // External value labels positioned to the right of bars
   const valueLabels = g.selectAll('.value-label')
       .data(data, d => d.activity);
 
@@ -171,14 +187,14 @@ function updateChart(unit) {
       .attr('class', 'value-label')
       .attr('y', d => yScale(d.activity) + yScale.bandwidth() / 2)
       .attr('dy', '0.35em')
-      .attr('text-anchor', 'start') // ❗️ Always start anchor since labels are external
-      .attr('fill', '#2c3e50'); // ❗️ Consistent dark color for external labels
+      .attr('text-anchor', 'start')
+      .attr('fill', '#2c3e50');
 
   const valueLabelsUpdate = valueLabelsEnter.merge(valueLabels);
 
   // Update value label positions and text with transitions
   valueLabelsUpdate.transition()
-      .duration(750)
+      .duration(3750)
       .attr('y', d => yScale(d.activity) + yScale.bandwidth() / 2)
       .attr('x', d => {
         const barWidth = Math.max(minBarWidth, xScale(d[unit]));
