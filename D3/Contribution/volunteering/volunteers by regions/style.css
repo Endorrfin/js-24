@@ -1,0 +1,115 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 2px;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+    margin-bottom: 5px;
+    font-size: 22px;
+}
+
+.subtitle {
+    text-align: center;
+    color: #7f8c8d;
+    margin-bottom: 7px;
+    font-size: 16px;
+}
+
+.controls {
+    text-align: center;
+    margin-bottom: 3px;
+}
+
+.sort-btn {
+    background: #3498db;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.7s;
+}
+
+.sort-btn:hover {
+    background: #5409DA;
+}
+
+.sort-btn.active {
+    background: #e74c3c;
+}
+
+.chart-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.bar {
+    /*fill: #3498db;*/
+    /*fill: #075B5E;*/
+    /*fill: #52357B;*/
+    fill: #5409DA;
+    transition: fill 0.3s;
+}
+
+.bar:hover {
+    fill: #e74c3c;
+}
+
+.bar-label {
+    font-size: 12px;
+    fill: #2c3e50;
+    font-weight: 500;
+}
+
+.bar-value {
+    font-size: 11px;
+    fill: #34495e;
+    font-weight: bold;
+}
+
+.axis {
+    font-size: 11px;
+    color: #7f8c8d;
+}
+
+.axis-label {
+    font-size: 16px;
+    font-weight: 600;
+    fill: #2c3e50;
+}
+
+.grid line {
+    stroke: #ecf0f1;
+    stroke-dasharray: 2,2;
+}
+
+.grid path {
+    stroke-width: 0;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 4px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}

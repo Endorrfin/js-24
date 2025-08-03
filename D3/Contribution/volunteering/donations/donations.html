@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bank donations chart</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+
+</head>
+<body>
+
+
+
+<div class="container">
+  <h1>Average number of people donating to the 🫙 of monobank</h1>
+  <p class="description">Compared to the first year of the full-scale war, the average donation amount increased 1.6 times: from 250 UAH to 410 UAH.</p>
+  <!-- Horizontal legend container -->
+  <div class="legend-container">
+    <div id="legend" class="legend-horizontal"></div>
+  </div>
+  <div class="chart-container">
+    <div id="chart"></div>
+    <div class="tooltip"></div>
+  </div>
+
+  <a class="reference" href="https://opendatabot.ua/analytics/volunteers-2024">source: Opendatabot</a>
+</div>
+
+
+<script src="donations.js"></script>
+</body>
+</html>
