@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>International brands race for supremacy 2000-2024 with scrubber</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="chart-container">
+  <div class="title">Ukrainian brands race</div>
+  <div class="description">
+    <span>Current chart animates the value (₴ <span style="color: #1ECD97; font-weight: bold">M</span>) of the top 10 Ukrainian brands from 2020 to 2024.</span>
+<!--    <span>Color indicates category / sector. Use the scrubber for interactive control.</span>-->
+    <span>Color indicates category / sector.</span>
+  </div>
+
+  <!-- ADDED: Custom scrubber controls -->
+  <div class="scrubber-container">
+    <div class="scrubber-controls">
+      <button
+              class="start-button"
+              id="startButton">
+        Start
+      </button>
+      <label for="scrubberSlider"></label>
+      <input
+              type="range"
+              class="scrubber-slider"
+              id="scrubberSlider"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+      >
+      <div class="year-display" id="yearDisplay">2016</div>
+    </div>
+  </div>
+
+  <div id="chart"></div>
+  <div id="loading" class="loading">Loading data...</div>
+  <div id="error" class="error" style="display: none;"></div>
+</div>
+
+<script src="uabrands.js"></script>
+</body>
+</html>
