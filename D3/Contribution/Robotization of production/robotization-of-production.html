@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Robotization</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1 class="title">Top 15 countries with the highest robotization rate in manufacturing</h1>
+    <p class="subtitle">According to the International Federation of Robotics (IFR) for 2023-2025</p>
+    <p class="description">This ranking reflects the current level of automation in manufacturing, measured by the number of industrial robots per 10,000 workers. This is a key indicator of the efficiency and technological advancement of industrial production within a country</p>
+  </div>
+
+<!--  <div class="controls">-->
+<!--    <label for="batchSelect">Select Countries:</label>-->
+<!--    <select id="batchSelect" class="batch-selector">-->
+<!--      &lt;!&ndash; Options will be populated by JavaScript &ndash;&gt;-->
+<!--    </select>-->
+<!--    <span id="batchInfo" style="color: #7f8c8d; font-size: 14px;"></span>-->
+<!--  </div>-->
+
+  <div id="loadingMessage" class="loading">Loading data...</div>
+  <div id="errorMessage" class="error" style="display: none;"></div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+
+  <!-- Tooltip element -->
+  <div id="tooltip" class="tooltip"></div>
+</div>
+
+<script src="robotizationProduction.js"></script>
+</body>
+</html>
