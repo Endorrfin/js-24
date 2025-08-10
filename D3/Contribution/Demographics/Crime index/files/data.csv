@@ -1,0 +1,101 @@
+﻿rank,region,flag,country,crime index
+1,Oceania,🇭🇹,Haiti,81
+2,Oceania,🇵🇬,Papua New Guinea,80.7
+3,America,🇻🇪,Venezuela,80.5
+4,Asia,🇦🇫,Afghanistan,75.2
+5,Africa,🇿🇦,South Africa,74.6
+6,America,🇭🇳,Honduras,71.9
+7,Oceania,🇹🇹,Trinidad and Tobago,71
+8,Asia,🇸🇾,Syria,68.4
+9,Oceania,🇯🇲,Jamaica,67.4
+10,America,🇵🇪,Peru,66.7
+11,America,🇬🇾,Guyana,66.4
+12,Africa,🇦🇴,Angola,66.3
+13,Africa,🇨🇩,DR Congo,66.2
+14,Africa,🇳🇬,Nigeria,66.1
+15,Africa,🇨🇲,Cameroon,65.5
+16,America,🇧🇴,Bolivia,64.6
+17,America,🇧🇷,Brazil,64.2
+18,Africa,🇳🇦,Namibia,63.6
+19,America,🇦🇷,Argentina,63.3
+20,Africa,🇸🇴,Somalia,63.2
+21,Asia,🇾🇪,Yemen,63
+22,America,🇪🇨,Ecuador,62.6
+23,Asia,🇧🇩,Bangladesh,61.5
+24,Africa,🇿🇼,Zimbabwe,61.2
+25,Africa,🇲🇿,Mozambique,61
+26,America,🇨🇴,Colombia,61
+27,America,🇨🇱,Chile,60.5
+28,Oceania,🇩🇴,Dominican Republic,60.4
+29,America,🇵🇾,Paraguay,60.1
+30,America,🇬🇹,Guatemala,57.7
+31,Oceania,🇧🇸,Bahamas,56.9
+32,Oceania,🇫🇯,Fiji,56.9
+33,America,🇸🇻,El Salvador,56.7
+34,Africa,🇱🇾,Libya,56.4
+35,Africa,🇰🇪,Kenya,55.8
+36,Africa,🇨🇮,Côte d'Ivoire,55.7
+37,Europe,🇫🇷,France,55.6
+38,Asia,🇲🇻,Maldives,54.1
+39,Africa,🇺🇬,Uganda,54.1
+40,America,🇨🇷,Costa Rica,53.7
+41,Africa,🇹🇿,Tanzania,53.4
+42,America,🇲🇽,Mexico,53.2
+43,Africa,🇩🇿,Algeria,52.9
+44,America,🇺🇾,Uruguay,52.3
+45,America,🇧🇿,Belize,52.1
+46,Asia,🇰🇬,Kyrgyzstan,52
+47,Asia,🇲🇳,Mongolia,51.7
+48,Asia,🇲🇽,Myanmar,51.6
+49,Africa,🇧🇼,Botswana,50.9
+50,America,🇳🇮,Nicaragua,50.8
+51,Asia,🇮🇷,Iran,50.5
+52,Africa,🇪🇹,Ethiopia,50.4
+53,Asia,🇰🇭,Cambodia,50.2
+54,Europe,🇧🇪,Belgium,49.5
+55,Africa,🇲🇺,Mauritius,49.4
+56,America,🇺🇸,United States,49.2
+57,Europe,🇧🇾,Belarus,49.1
+58,Europe,🇮🇪,Ireland,48.6
+59,Asia,🇲🇾,Malaysia,48.6
+60,Australia and New Zealand,🇳🇿,New Zealand,48.5
+61,Europe,🇬🇧,United Kingdom,48.4
+62,Europe,🇸🇪,Sweden,48.1
+63,Africa,🇲🇦,Morocco,47.5
+64,Australia and New Zealand,🇦🇺,Australia,47.4
+65,Europe,🇮🇹,Italy,47.2
+66,Europe,🇺🇦,Ukraine,47
+67,Africa,🇪🇬,Egypt,46.9
+68,Asia,🇱🇧,Lebanon,46.9
+69,Europe,🇬🇷,Greece,46.4
+70,Asia,🇮🇩,Indonesia,46.1
+71,America,🇨🇦,Canada,45.8
+72,Africa,🇬🇭,Ghana,45.8
+73,Africa,🇿🇲,Zambia,45.6
+74,Asia,🇰🇿,Kazakhstan,45.6
+75,Africa,🇸🇩,Sudan,45.6
+76,Africa,🇹🇳,Tunisia,45
+77,Oceania,🇧🇧,Barbados,44.9
+78,Europe,🇲🇩,Moldova,44.7
+79,Asia,🇮🇳,India,44.2
+80,Europe,🇦🇱,Albania,44.2
+81,Asia,🇵🇭,Philippines,43.4
+82,Asia,🇵🇸,State of Palestine,43.2
+83,Europe,🇲🇹,Malta,43
+84,America,🇵🇦,Panama,42.7
+85,Asia,🇵🇰,Pakistan,42.4
+86,Asia,🇱🇰,Sri Lanka,42.3
+87,Asia,🇮🇶,Iraq,41.9
+88,Asia,🇹🇷,Turkey,41.4
+89,Europe,🇲🇰,North Macedonia,41.4
+90,Europe,🇧🇦,Bosnia and Herzegovina,41.2
+91,Asia,🇻🇳,Vietnam,40.4
+92,Asia,🇯🇴,Jordan,39.8
+93,Europe,🇩🇪,Germany,39.6
+94,Europe,🇷🇺,Russian Federation,38.4
+95,Europe,🇷🇸,Serbia,37.2
+96,Europe,🇪🇸,Spain,37.2
+97,Asia,🇹🇭,Thailand,36.8
+98,Europe,🇱🇻,Latvia,36.6
+99,Asia,🇳🇵,Nepal,36.1
+100,Europe,🇧🇬,Bulgaria,35.9
