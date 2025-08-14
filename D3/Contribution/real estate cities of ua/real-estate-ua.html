@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Ukrainian real estate price dynamics 2021-2025</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+</head>
+<body>
+<div class="chart-container">
+  <div class="chart-title">🇺🇦 Ukrainian real estate price dynamics</div>
+  <div class="chart-subtitle">Average cost per 1m² across 19 cities (2021-2025)</div>
+
+  <!-- Top horizontal legend -->
+  <div class="top-legend" id="top-legend"></div>
+
+  <!-- Sorting controls -->
+  <div class="sorting-controls">
+    <button class="sort-button active" onclick="sortCities('original')">Original Order</button>
+    <button class="sort-button" onclick="sortCities('alphabetical')">Alphabetical</button>
+    <button class="sort-button" onclick="sortCities('2025-high')">2025 Price (High-Low)</button>
+    <button class="sort-button" onclick="sortCities('2025-low')">2025 Price (Low-High)</button>
+    <button class="sort-button" onclick="sortCities('change')">Price Change 2021-2025</button>
+  </div>
+
+  <div id="chart"></div>
+</div>
+
+<!-- Tooltip element -->
+<div class="tooltip" id="tooltip"></div>
+
+<script src="realEstateUa.js"></script>
+</body>
+</html>

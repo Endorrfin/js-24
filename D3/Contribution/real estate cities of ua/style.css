@@ -1,0 +1,152 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f5f5f5;
+}
+
+.chart-container {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+.chart-title {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+.chart-subtitle {
+    text-align: center;
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 10px;
+}
+
+/* Top horizontal legend styling */
+.top-legend {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.legend-item-horizontal {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.legend-color-box {
+    width: 16px;
+    height: 16px;
+    margin-right: 6px;
+    border-radius: 2px;
+}
+
+/* Sorting controls styling */
+.sorting-controls {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.sort-button {
+    /*background-color: #3E5F44;*/
+    /*background-color: #DEE791;*/
+    /*background-color: #97B067;*/
+    /*background-color: #456882;*/
+    /*background-color: #708A58;*/
+    background-color: #FFFA8D;
+    /*color: white;*/
+    color: black;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background-color 0.3s;
+}
+
+.sort-button:hover {
+    background-color: #00FFDE;
+}
+
+.sort-button.active {
+    /*background-color: #03A6A1;*/
+    background-color: #1DCD9F;
+    color: white;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+/* Chart styling */
+.axis {
+    font-size: 12px;
+    color: darkblue;
+    /*font-style: italic;*/
+}
+
+.axis-label {
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.line {
+    fill: none;
+    stroke-width: 2.5;
+}
+
+.dot {
+    fill: white;
+    stroke-width: 2;
+    r: 4;
+}
+
+.dot:hover {
+    r: 6;
+    stroke-width: 3;
+}
+
+/* Legend styling */
+.legend {
+    font-size: 12px;
+}
+
+.legend-item {
+    cursor: pointer;
+}
+
+.legend-item:hover .legend-text {
+    font-weight: bold;
+}
+
+/* Tooltip styling */
+.tooltip {
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 12px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+/* Grid lines */
+.grid line {
+    stroke: #e0e0e0;
+    stroke-dasharray: 3,3;
+}
+
+.grid path {
+    stroke-width: 0;
+}
