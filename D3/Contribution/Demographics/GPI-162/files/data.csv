@@ -1,0 +1,163 @@
+﻿#,region,flag,country,GPI
+1,Europe,🇮🇸,Iceland,1.112
+2,Europe,🇦🇹,Austria,1.124
+3,Europe,🇮🇪,Ireland,1.124
+4,Australia and New Zealand,🇳🇿,New Zealand,1.323
+5,Asia,🇸🇬,Singapore,1.339
+6,Europe,🇨🇭,Switzerland,1.35
+7,Europe,🇵🇹,Portugal,1.372
+8,Europe,🇩🇰,Denmark,1.382
+9,Europe,🇸🇮,Slovenia,1.395
+10,Asia,🇲🇾,Malaysia,1.427
+11,America,🇨🇦,Canada,1.449
+12,Europe,🇨🇿,Czech Republic,1.459
+13,Europe,🇫🇮,Finland,1.474
+14,Europe,🇭🇺,Hungary,1.502
+15,Europe,🇭🇷,Croatia,1.504
+16,Europe,🇧🇪,Belgium,1.51
+17,Asia,🇯🇵,Japan,1.525
+18,Europe,🇳🇱,Netherlands,1.527
+19,Australia and New Zealand,🇦🇺,Australia,1.536
+20,Europe,🇩🇪,Germany,1.542
+21,Asia,🇧🇹,Bhutan,1.564
+22,Africa,🇲🇺,Mauritius,1.577
+23,Europe,🇪🇸,Spain,1.597
+24,Europe,🇪🇪,Estonia,1.615
+25,Asia,🇰🇼,Kuwait,1.622
+26,Europe,🇧🇬,Bulgaria,1.629
+27,Europe,🇸🇰,Slovakia,1.634
+28,Europe,🇳🇴,Norway,1.638
+29,Asia,🇶🇦,Qatar,1.656
+30,Europe,🇱🇻,Latvia,1.661
+31,Europe,🇱🇹,Lithuania,1.672
+32,Europe,🇵🇱,Poland,1.678
+33,Europe,🇮🇹,Italy,1.692
+34,Europe,🇬🇧,United Kingdom,1.703
+35,Europe,🇲🇪,Montenegro,1.746
+36,Europe,🇷🇴,Romania,1.755
+37,Asia,🇴🇲,Oman,1.761
+38,Europe,🇲🇰,North Macedonia,1.764
+39,Europe,🇸🇪,Sweden,1.782
+40,Europe,🇬🇷,Greece,1.793
+41,Asia,🇻🇳,Vietnam,1.802
+42,Europe,🇦🇱,Albania,1.809
+43,Asia,🇹🇼,Taiwan,1.818
+44,Africa,🇲🇬,Madagascar,1.838
+45,Asia,🇲🇳,Mongolia,1.845
+46,Asia,🇰🇷,South Korea,1.848
+47,America,🇦🇷,Argentina,1.855
+48,Asia,🇮🇩,Indonesia,1.857
+49,Asia,🇱🇦,Laos,1.861
+50,Africa,🇧🇼,Botswana,1.863
+51,Asia,🇹🇱,Timor-Leste,1.882
+52,America,🇺🇾,Uruguay,1.893
+53,Asia,🇦🇪,United Arab Emirates,1.897
+54,Europe,🇷🇸,Serbia,1.93
+55,Africa,🇬🇭,Ghana,1.938
+56,Africa,🇿🇲,Zambia,1.948
+57,America,🇨🇷,Costa Rica,1.95
+58,Asia,🇰🇿,Kazakhstan,1.954
+59,Asia,🇺🇿,Uzbekistan,1.957
+60,Europe,🇧🇦,Bosnia and Herzegovina,1.961
+61,Africa,🇳🇦,Namibia,1.972
+62,Europe,🇲🇩,Moldova,1.976
+63,America,🇨🇱,Chile,1.978
+64,Africa,🇹🇿,Tanzania,1.987
+65,Africa,🇸🇱,Sierra Leone,1.993
+66,Asia,🇯🇴,Jordan,1.998
+67,America,🇧🇴,Bolivia,2.009
+68,Africa,🇱🇷,Liberia,2.025
+69,Asia,🇰🇭,Cambodia,2.028
+70,Asia,🇹🇯,Tajikistan,2.035
+71,Africa,🇦🇴,Angola,2.043
+72,Africa,🇹🇳,Tunisia,2.044
+73,America,🇵🇾,Paraguay,2.044
+74,Asia,🇹🇭,Thailand,2.048
+75,Asia,🇦🇲,Armenia,2.052
+76,Asia,🇰🇬,Kyrgyzstan,2.053
+77,Africa,🇲🇦,Morocco,2.054
+78,Africa,🇲🇼,Malawi,2.063
+79,Asia,🇳🇵,Nepal,2.069
+80,Asia,🇧🇭,Bahrain,2.072
+81,Asia,🇹🇲,Turkmenistan,2.079
+82,Africa,🇬🇲,Gambia,2.079
+83,Africa,🇸🇳,Senegal,2.084
+84,Africa,🇬🇳,Guinea-Bissau,2.085
+85,Europe,🇫🇷,France,2.088
+86,Oceania,🇹🇹,Trinidad and Tobago,2.092
+87,Asia,🇨🇳,China,2.101
+88,Asia,🇨🇾,Cyprus,2.101
+89,Africa,🇩🇿,Algeria,2.11
+90,Oceania,🇯🇲,Jamaica,2.119
+91,Africa,🇷🇼,Rwanda,2.12
+92,Asia,🇧🇩,Bangladesh,2.126
+93,Africa,🇬🇶,Equatorial Guinea,2.132
+94,Africa,🇲🇷,Mauritania,2.136
+95,America,🇵🇦,Panama,2.14
+96,Oceania,🇩🇴,Dominican Republic,2.157
+97,Oceania,🇨🇺,Cuba,2.16
+98,America,🇵🇪,Peru,2.179
+99,Asia,🇱🇰,Sri Lanka,2.195
+100,Asia,🇬🇪,Georgia,2.195
+101,Asia,🇸🇦,Saudi Arabia,2.206
+102,Africa,🇸🇿,Eswatini,2.209
+103,Asia,🇵🇭,Philippines,2.21
+104,Africa,🇪🇬,Egypt,2.212
+105,Asia,🇦🇿,Azerbaijan,2.248
+106,Africa,🇲🇿,Mozambique,2.25
+107,America,🇸🇻,El Salvador,2.25
+108,Africa,🇨🇮,Côte d'Ivoire,2.255
+109,Africa,🇨🇩,DR Congo,2.261
+110,America,🇬🇾,Guyana,2.286
+111,Europe,🇧🇾,Belarus,2.291
+112,America,🇳🇮,Nicaragua,2.295
+113,Africa,🇧🇯,Benin,2.306
+114,Oceania,🇵🇬,Papua New Guinea,2.315
+115,Asia,🇮🇳,India,2.319
+116,America,🇬🇹,Guatemala,2.332
+117,Africa,🇬🇦,Gabon,2.372
+118,Africa,🇩🇯,Djibouti,2.374
+119,Africa,🇹🇬,Togo,2.381
+120,Africa,🇿🇼,Zimbabwe,2.396
+121,Africa,🇰🇪,Kenya,2.409
+122,America,🇭🇳,Honduras,2.415
+123,Africa,🇬🇫,Guinea,2.423
+124,Africa,🇱🇸,Lesotho,2.461
+125,Africa,🇺🇬,Uganda,2.477
+126,Africa,🇿🇦,South Africa,2.507
+127,Africa,🇱🇾,Libya,2.528
+128,Africa,🇧🇮,Burundi,2.567
+129,America,🇪🇨,Ecuador,2.572
+130,America,🇧🇷,Brazil,2.589
+131,America,🇺🇸,United States,2.622
+132,Asia,🇮🇷,Iran,2.682
+133,Asia,🇱🇧,Lebanon,2.693
+134,Africa,🇹🇩,Chad,2.704
+135,Africa,🇪🇷,Eritrea,2.748
+136,Africa,🇨🇲,Cameroon,2.773
+137,America,🇲🇽,Mexico,2.778
+138,Asia,🇹🇷,Turkey,2.78
+139,Asia,🇵🇰,Pakistan,2.783
+140,Africa,🇳🇪,Niger,2.792
+141,America,🇻🇪,Venezuela,2.821
+142,Oceania,🇭🇹,Haiti,2.827
+143,Africa,🇪🇹,Ethiopia,2.845
+144,Asia,🇵🇸,Palestine,2.872
+145,America,🇨🇴,Colombia,2.887
+146,Africa,🇳🇬,Nigeria,2.907
+147,Asia,🇲🇽,Myanmar,2.943
+148,Africa,🇧🇫,Burkina Faso,2.969
+149,Africa,🇨🇫,Central African Republic,3.009
+150,Asia,🇮🇶,Iraq,3.045
+151,Asia,🇰🇵,North Korea,3.055
+152,Africa,🇸🇴,Somalia,3.091
+153,Africa,🇲🇱,Mali,3.095
+154,Asia,🇮🇱,Israel,3.115
+155,Asia,🇸🇾,Syria,3.173
+156,Europe,🇷🇺,Russian Federation,3.249
+157,Africa,🇨🇩,DR Congo,3.264
+158,Europe,🇺🇦,Ukraine,3.28
+159,Asia,🇦🇫,Afghanistan,3.294
+160,Africa,🇸🇸,South Sudan,3.324
+161,Africa,🇸🇩,Sudan,3.327
+162,Asia,🇾🇪,Yemen,3.397
