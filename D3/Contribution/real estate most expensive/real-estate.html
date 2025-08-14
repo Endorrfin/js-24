@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Robotization</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1 class="title">Top 15 most expensive real estate in the world per 1 M² in 2025</h1>
+<!--    <p class="subtitle">According to the 2025</p>-->
+<!--    <p class="description">Here is a list of the top 15 most expensive real estate locations in the world in 2025, including cost per square meter, country, and city</p>-->
+  </div>
+
+<!--  <div class="controls">-->
+<!--    <label for="batchSelect">Select Countries:</label>-->
+<!--    <select id="batchSelect" class="batch-selector">-->
+<!--      &lt;!&ndash; Options will be populated by JavaScript &ndash;&gt;-->
+<!--    </select>-->
+<!--    <span id="batchInfo" style="color: #7f8c8d; font-size: 14px;"></span>-->
+<!--  </div>-->
+
+  <div id="loadingMessage" class="loading">Loading data...</div>
+  <div id="errorMessage" class="error" style="display: none;"></div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+
+  <!-- Tooltip element -->
+  <div id="tooltip" class="tooltip"></div>
+</div>
+
+<script src="realEstate.js"></script>
+</body>
+</html>
