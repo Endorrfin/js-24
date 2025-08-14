@@ -1,0 +1,245 @@
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Arial, sans-serif;
+    margin: 0;
+    padding: 5px;
+    background-color: #f8f9fa;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.08);
+    padding: 5px;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.title {
+    font-size: 24px;
+    font-weight: 700;
+    color: #2c3e50;
+    margin: 0 0 3px 0;
+    letter-spacing: -0.5px;
+}
+
+.subtitle {
+    font-size: 15px;
+    color: #ff0000;
+    margin: 0;
+    font-weight: 600;
+}
+
+.description {
+    font-size: 13px;
+    color: #595a5b;
+    margin: 0;
+    font-weight: 300;
+}
+
+/* Enhanced controls layout */
+.controls {
+    margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    padding: 7px;
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+
+.control-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.control-label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #495057;
+    text-transform: uppercase;
+    letter-spacing: 0.8px;
+}
+
+.selector {
+    padding: 5px 7px;
+    border: 0.5px solid #a5c3da;
+    border-radius: 6px;
+    font-size: 14px;
+    background: white;
+    cursor: pointer;
+    outline: none;
+    font-weight: 500;
+    min-width: 180px;
+    transition: all 0.7s ease;
+}
+
+.selector:focus {
+    border-color: #2980b9;
+    box-shadow: 0 0 0 3px rgba(52, 152, 219, 0.15);
+}
+
+.selector:hover {
+    border-color: #2980b9;
+}
+
+.info-text {
+    color: #6c757d;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 8px 0;
+    margin-top: 25px;
+}
+
+.chart-container {
+    position: relative;
+    background: white;
+    border-radius: 8px;
+}
+
+.bar {
+    transition: all 0.3s ease;
+    stroke: white;
+    stroke-width: 1;
+}
+
+/* Region-based color scheme - more specific selectors */
+.bar.Africa { fill: #FF6500 !important; }
+.bar.America { fill: #7A1CAC !important; }
+.bar.Asia { fill: #7B4019 !important; }
+.bar.Europe { fill: #66D2CE !important; }
+.bar.Oceania { fill: #4E71FF !important; }
+.bar.Australia.and.New.Zealand { fill: #5C7285 !important; }
+
+.bar:hover {
+    opacity: 0.8;
+    cursor: pointer;
+    stroke-width: 2;
+    stroke: #2c3e50;
+}
+
+.axis-text {
+    font-size: 12px;
+    fill: #495057;
+    font-weight: 500;
+}
+
+.country-label {
+    font-size: 13px;
+    fill: #2c3e50;
+    font-weight: 600;
+}
+
+.grid-line {
+    stroke: #dee2e6;
+    stroke-dasharray: 2,4;
+    stroke-width: 1;
+    opacity: 0.6;
+}
+
+.value-label {
+    font-size: 12px;
+    fill: #495057;
+    font-weight: 600;
+}
+
+.axis-title {
+    font-size: 14px;
+    fill: #2c3e50;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    padding: 6px;
+    border-radius: 8px;
+    font-size: 14px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    max-width: 280px;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.loading {
+    text-align: center;
+    padding: 60px;
+    color: #6c757d;
+    font-size: 16px;
+}
+
+.error {
+    text-align: center;
+    padding: 40px;
+    color: #e74c3c;
+    font-size: 16px;
+    background: #fdf2f2;
+    border-radius: 8px;
+    border: 1px solid #fadbd8;
+}
+
+/* Region legend */
+.legend {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+    padding: 15px;
+    background: #f8f9fa;
+    border-radius: 8px;
+    flex-wrap: wrap;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 15px;
+    }
+
+    .control-group {
+        width: 100%;
+    }
+
+    .selector {
+        min-width: 100%;
+    }
+
+    .legend {
+        flex-direction: column;
+        gap: 10px;
+    }
+}

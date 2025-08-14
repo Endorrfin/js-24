@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Crime Index - Global Analysis</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <h1 class="title">Safest Countries in the World 2024</h1>
+    <p class="subtitle">The Global Peace Index (GPI) ranks the safest and most peaceful countries in the world.</p>
+    <p class="description">This report is published annually by the Institute for Economics and Peace, which defines itself as “an independent, non-partisan, non-profit organization dedicated to shifting the world’s focus to peace as a positive, achievable and tangible measure of human wellbeing and progress.</p>
+  </div>
+
+  <div class="controls">
+    <!-- CHANGED: Added region selector control group -->
+    <div class="control-group">
+      <label class="control-label" for="regionSelect">Filter by Region</label>
+      <select id="regionSelect" class="selector">
+        <option value="all">All Regions</option>
+        <!-- Options will be populated by JavaScript -->
+      </select>
+    </div>
+
+    <!-- CHANGED: Enhanced batch selector layout -->
+    <div class="control-group">
+      <label class="control-label" for="batchSelect">Select Range</label>
+      <select id="batchSelect" class="selector">
+        <!-- Options will be populated by JavaScript -->
+      </select>
+    </div>
+
+    <!-- CHANGED: Enhanced info display -->
+    <div class="info-text">
+      <span id="batchInfo"></span>
+    </div>
+  </div>
+
+  <div id="loadingMessage" class="loading">Loading data...</div>
+  <div id="errorMessage" class="error" style="display: none;"></div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+  </div>
+
+  <!-- CHANGED: Added region legend -->
+  <div class="legend" id="legend" style="display: none;">
+    <!-- Legend items will be populated by JavaScript -->
+  </div>
+
+  <!-- Tooltip element -->
+  <div id="tooltip" class="tooltip"></div>
+</div>
+
+<script src="GPI.js"></script>
+</body>
+</html>
