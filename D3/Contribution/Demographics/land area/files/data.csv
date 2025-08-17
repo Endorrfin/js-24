@@ -1,0 +1,234 @@
+﻿#,region,flag,country,tatal area (Km²),world share
+1,Europe,🇷🇺,Russian Federation,"17,098,242",11.00%
+2,America,🇨🇦,Canada,"9,984,670",6.11%
+3,Asia,🇨🇳,China,"9,706,961",6.30%
+4,America,🇺🇸,United States,"9,372,610",6.14%
+5,America,🇧🇷,Brazil,"8,515,767",5.61%
+6,Australia & New Zealand,🇦🇺,Australia,"7,692,024",5.16%
+7,Asia,🇮🇳,India,"3,287,590",2.00%
+8,America,🇦🇷,Argentina,"2,780,400",1.84%
+9,Asia,🇰🇿,Kazakhstan,"2,724,900",1.81%
+10,Africa,🇩🇿,Algeria,"2,381,741",1.60%
+11,Africa,🇨🇩,DR Congo,"2,344,858",1.52%
+12,America,🇬🇱,Greenland,"2,166,086",0.28%
+13,Asia,🇸🇦,Saudi Arabia,"2,149,690",1.44%
+14,America,🇲🇽,Mexico,"1,964,375",1.31%
+15,Asia,🇮🇩,Indonesia,"1,904,569",1.22%
+16,Africa,🇸🇩,Sudan,"1,886,068",1.19%
+17,Africa,🇱🇾,Libya,"1,759,540",1.18%
+18,Asia,🇮🇷,Iran,"1,648,195",1.09%
+19,Asia,🇲🇳,Mongolia,"1,564,110",1.04%
+20,America,🇵🇪,Peru,"1,285,216",0.86%
+21,Africa,🇹🇩,Chad,"1,284,000",0.85%
+22,Africa,🇳🇪,Niger,"1,267,000",0.85%
+23,Africa,🇦🇴,Angola,"1,246,700",0.84%
+24,Africa,🇲🇱,Mali,"1,240,192",0.82%
+25,Africa,🇿🇦,South Africa,"1,221,037",0.81%
+26,America,🇨🇴,Colombia,"1,141,748",0.74%
+27,Africa,🇪🇹,Ethiopia,"1,104,300",0.67%
+28,America,🇧🇴,Bolivia,"1,098,581",0.73%
+29,Africa,🇲🇷,Mauritania,"1,030,700",0.69%
+30,Africa,🇪🇬,Egypt,"1,002,450",0.67%
+31,Africa,🇹🇿,Tanzania,"945,087",0.59%
+32,Africa,🇳🇬,Nigeria,"923,768",0.61%
+33,America,🇻🇪,Venezuela,"916,445",0.59%
+34,Asia,🇵🇰,Pakistan,"881,912",0.52%
+35,Africa,🇳🇦,Namibia,"825,615",0.55%
+36,Africa,🇲🇿,Mozambique,"801,590",0.53%
+37,Asia,🇹🇷,Turkey,"783,562",0.52%
+38,America,🇨🇱,Chile,"756,102",0.50%
+39,Africa,🇿🇲,Zambia,"752,612",0.50%
+40,Asia,🇲🇽,Myanmar,"676,578",0.44%
+41,Asia,🇦🇫,Afghanistan,"652,230",0.44%
+42,Africa,🇸🇴,Somalia,"637,657",0.42%
+43,Africa,🇨🇫,Central African Republic,"622,984",0.42%
+44,Africa,🇸🇸,South Sudan,"619,745",0.41%
+45,Europe,🇺🇦,Ukraine,"603,500",0.39%
+46,Africa,🇲🇬,Madagascar,"587,041",0.39%
+47,Africa,🇧🇼,Botswana,"582,000",0.38%
+48,Africa,🇰🇪,Kenya,"580,367",0.38%
+49,Europe,🇫🇷,France,"551,695",0.37%
+50,Asia,🇾🇪,Yemen,"527,968",0.35%
+51,Asia,🇹🇭,Thailand,"513,120",0.34%
+52,Europe,🇪🇸,Spain,"505,992",0.33%
+53,Asia,🇹🇲,Turkmenistan,"488,100",0.32%
+54,Africa,🇨🇲,Cameroon,"475,442",0.32%
+55,Oceania,🇵🇬,Papua New Guinea,"462,840",0.30%
+56,Europe,🇸🇪,Sweden,"450,295",0.28%
+57,Asia,🇺🇿,Uzbekistan,"447,400",0.29%
+58,Africa,🇲🇦,Morocco,"446,550",0.30%
+59,Asia,🇮🇶,Iraq,"438,317",0.29%
+60,America,🇵🇾,Paraguay,"406,752",0.27%
+61,Africa,🇿🇼,Zimbabwe,"390,757",0.26%
+62,Asia,🇯🇵,Japan,"377,930",0.24%
+63,Europe,🇩🇪,Germany,"357,114",0.23%
+64,Asia,🇵🇭,Philippines,"342,353",0.20%
+65,Africa,🇨🇬,Congo,"342,000",0.23%
+66,Europe,🇫🇮,Finland,"338,424",0.20%
+67,Asia,🇻🇳,Vietnam,"331,212",0.21%
+68,Asia,🇲🇾,Malaysia,"330,803",0.22%
+69,Europe,🇳🇴,Norway,"323,802",0.25%
+70,Africa,🇨🇮,Côte d'Ivoire,"322,463",0.21%
+71,Europe,🇵🇱,Poland,"312,679",0.21%
+72,Asia,🇴🇲,Oman,"309,500",0.21%
+73,Europe,🇮🇹,Italy,"301,336",0.20%
+74,America,🇪🇨,Ecuador,"276,841",0.17%
+75,Africa,🇧🇫,Burkina Faso,"272,967",0.18%
+76,Australia & New Zealand,🇳🇿,New Zealand,"270,467",0.18%
+77,Africa,🇬🇦,Gabon,"267,668",0.17%
+78,Africa,🇪🇭,Western Sahara,"266,000",0.18%
+79,Africa,🇬🇫,Guinea,"245,857",0.16%
+80,Europe,🇬🇧,United Kingdom,"242,900",0.16%
+81,Africa,🇺🇬,Uganda,"241,550",0.13%
+82,Africa,🇬🇭,Ghana,"238,533",0.15%
+83,Europe,🇷🇴,Romania,"238,391",0.15%
+84,Asia,🇱🇦,Laos,"236,800",0.15%
+85,America,🇬🇾,Guyana,"214,969",0.13%
+86,Europe,🇧🇾,Belarus,"207,600",0.14%
+87,Asia,🇰🇬,Kyrgyzstan,"199,951",0.13%
+88,Africa,🇸🇳,Senegal,"196,722",0.13%
+89,Asia,🇸🇾,Syria,"185,180",0.12%
+90,Asia,🇰🇭,Cambodia,"181,035",0.12%
+91,America,🇺🇾,Uruguay,"181,034",0.12%
+92,America,🇸🇷,Suriname,"163,820",0.10%
+93,Africa,🇹🇳,Tunisia,"163,610",0.10%
+94,Asia,🇧🇩,Bangladesh,"147,570",0.09%
+95,Asia,🇳🇵,Nepal,"147,181",0.10%
+96,Asia,🇹🇯,Tajikistan,"143,100",0.09%
+97,Europe,🇬🇷,Greece,"131,990",0.09%
+98,America,🇳🇮,Nicaragua,"130,373",0.08%
+99,Asia,🇰🇵,North Korea,"120,538",0.08%
+100,Africa,🇲🇼,Malawi,"118,484",0.06%
+101,Africa,🇪🇷,Eritrea,"117,600",0.07%
+102,Africa,🇧🇯,Benin,"112,622",0.08%
+103,America,🇭🇳,Honduras,"112,492",0.08%
+104,Africa,🇱🇷,Liberia,"111,369",0.07%
+105,Europe,🇧🇬,Bulgaria,"110,879",0.07%
+106,Oceania,🇨🇺,Cuba,"109,884",0.07%
+107,America,🇬🇹,Guatemala,"108,889",0.07%
+108,Europe,🇮🇸,Iceland,"103,000",0.07%
+109,Asia,🇰🇷,South Korea,"100,210",0.07%
+110,Europe,🇭🇺,Hungary,"93,028",0.06%
+111,Europe,🇵🇹,Portugal,"92,090",0.06%
+112,Asia,🇯🇴,Jordan,"89,342",0.06%
+113,Europe,🇷🇸,Serbia,"88,361",0.06%
+114,Asia,🇦🇿,Azerbaijan,"86,600",0.06%
+115,Europe,🇦🇹,Austria,"83,871",0.06%
+116,Asia,🇦🇪,United Arab Emirates,"83,600",0.06%
+117,America,🇬🇫,French Guiana,"83,534",0.06%
+118,Europe,🇨🇿,Czech Republic,"78,865",0.05%
+119,America,🇵🇦,Panama,"75,417",0.05%
+120,Africa,🇸🇱,Sierra Leone,"71,740",0.05%
+121,Europe,🇮🇪,Ireland,"70,273",0.05%
+122,Asia,🇬🇪,Georgia,"69,700",0.05%
+123,Asia,🇱🇰,Sri Lanka,"65,610",0.04%
+124,Europe,🇱🇹,Lithuania,"65,300",0.04%
+125,Europe,🇱🇻,Latvia,"64,559",0.04%
+126,Africa,🇹🇬,Togo,"56,785",0.04%
+127,Europe,🇭🇷,Croatia,"56,594",0.04%
+128,Europe,🇧🇦,Bosnia and Herzegovina,"51,209",0.03%
+129,America,🇨🇷,Costa Rica,"51,100",0.03%
+130,Europe,🇸🇰,Slovakia,"49,037",0.03%
+131,Oceania,🇩🇴,Dominican Republic,"48,671",0.03%
+132,Europe,🇪🇪,Estonia,"45,227",0.03%
+133,Europe,🇩🇰,Denmark,"43,094",0.03%
+134,Europe,🇳🇱,Netherlands,"41,850",0.02%
+135,Europe,🇨🇭,Switzerland,"41,284",0.03%
+136,Asia,🇧🇹,Bhutan,"38,394",0.03%
+137,Asia,🇹🇼,Taiwan,"36,193",0.02%
+138,Africa,🇬🇳,Guinea-Bissau,"36,125",0.02%
+139,Europe,🇲🇩,Moldova,"33,846",0.02%
+140,Europe,🇧🇪,Belgium,"30,528",0.02%
+141,Africa,🇱🇸,Lesotho,"30,355",0.02%
+142,Asia,🇦🇲,Armenia,"29,743",0.02%
+143,Oceania,🇸🇧,Solomon Islands,"28,896",0.02%
+144,Europe,🇦🇱,Albania,"28,748",0.02%
+145,Africa,🇬🇶,Equatorial Guinea,"28,051",0.02%
+146,Africa,🇧🇮,Burundi,"27,834",0.02%
+147,Oceania,🇭🇹,Haiti,"27,750",0.02%
+148,Africa,🇷🇼,Rwanda,"26,338",0.02%
+149,Europe,🇲🇰,North Macedonia,"25,713",0.02%
+150,Africa,🇩🇯,Djibouti,"23,200",0.02%
+151,America,🇧🇿,Belize,"22,966",0.02%
+152,America,🇸🇻,El Salvador,"21,041",0.01%
+153,Asia,🇮🇱,Israel,"20,770",0.02%
+154,Europe,🇸🇮,Slovenia,"20,273",0.01%
+155,Oceania,🇳🇨,New Caledonia,"18,575",0.01%
+156,Oceania,🇫🇯,Fiji,"18,272",0.01%
+157,Asia,🇰🇼,Kuwait,"17,818",0.01%
+158,Africa,🇸🇿,Eswatini,"17,364",0.01%
+159,Asia,🇹🇱,Timor-Leste,"14,874",0.01%
+160,Oceania,🇧🇸,Bahamas,"13,943",0.01%
+161,Europe,🇲🇪,Montenegro,"13,812",0.01%
+162,Oceania,🇻🇺,Vanuatu,"12,189",0.01%
+163,America,🇫🇰,Falkland Islands,"12,173",0.01%
+164,Asia,🇶🇦,Qatar,"11,586",0.01%
+165,Oceania,🇯🇲,Jamaica,"10,991",0.01%
+166,Africa,🇬🇲,Gambia,"10,689",0.01%
+167,Asia,🇱🇧,Lebanon,"10,452",0.01%
+168,Asia,🇨🇾,Cyprus,"9,251",0.01%
+169,America,🇵🇷,Puerto Rico,"8,870",0.01%
+170,Asia,🇵🇸,State of Palestine,"6,220",0.00%
+171,Oceania,🇧🇳,Brunei,"5,765",0.00%
+172,Oceania,🇹🇹,Trinidad and Tobago,"5,130",0.00%
+173,Oceania,🇵🇫,French Polynesia,"4,167",0.00%
+174,Africa,🇨🇻,Cabo Verde,"4,033",0.00%
+175,Oceania,🇼🇸,Samoa,"2,842",0.00%
+176,Europe,🇱🇺,Luxembourg,"2,586",0.00%
+177,Africa,🇷🇪,Réunion,"2,511",0.00%
+178,Africa,🇲🇺,Mauritius,"2,040",0.00%
+179,Africa,🇰🇲,Comoros,"1,862",0.00%
+180,America,🇬🇵,Guadeloupe,"1,628",0.00%
+181,Europe,🇫🇴,Faroe Islands,"1,393",0.00%
+182,America,🇲🇶,Martinique,"1,128",0.00%
+183,Asia,🇭🇰,Hong Kong,"1,104",0.00%
+184,Africa,🇸🇹,Sao Tome & Principe,964,0.00%
+185,America,🇹🇨,Turks & Caicos Islands,948,0.00%
+186,Oceania,🇰🇮,Kiribati,811,0.00%
+187,Asia,🇧🇭,Bahrain,765,0.00%
+188,Oceania,🇩🇲,Dominica,751,0.00%
+189,Oceania,🇹🇴,Tonga,747,0.00%
+190,Asia,🇸🇬,Singapore,710,0.00%
+191,Oceania,🇫🇲,Micronesia,702,0.00%
+192,America,🇱🇨,Saint Lucia,616,0.00%
+193,Europe,🇮🇲,Isle of Man,572,0.00%
+194,Oceania,🇬🇺,Guam,549,0.00%
+195,Europe,🇦🇩,Andorra,468,0.00%
+196,Oceania,🇲🇵,Northern Mariana Islands,464,0.00%
+197,Oceania,🇵🇼,Palau,459,0.00%
+198,Africa,🇸🇨,Seychelles,452,0.00%
+199,America,🇨🇼,Curaçao,444,0.00%
+200,Oceania,🇦🇬,Antigua and Barbuda,442,0.00%
+201,Oceania,🇧🇧,Barbados,430,0.00%
+202,Africa,🇸🇭,Saint Helena,394,0.00%
+203,Oceania,🇻🇨,St. Vincent & Grenadines,389,0.00%
+204,Africa,🇸🇹,Sao Tome & Principe,374,0.00%
+205,America,🇻🇮,U.S. Virgin Islands,347,0.00%
+206,Oceania,🇬🇩,Grenada,344,0.00%
+207,America,🇳🇱,Caribbean Netherlands,328,0.00%
+208,Europe,🇲🇹,Malta,316,0.00%
+209,Asia,🇲🇻,Maldives,300,0.00%
+210,America,🇰🇾,Cayman Islands,264,0.00%
+211,Oceania,🇰🇳,Saint Kitts & Nevis,261,0.00%
+212,Oceania,🇳🇺,Niue,260,0.00%
+213,America,🇵🇲,Saint Pierre & Miquelon,242,0.00%
+214,Oceania,🇨🇰,Cook Islands,236,0.00%
+215,Oceania,🇦🇸,American Samoa,199,0.00%
+216,Oceania,🇲🇭,Marshall Islands,181,0.00%
+217,America,🇦🇼,Aruba,180,0.00%
+218,Europe,🇱🇮,Liechtenstein,160,0.00%
+219,America,🇻🇬,British Virgin Islands,151,0.00%
+220,Oceania,🇼🇫,Wallis & Futuna,142,0.00%
+221,America,🇲🇸,Montserrat,102,0.00%
+222,America,🇦🇮,Anguilla,91,0.00%
+223,Europe,🇸🇲,San Marino,61,0.00%
+224,America,🇧🇲,Bermuda,54,0.00%
+225,America,🇸🇽,Sint Maarten,34,0.00%
+226,Asia,🇲🇴,Macao,30,0.00%
+227,Oceania,🇹🇻,Tuvalu,26,0.00%
+228,Oceania,🇳🇷,Nauru,21,0.00%
+229,America,🇧🇱,Saint Barthelemy,21,0.00%
+230,Oceania,🇹🇰,Tokelau,12,0.00%
+231,Europe,🇬🇮,Gibraltar,6,0.00%
+232,Europe,🇲🇨,Monaco,2,0.00%
+233,Europe,🇻🇦,Vatican,0.4,0.00%
