@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GDP by Country</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title">GDP by Country 2023 (billion $)</div>
+    <div class="description">
+<!--      <p>Interactive visualization of 181 countries ranked by GDP.</p>-->
+      <p>GDP, or Gross Domestic Product, is the <b>total monetary value of all goods and services produced and sold</b> within a country during a specific time period, typically one year. World's GDP is <b>$106,172,000,000,000 </b> (nominal, 2023)</p>
+    </div>
+    <p class="source"><i>ℹ️ Sources: World Bank (World Development Indicators, December 16, 2024); United Nations (World Population Prospects 2024).</i></p>
+  </div>
+
+  <div class="controls">
+    <div class="filter-group">
+      <label for="regionFilter">Filter by region:</label>
+      <select id="regionFilter">
+        <option value="all">All regions</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="rangeSelector">Select range:</label>
+      <select id="rangeSelector">
+        <option value="1-15">Countries 1-15</option>
+      </select>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+      Showing countries 1-15 of 181 | All regions selected
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+    <div class="tooltip"></div>
+  </div>
+
+  <div class="legend-wrapper">
+    <div class="legend">
+      <!--    REGIONS-->
+      <!--    <div class="legend-title">Regions</div>-->
+      <div class="legend-items" id="legendItems"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="GDPByCountry.js"></script>
+</body>
+</html>
+
+
+
+
