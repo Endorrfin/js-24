@@ -1,0 +1,232 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color: #f8f9fa;
+}
+
+.container {
+    display: block;
+    max-width: 1400px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 10px;
+    /*box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;*/
+    /*box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;*/
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+
+.header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.title {
+    font-size: 28px;
+    font-weight: bold;
+    color: #2c3e50;
+    margin-bottom: 5px;
+}
+
+.description {
+    font-size: 14px;
+    color: #004030;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.2;
+}
+
+.source {
+    font-size: 12px;
+    color: #073033;
+    max-width: 1000px;
+    margin: 0 auto;
+    line-height: 1.1;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+    padding: 8px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+    flex-wrap: wrap;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.05) 0px 6px 24px 0px, rgba(0, 0, 0, 0.08) 0px 0px 0px 1px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+
+.filter-group {
+    display: flex;
+    align-items: center;
+    gap: 30px;
+}
+
+.filter-group label {
+    font-weight: 600;
+    color: #2c3e50;
+}
+
+select, input {
+    padding: 8px 12px;
+    border: 2px solid #e9ecef;
+    border-radius: 5px;
+    font-size: 14px;
+    background: white;
+    transition: border-color 0.3s;
+}
+
+select:focus, input:focus {
+    outline: none;
+    border-color: #3498db;
+}
+
+.chart-container {
+    position: relative;
+}
+
+.bar {
+    transition: opacity 0.3s, stroke-width 0.3s;
+    cursor: pointer;
+}
+
+.bar:hover {
+    opacity: 0.8;
+    stroke: #2c3e50;
+    stroke-width: 2;
+}
+
+.axis text {
+    font-size: 12px;
+    fill: #555;
+}
+
+.axis-title {
+    font-size: 14px;
+    font-weight: 600;
+    fill: #2c3e50;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(44, 62, 80, 0.95);
+    color: white;
+    padding: 6px;
+    border-radius: 6px;
+    font-size: 13px;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.2s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
+    z-index: 1000;
+    backdrop-filter: blur(10px);
+    max-width: 280px;
+}
+
+.tooltip.show {
+    opacity: 1;
+}
+
+.tooltip-country {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.tooltip-flag {
+    font-size: 20px;
+    margin-right: 8px;
+}
+
+.legend-wrapper {
+    display: flex;
+    justify-content: center;
+}
+
+.legend {
+    margin-top: 5px;
+    padding: 5px;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.legend-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: #2c3e50;
+    margin-bottom: 15px;
+}
+
+.legend-items {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.legend-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: opacity 0.3s;
+}
+
+.legend-text {
+    color: #ececec;
+    align-items: center;
+}
+
+.legend-item:hover {
+    opacity: 0.7;
+}
+
+.legend-color {
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+}
+
+.legend-text {
+    font-size: 14px;
+    color: #2c3e50;
+}
+
+.info-panel {
+    flex: 1;
+    padding: 8px 15px;
+    background-color: #e3f2fd;
+    border-radius: 6px;
+    font-size: 14px;
+    color: #750101;
+    color: #C71E64;
+    text-align: center;
+    min-width: 300px;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .controls {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .filter-group {
+        justify-content: space-between;
+    }
+
+    .info-panel {
+        margin-top: 15px;
+        min-width: auto;
+    }
+
+    .legend-items {
+        justify-content: center;
+    }
+}
+}

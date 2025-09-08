@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>GDP per Capita</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+
+</head>
+<body>
+<div class="container">
+  <div class="header">
+    <div class="title">GDP (PPP) per capita 2023 $</div>
+    <div class="description">
+      <p>Gross Domestic Product (GDP) per capita shows a country's GDP divided by its total population.
+        The data below lists countries in the world ranked by GDP at Purchasing Power Parity (PPP) per capita, along with the Nominal GDP per capita.
+        <b>PPP takes into account the relative cost of living</b>, rather than using only exchange rates,
+        therefore providing a more accurate picture of the real differences in income.</p>
+    </div>
+    <p class="source"><i>ℹ️ Sources include: World Bank (World Development Indicators, December 16, 2024).</i></p>
+  </div>
+
+  <div class="controls">
+    <div class="filter-group">
+      <label for="regionFilter">Filter by region:</label>
+      <select id="regionFilter">
+        <option value="all">All regions</option>
+      </select>
+    </div>
+
+    <div class="filter-group">
+      <label for="rangeSelector">Select range:</label>
+      <select id="rangeSelector">
+        <option value="1-15">Countries 1-15</option>
+      </select>
+    </div>
+
+    <div class="info-panel" id="infoPanel">
+      Showing countries 1-15 of 181 | All regions selected
+    </div>
+  </div>
+
+  <div class="chart-container">
+    <svg id="chart"></svg>
+    <div class="tooltip"></div>
+  </div>
+
+  <div class="legend-wrapper">
+    <div class="legend">
+      <div class="legend-items" id="legendItems"></div>
+    </div>
+  </div>
+
+</div>
+
+<script src="GDPpppPerCapita2023.js"></script>
+</body>
+</html>
+
+
+
+
