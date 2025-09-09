@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Icelandic population by age</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+<div class="container">
+  <h1 class="title">🇮🇸 Icelandic population by age 1841–2019</h1>
+  <p class="subtitle">
+    <span style="color: #4e79a7; font-weight: 600;">Blue</span> represents surplus male population and
+<!--    <span style="color: #BBFBFF; font-weight: 600;">Blue</span> represents surplus male population and-->
+    <span style="color: #e15759; font-weight: 600;">red</span> surplus female population.<br>
+<!--    <span style="color: #f700ff; font-weight: 600;">red</span> surplus female population.<br>-->
+    Data: Statistics Iceland via Borgar Þorsteinsson
+  </p>
+
+  <!-- Custom controls -->
+  <div class="controls">
+    <div class="year-control">
+<!--      <button class="start-button" id="startButton">Start</button>-->
+      <button class="start-button" id="startButton">▶️</button>
+      <input type="range" class="year-slider" id="yearSlider" min="1841" max="2019" value="2019" step="1">
+      <span class="year-display" id="yearDisplay">2019</span>
+    </div>
+  </div>
+
+  <!-- Manual legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background: #4e79a7;"></div>
+<!--      <div class="legend-color" style="background: #BBFBFF;"></div>-->
+      <span>🙎‍♂️️ Male</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background: #e15759;"></div>
+<!--      <div class="legend-color" style="background: #f700ff;"></div>-->
+      <span>🙍‍♀️ Female</span>
+    </div>
+  </div>
+
+  <div class="chart-container" id="chart"></div>
+</div>
+
+<script src="populationByAge.js"></script>
+</body>
+</html>
