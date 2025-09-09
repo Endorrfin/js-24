@@ -11,6 +11,7 @@
 * Исключаем из сравнения все не-символы. Лучше всего работать с регулярными выражениями.
 * */
 
+// SOLUTION I
 const buildCharObject = str => {
     const charObj = {}
     for (let char of str.replace(/[^\w]/g).toLowerCase()) {
@@ -22,7 +23,8 @@ const buildCharObject = str => {
     return charObj
 }
 
-// main function
+
+// SOLUTION II
 const anagram = (strA, strB) => {
     // build the object that holds strA data
     const aCharObject = buildCharObject(strA)
@@ -52,6 +54,7 @@ const anagram = (strA, strB) => {
 }
 
 
+// SOLUTION III
 function allAnagrams(array) {
     const sorted = array.map((str) => str.split('').sort().join(''));
     for (let i = 0; i < sorted.length; i++) {
@@ -63,4 +66,34 @@ function allAnagrams(array) {
 }
 
 // console.log(anagram('finder', 'Friend'))
+
+
+// SOLUTION IV
+const isAnagram = (strA, strB) => {
+    if (strA.length !== strB.length) return false;
+
+    const arrA = strA.toLocaleLowerCase().split('');
+    const arrB = strB.toLocaleLowerCase().split('');
+    let count = 0;
+
+    arrA.forEach((symbol) => {
+        // debugger;
+        const index = arrB.findIndex((elem) => elem === symbol);
+        if (index !== -1) {
+            count += 1;
+            arrB.splice(index, 1);
+        }
+    });
+
+    return count === strA.length;
+
+};
+
+// console.log(isAnagram('abba', 'abbaa'));
+// console.log(isAnagram('abba', 'aaba'));
+// console.log(isAnagram('abbaa', 'abba'));
+// console.log(isAnagram('finder', 'Friend'));
+
+
+
 

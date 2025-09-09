@@ -1,6 +1,6 @@
 'use strict';
 
-// ======= What will show console log? #1 =======
+// What will show console log?
 function showConsole () {
   console.log(1 + '2'); // 12
   console.log('1' + 2); // 12
@@ -39,7 +39,7 @@ function showConsole () {
 
 
 
-// -------------- Unit 1.1 What will be the output of this code? --------------
+// ✳️ EXAMPLE 1.1 What will be the output of this code?
 
 var a = {},
   b={key:'b'},
@@ -52,16 +52,17 @@ a[c]=456;
 // console.log({}.toString())
 
 
-// -------------- Unit 1.2 What will be the output of this code? --------------
+// ✳️ EXAMPLE 1.2 What will be the output of this code?
 var x = 21;
 var girl = function () {
   console.log(x);
   var x = 20;
 };
+
 // girl ();
 
 
-// -------------- Unit 1.3 Imagine you have this code? --------------
+// ✳️ EXAMPLE 1.3 Imagine you have this code?
 var a = [1, 2, 3];
 // a) Will this result in a crash?
 a[10] = 99;
@@ -70,13 +71,13 @@ a[10] = 99;
 
 
 
-// -------------- Unit 1.4 ему равно foo.length? --------------
+// ✳️ EXAMPLE 1.4 ему равно foo.length?
 var foo = {};
 foo.bar = 'hello';
 // console.log(foo.length);
 
 
-// -------------- Unit 1.5 What will show console log? --------------
+// ✳️ EXAMPLE 1.5 What will show console log?
 var RED = 'red';
 const red = 'red';
 var RED = 'blue';
@@ -86,7 +87,7 @@ var RED = 'blue';
 
 
 
-// -------------- Unit 1.6 What will show console log? --------------
+// ✳️ EXAMPLE 1.6 What will show console log?
 var a = {};
 var b = a;
 // console.log(a === b);
@@ -98,7 +99,7 @@ var d = {};
 
 
 
-// -------------- Unit 1.7 What will show console log? --------------
+// ✳️ EXAMPLE 1.7 What will show console log?
 let num = 5;
 
 // function run(fromWhom, fromWhom) {
@@ -117,7 +118,7 @@ for (let i = 0; i < 10; i++) {
 // console.log(count);
 
 
-// -------------- Unit 1.8 What will show console.log? --------------
+// ✳️ EXAMPLE 1.8 What will show console.log?
  for(var i = 0; i < 3; i++) {
    setTimeout(function () {
      // console.log(i); // 3
@@ -125,7 +126,7 @@ for (let i = 0; i < 10; i++) {
  }
 
 
-// -------------- Unit 1.9 What will show console.log? --------------
+// ✳️ EXAMPLE 1.9 What will show console.log?
  for(let i = 0; i < 3; i++) {
   setTimeout(function () {
     // console.log(i); // 0, 1, 2
@@ -134,12 +135,12 @@ for (let i = 0; i < 10; i++) {
 
 
 
-// -------------- Unit 2.1 What will show console.log? --------------
+// ✳️ EXAMPLE 2.1 What will show console.log?
 const multiply = new Function('x', 'y', 'return x * y');
 // console.log(multiply(3, 4));
 
 
-// -------------- Unit 2.2 What will show console.log? --------------
+// ✳️ EXAMPLE 2.2 What will show console.log?
 class User {
   constructor () {
     this.name = 'Frank';
@@ -161,19 +162,19 @@ const user = new User();
 // console.log(user.mother());
 
 
-// -------------- Unit 2.3 What will show console.log? --------------
+// ✳️ EXAMPLE 2.3 What will show console.log?
 const capitalize = ([a, ...other]) => a.toUpperCase() + other.join('');
 let result = capitalize('hello');
 // console.log(result);
 
 
-// -------------- Unit 2.4 What will show console.log? --------------
+// ✳️ EXAMPLE 2.4 What will show console.log?
 const mixArray1 = [3, '', 14, false, 15.8, true, 0, 'name', undefined, 100, NaN, 'true', 'false', ' ', -0, [], {}];
 const mixArray2 = mixArray1.filter(Boolean);
 // console.log(mixArray2);
 
 
-// -------------- Unit 2.5 What will show console.log? --------------
+// ✳️ EXAMPLE 2.5 What will show console.log?
 let a2 = 7;
 function test (a2) {
   return a2++;
@@ -182,17 +183,17 @@ function test (a2) {
 // console.log(test());
 
 
-// -------------- Unit 3.1 What will show console.log? --------------
-const id = document.body.id = 1;
+// ✳️ EXAMPLE 3.1 What will show console.log?
+// const id = document.body.id = 1;
 // console.log(id === 1);
 // console.log(document.body.id === 1);
 
 
 
-// -------------- What will show console.log group? --------------
+// What will show console.log group?
 const whatShowConsole = () => {
 
-  // -------------- Case 1 --------------
+  // 🔷🔶 CASE 1
   // x++ executes the statement and then increments the value.
   // ++x increments the value and then executes the statement.
   let x1 = 5;
@@ -200,55 +201,55 @@ const whatShowConsole = () => {
   console.log('++x1', ++x1);
 
 
-  // -------------- Case 2 --------------
+  // 🔷🔶 CASE 2
   console.log([] + false - null + true); // NaN
 
 
-  // -------------- Case 3 --------------
+  // 🔷🔶 CASE 3
   let y3 = 1;
   let x3 = y3 = 2;
-  console.log(x3);
+  // console.log(x3);
 
 
-  // -------------- Case 4 --------------
-  console.log([] + 1 + 2);
+  // 🔷🔶 CASE 4
+  // console.log([] + 1 + 2);
 
 
-  // -------------- Case 5 --------------
-  console.log("1" [0]);
+  // 🔷🔶 CASE 5
+  // console.log("1" [0]);
 
 
-  // -------------- Case 6 --------------
-  console.log(2 && 1 && null && 0 && undefined); // null - оператор && запинается на лжи
+  // 🔷🔶 CASE 6
+  // console.log(2 && 1 && null && 0 && undefined); // null - оператор && запинается на лжи
 
 
-  // -------------- Case 7 --------------
-  console.log(!!(1 && 2) === (1 && 2));
+  // 🔷🔶 CASE 7
+  // console.log(!!(1 && 2) === (1 && 2));
 
 
-  // -------------- Case 8 --------------
-  console.log(null || 2 && 3 || 4); // правдивое и будет возвращаться && имеет приоритет перед || - запинается на правде
+  // 🔷🔶 CASE 8
+  // console.log(null || 2 && 3 || 4); // правдивое и будет возвращаться && имеет приоритет перед || - запинается на правде
 
 
-  // -------------- Case 9 --------------
+  // 🔷🔶 CASE 9
   let a9 = [1, 2, 3];
   let b9 = [1, 2, 3];
-  console.log(a9 == b9);
+  // console.log(a9 == b9);
 
 
-  // -------------- Case 10 --------------
-  console.log(+"Infinity"); // унарный + делает его не строкой
+  // 🔷🔶 CASE 10
+  // console.log(+"Infinity"); // унарный + делает его не строкой
 
 
-  // -------------- Case 11 --------------
-  console.log("Ëжик" > "яблоко");
+  // 🔷🔶 CASE 11
+  // console.log("Ëжик" > "яблоко");
 
 
-  // -------------- Case 12 --------------
-  console.log(0 || "" || 2 || undefined || true || false);
+  // 🔷🔶 CASE 12
+  // console.log(0 || "" || 2 || undefined || true || false);
 
 
-  // -------------- Case 13 --------------
+  // 🔷🔶 CASE 13
   // Яблоко стоит 1.15, апельсин стоит 2.30. Сколько они стоят вместе?
   // Чему равна сумма 1.15 + 2.30 с точки зрения JavaScript?
   // Число хранится в памяти в бинарной форме, как последовательность бит – единиц и нулей. Но дроби, такие как 1.15, 2.30, которые выглядят довольно просто в десятичной системе счисления, на самом деле являются бесконечной дробью в двоичной форме.
@@ -283,7 +284,7 @@ fruits2.length = 3;
 // console.log(fruits2) // ['mango', 'apple', undefined];
 
 
-// -------------- case 14 - context --------------
+// 🔷🔶 CASE 14 - context
 var length = 4;
 function callback() {
   // console.log(this.length);
@@ -300,17 +301,156 @@ object.method(callback, 1, 2);
 
 
 
-// -------------- case 15 - 1,5 !== 1.5 --------------
+// 🔷🔶 CASE 15 - 1,5 !== 1.5
 const someResult = (1,5 - 1) * 2; // 1,5 return the most right value
 // console.log(someResult);
 
 
-// -------------- case 16 - return boolean --------------
+// 🔷🔶 CASE 16 - return boolean
 const groceries = ['apple', null, 'milk', undefined, 'bread', '']
 const list = groceries.filter(Boolean); // will remove all value that transform to false
 // console.log(list);
 
 
+
+// 🚀 Essential JavaScript Quiz 1.1: What is the order of console logs?
+// https://claude.ai/public/artifacts/dfa1e00d-cf8f-419d-b9fe-1610f8c602c5?fullscreen=true
+function quiz1 () {
+  console.log('1: Start');
+
+  setTimeout(() => console.log('2: Timeout'), 0);
+
+  Promise.resolve().then(() => console.log('3: Promise'));
+
+  Promise.all([
+    Promise.resolve('A'),
+    Promise.resolve('B')
+  ]).then(() => console.log('4: Promise.all'));
+
+  console.log('5: End');
+}
+
+// quiz1();
+
+// ✅ Correct! Synchronous code runs first (1, 5). All microtasks (Promises) have higher priority than macrotasks (setTimeout). Both individual Promise and Promise.all are microtasks that run before setTimeout (3, 4, then 2).
+
+
+// 🚀 Essential JavaScript Quiz 1.2: What does this code output?
+function quiz2 () {
+  function createCounter() {
+    let count = 0;
+    return function() {
+      count++;
+      return count;
+    };
+  }
+  const counter = createCounter();
+  console.log(counter());
+  console.log(counter());
+}
+
+// quiz2();
+// ✅ Correct! The returned function forms a closure, maintaining access to the 'count' variable even after createCounter finishes executing. Each call increments the same count.
+
+
+// 🚀 Essential JavaScript Quiz 1.3: What is the complete output?
+function quiz3 () {
+  Promise.resolve('success')
+      .then(result => {
+        console.log(result);
+        throw new Error('oops');
+      })
+      .then(result => console.log('This runs'))
+      .catch(err => console.log('Caught:', err.message));
+}
+
+// quiz3();
+// ✅ Correct! The first .then() logs 'success' but throws an error. This skips the second .then() and goes directly to .catch(), which logs 'Caught: oops'.
+
+
+// 🚀 Essential JavaScript Quiz 1.4: What is the output of these two calls?
+  const obj = {
+    name: 'Alice',
+    arrow: () => console.log(this.name),
+    method() { console.log(this.name); }
+  };
+
+  // obj.arrow();
+  // obj.method();
+  // ✅ Correct! Arrow functions don't bind their own 'this' - they inherit from the enclosing scope. Regular methods bind 'this' to the calling object.
+
+
+
+// 🚀 Essential JavaScript Quiz 1.5: What happens when this code runs?
+function quiz5 () {
+  async function main() {
+    async function getValue() {
+      return 42;
+    }
+    console.log(getValue());
+    console.log(await getValue());
+  }
+  main();
+}
+
+// quiz5();
+// ✅ Correct! Async functions always return a Promise object, so getValue() logs a Promise. The await keyword resolves the Promise and logs 42.
+
+
+
+// 🚀 Essential JavaScript Quiz 1.6: What is logged?
+function quiz6 () {
+  const obj1 = { value: 10 };
+  const obj2 = obj1;
+  const obj3 = { ...obj1 };
+  obj2.value = 20;
+  console.log(obj1.value, obj3.value);
+}
+
+// quiz6();
+// ✅ Correct! obj1 and obj2 reference the same object, so changing obj2 affects obj1. obj3 is a shallow copy (spread operator), so it's independent.
+
+
+
+// 🚀 Essential JavaScript Quiz 1.7: What is the output?
+function quiz7 () {
+  const user = { name: 'Bob' };
+  const { name, age = 25, city = 'Unknown' } = user;
+  console.log(name, age, city);
+}
+
+// quiz7();
+// ✅ Correct! Destructuring allows default values for missing properties. 'name' exists in the object, while 'age' and 'city' use their default values.
+
+
+
+// 🚀 Essential JavaScript Quiz 1.8: What are the five outputs (in order)?
+function quiz8 () {
+  console.log([] == false);
+  console.log([] === false);
+  console.log(Boolean([]));
+  console.log(0 == '');
+  console.log(null == undefined);
+}
+
+// quiz8();
+// ✅ Correct! [] converts to '' then 0, which equals false (==). === checks type too. Boolean([]) is true (truthy). 0 == '' both convert to 0. null == undefined is a special case that's true.
+
+
+
+// 🚀 Essential JavaScript Quiz 1.9: What are the two console outputs?
+function quiz9 () {
+  const numbers = [1, 2, 3, 4, 5];
+  const result = numbers
+      .filter(n => n > 2)
+      .map(n => n * 2)
+      .reduce((sum, n) => sum + n, 0);
+  console.log(result);
+  console.log(numbers);
+}
+
+// quiz9();
+// ✅ Correct! filter(n > 2) gives [3,4,5], map(n * 2) gives [6,8,10], reduce sums to 6+8+10=24. The original array remains unchanged as these methods don't mutate.
 
 
 

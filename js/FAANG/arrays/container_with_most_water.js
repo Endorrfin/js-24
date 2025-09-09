@@ -49,6 +49,11 @@ A. No, lines inside a container don't affect the area.
 **/
 
 const heightsArray = [7, 1, 2, 3, 9];
+const input1 = [1, 8, 6, 2, 5, 4, 8, 3, 7];
+const input2 = [1, 1];
+const input3 = [4, 3, 2, 1, 4];
+const input4 = [1, 2, 1];
+const input5 = [0, 0, 100];
 
 // ✅ SOLUTION I
 const getMaxWaterContainer = function (heights) {
@@ -66,7 +71,7 @@ const getMaxWaterContainer = function (heights) {
   return maxArea;
 }
 
-console.log(getMaxWaterContainer(heightsArray));
+// console.log(getMaxWaterContainer(heightsArray));
 
 
 // ✅ SOLUTION II
@@ -94,9 +99,45 @@ const maxArea = function (heights) {
   return maxArea;
 }
 
-console.log(maxArea(heightsArray));
-console.log('=================================');
-console.log(maxArea(heightsArray2));
+// console.log(maxArea(heightsArray));
+// console.log('=================================');
+// console.log(maxArea(heightsArray2));
+
+
+// ✅ SOLUTION III
+
+function maxAreaWater(height) {
+  let maxArea = 0;
+  let left = 0;
+  let right = height.length - 1;
+
+  while (left < right) {
+    // Calculate minimum line, and also multiply height of minimum line by difference between right and left pointer.
+    let currentVolume = Math.min(height[left], height[right]) * (right - left);
+    // console.log('🔶 CURRENT VALUE', currentVolume);
+
+    // record maximum water volume to result
+    maxArea = Math.max(maxArea, currentVolume);
+
+    // Compare height of pointers
+    if (height[left] < height[right]) {
+      // Move left pointer to right
+      left += 1;
+    } else {
+      // Move right pointer to left
+      right -= 1;
+    }
+  }
+
+  return maxArea
+}
+
+console.log(input1, '➡️', maxAreaWater(input1));
+console.log(input2, '➡️', maxAreaWater(input2));
+console.log(input3, '➡️', maxAreaWater(input3));
+console.log(input4, '➡️', maxAreaWater(input4));
+console.log(input5, '➡️', maxAreaWater(input5));
+
 
 
 
