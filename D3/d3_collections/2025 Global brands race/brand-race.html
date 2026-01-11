@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Global brand race</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.8.5/d3.min.js"></script>
+</head>
+<body>
+
+<!--🔹🔸 Best Global Brands 2025 Top 100-->
+<!--  https://interbrand.com/best-global-brands/global/-->
+
+<div class="chart-container">
+<!--  <div class="title">Global brand race 2000-2024 with Scrubber</div>-->
+  <div class="title">Global brand race</div>
+  <div class="description">
+    <span>Current chart animates the value (💲<span style="color: #1ECD97; font-weight: bold">M</span>) of the top 1️⃣ 8️⃣ global brands from 2️⃣ 0️⃣ 0️⃣ 0️⃣ to 2️⃣ 0️⃣ 2️⃣ 5️⃣.</span>
+    <span>Color indicates industry.</span>
+  </div>
+
+<!--   Custom scrubber controls -->
+  <div class="scrubber-container">
+    <div class="scrubber-controls">
+      <button
+              class="start-button"
+              id="startButton">
+        Start
+      </button>
+      <label for="scrubberSlider"></label>
+      <input
+              type="range"
+              class="scrubber-slider"
+              id="scrubberSlider"
+              min="0"
+              max="100"
+              value="0"
+              step="1"
+      >
+      <div class="year-display" id="yearDisplay">2000</div>
+    </div>
+  </div>
+
+  <div id="chart"></div>
+  <div id="loading" class="loading">Loading data...</div>
+  <div id="error" class="error" style="display: none;"></div>
+</div>
+
+<script src="brandRace.js"></script>
+</body>
+</html>
