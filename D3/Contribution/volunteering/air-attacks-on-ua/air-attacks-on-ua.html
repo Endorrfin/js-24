@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Russian Air Strikes on Ukraine (2022-2025)</title>
+  <script src="https://d3js.org/d3.v7.min.js"></script>
+  <style>
+
+  </style>
+</head>
+<body>
+<div class="container">
+  <h1>Russian air strikes on Ukraine: Military escalation and humanitarian impact</h1>
+  <p class="subtitle">Data: 2022-2025 | Sources: UN Monitoring Mission for Human Rights in Ukraine</p>
+
+  <svg id="chart"></svg>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item">
+      <div class="legend-color" style="background: #7B9AB5;"></div>
+      <span>Rockets</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-color" style="background: #4A5D6F;"></div>
+      <span>Drones</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line" style="background: #D64545;"></div>
+      <span>Injured</span>
+    </div>
+    <div class="legend-item">
+      <div class="legend-line" style="background: #8B2E2E;"></div>
+      <span>Deaths</span>
+    </div>
+  </div>
+</div>
+
+<!-- Tooltip element -->
+<div class="tooltip"></div>
+
+<script src="airAttacksOnUA.js"></script>
+</body>
+</html>
