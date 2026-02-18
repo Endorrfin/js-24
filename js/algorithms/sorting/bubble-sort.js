@@ -69,3 +69,37 @@ function bubbleSortBest(array) {
 // console.log( 'sorted array 3.1: ', bubbleSortBest(array), 'length', array.length, 'count = ', count);
 // console.log( 'sorted array 3.2: ', bubbleSortBest(arrayGenerate), 'length', arrayGenerate.length, 'count = ', count);
 
+
+const arraySimple = [5, 4, 3, 2, 1, 0];
+function bubbleSortSimple(array) {
+  let result = [];
+  let length = array.length;
+
+  while (length !== 0) {
+    let maxIndex = 0
+    for (let i = 1;  i < length; i++) {
+      if (array[i - 1] > array[i]) {
+        let temp = array[i];
+        array[i] = array[i - 1];
+        array[i - 1] = temp;
+
+        maxIndex = i
+
+      }
+    }
+
+    length = maxIndex;
+    result = array
+  }
+  return result
+
+};
+
+console.log(bubbleSortSimple(arraySimple));
+
+
+
+
+
+
+
