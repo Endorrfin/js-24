@@ -153,3 +153,48 @@ function flatDeep(array) {
 
 // console.log(flatDeep([1, 2, 3, [4, [[[5, [6, 7]]]], 8, [[[9, [[[[[10]]]]]]]]]]));
 
+
+
+
+/*
+Напишіть функцію, яка приймає масив об'єктів та ключ групування,
+і повертає об'єкт, де кожен ключ - це значення відповідного ключа групування,
+а значення - це масиви об'єктів, що належать до цієї групи.
+*/
+const inputData = [
+    { name: "John", age: 20, occupation: "Engineer" },
+    { name: "Jane", age: 25, occupation: "Doctor" },
+    { name: "Bob", age: 20, occupation: "Engineer" },
+    { name: "Allan", age: 29, occupation: "Lawyer" },
+    { name: "Amanda", age: 27, occupation: "Designer" },
+    { name: "Monika", age: 32, occupation: "Lawyer" },
+];
+
+function groupBy(dataList, key) {
+    return dataList.reduce((acc, item) => {
+        const groupKey = item[key];
+        if (groupKey === undefined) return acc; // пропускаємо елементи без вказаного ключа
+        if (!acc[groupKey]) acc[groupKey] = [];
+        acc[groupKey].push(item);
+        return acc;
+    }, {});
+}
+
+const groupedData = groupBy(inputData, "occupation");
+
+console.log(groupedData);
+/* Очікуваний Результат:
+{
+  "Engineer": [
+    { name: "John", age: 20, occupation: "Engineer" },
+    { name: "Bob", age: 20, occupation: "Engineer" }
+  ],
+  "Doctor": [
+    { name: "Jane", age: 25, occupation: "Doctor" }
+  ]
+}
+*/
+
+
+// SOLUTION I
+
